@@ -1,0 +1,28 @@
+name: Sync Intervals Data
+on:
+  schedule:
+    - cron: '0 8 * * *' # Runs at 8am daily
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Fetch Data
+        env:
+          API_KEY: ${{ secrets.INTERVALS_API_KEY }}
+          ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
+        run: |
+          curl -u "API_KEY:$API_KEY" "https://intervals.icu/api/v1/athlete/$ID/wellness.csv" -o wellness.csv
+          curl -u "API_KEY:$API_KEY" "https://intervals.icu/api/v1/athlete/$ID/activities.csv" -o activities.csv
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add wellness.csv activities.csv
+          git commit -m "Update training data" || exit 0
+          git push
