@@ -1,31 +1,41 @@
 import requests
 import os
-import pandas as pd
 from datetime import datetime, timedelta
 
 # --- CONFIG ---
-ATHLETE_ID = os.environ.get('INTERVALS_ID')
-API_KEY = os.environ.get('INTERVALS_API_KEY')
-AUTH = ('athlete', API_KEY)
+ID = os.environ.get('INTERVALS_ID')
+KEY = os.environ.get('INTERVALS_API_KEY')
+AUTH = ('athlete', KEY)
 
-def final_push():
-    # Looking back 7 days. Simplest possible request.
-    start = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+def coach_tony_reboot():
+    # Looking back 3 days only - simplest request possible
+    start = (datetime.now() - timedelta(days=3)).strftime("%Y-%m-%d")
     
-    # We are using the "Bulk" endpoint which is often more permissive
-    url = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}/activities?oldest={start}"
+    # NEW ENDPOINT: This is the most permissive one
+    url = f"https://intervals.icu/api/v1/athlete/{ID}/activities?oldest={start}"
     
     try:
-        res = requests.get(url, auth=AUTH)
-        if res.status_code == 200:
-            data = res.json()
-            return f"VICTORY: Found {len(data)} activities."
+        print(f"Connecting to ID {ID}...")
+        r = requests.get(url, auth=AUTH)
+        
+        if r.status_code == 200:
+            data = r.json()
+            if not data:
+                return "CONNECTED: But no rides found. Is Garmin/Strava synced?"
+            
+            last_ride = data[-1]
+            return f"SUCCESS: Found {last_ride.get('name')} on {last_ride.get('start_date_local')}"
+        
+        elif r.status_code == 403:
+            return f"403 STILL: The ID {ID} is being rejected. Check if the ID in GitHub matches your Settings page exactly."
         else:
-            return f"STILL 403: Check if your ID ({ATHLETE_ID}) matches the Key owner."
+            return f"FAILED: Status {r.status_code}. Double check the API Key."
+            
     except Exception as e:
-        return str(e)
+        return f"CRASH: {str(e)}"
 
 if __name__ == "__main__":
-    report = final_push()
+    result = coach_tony_reboot()
+    print(result)
     with open("latest_report.txt", "w") as f:
-        f.write(report)
+        f.write(result)
