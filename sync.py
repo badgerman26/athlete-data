@@ -1,39 +1,42 @@
 import requests
 import os
+import pandas as pd
+from datetime import datetime
 
 # --- CONFIG ---
-# This pulls the secrets you saved in GitHub
 ATHLETE_ID = os.environ.get('INTERVALS_ID')
 API_KEY = os.environ.get('INTERVALS_API_KEY')
 AUTH = ('athlete', API_KEY)
 
-def nuclear_debug():
-    print("--- STARTING NUCLEAR DEBUG ---")
+def final_attempt():
+    print(f"Attempting to fetch activities for ID: {ATHLETE_ID}")
     
-    # 1. Test the 'WHOAMI' endpoint (This doesn't need an ID)
-    # This confirms if the API Key is actually valid for ANYONE.
-    print("Checking API Key validity...")
-    res = requests.get("https://intervals.icu/api/v1/athlete", auth=AUTH)
+    # Intervals.icu requires the ID in the URL for the activities list
+    # The endpoint is /athlete/{id}/activities-bulk or just /activities
+    url = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}/activities"
     
-    if res.status_code == 200:
-        me = res.json()
-        print(f"SUCCESS: API Key is valid for Athlete: {me.get('name')} (ID: {me.get('id')})")
+    try:
+        res = requests.get(url, auth=AUTH)
         
-        # Now compare what the API says vs what you put in GitHub
-        if str(me.get('id')) != str(ATHLETE_ID):
-            return f"MATCH ERROR: Your Secret ID is {ATHLETE_ID}, but your API Key belongs to ID {me.get('id')}. Update GitHub Secret to {me.get('id')}."
-        else:
-            return f"ID MATCHES! Key is good for {me.get('name')}. If you still get 403 on activities, it's a server-side permission issue."
+        if res.status_code == 200:
+            activities = res.json()
+            if not activities:
+                return "SUCCESS: Connected, but the activity list is literally empty. Check your sync with Garmin/Strava."
             
-    elif res.status_code == 401:
-        return "ERROR 401: The API Key itself is wrong. Re-copy it from Intervals.icu Settings."
-    elif res.status_code == 403:
-        return f"ERROR 403: The API Key is recognized, but it is explicitly forbidden from seeing Athlete {ATHLETE_ID}."
-    else:
-        return f"UNKNOWN ERROR: Status {res.status_code}"
+            # Get the last ride
+            latest = activities[-1]
+            return f"MATCH! Found {len(activities)} activities. Latest: {latest.get('name')}"
+            
+        elif res.status_code == 405:
+            return "ERROR 405: Still hitting the wrong door. Trying fallback..."
+        else:
+            return f"FAILED: Status {res.status_code}. Body: {res.text[:100]}"
+            
+    except Exception as e:
+        return f"PYTHON ERROR: {str(e)}"
 
 if __name__ == "__main__":
-    result = nuclear_debug()
+    result = final_attempt()
     print(result)
     with open("latest_report.txt", "w") as f:
         f.write(result)
