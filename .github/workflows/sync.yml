@@ -1,8 +1,8 @@
-name: Section 11 Master Sync
+name: Coach Tony Master Sync
 on:
   schedule:
-    - cron: '*/10 * * * *' # Post-ride check
-    - cron: '0 8 * * *'    # 8 AM Morning Wellness
+    - cron: '*/10 * * * *' # Checks for rides every 10 mins
+    - cron: '0 8 * * *'    # 8 AM UTC Morning Wellness
   workflow_dispatch:
 
 jobs:
@@ -31,13 +31,13 @@ jobs:
 
       - name: Commit and Push Data
         run: |
-          git config --global user.name "Section 11 Bot"
-          git config --global user.email "bot@section11.com"
-          git add latest.json activities.csv latest_report.txt
-          git commit -m "Update training data [skip ci]" || echo "No changes"
+          git config --global user.name "Coach Tony Bot"
+          git config --global user.email "bot@coachtony.com"
+          git add activities.csv wellness.csv latest_report.txt
+          git commit -m "Coach Tony Data Sync [skip ci]" || echo "No changes"
           git push
 
-      - name: Send Email to Robbie
+      - name: Send Email
         if: success()
         uses: dawidd6/action-send-mail@v3
         with:
@@ -45,7 +45,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Section 11: Coach Report Audit"
+          subject: "Message from Coach Tony"
           to: robbie.whittaker@gmail.com
-          from: "Section 11 Bot"
+          from: "Coach Tony"
           body: file://latest_report.txt
