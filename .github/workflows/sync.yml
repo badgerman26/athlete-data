@@ -1,8 +1,8 @@
 name: Section 11 Auto-Sync & Email
 on:
   schedule:
-    - cron: '*/5 * * * *' # Runs every 5 mins to catch your ride upload
-  workflow_dispatch: # Allows you to trigger it manually for testing
+    - cron: '*/10 * * * *' # Checks every 10 mins (best balance for Actions)
+  workflow_dispatch:
 
 jobs:
   sync-and-audit:
@@ -19,23 +19,40 @@ jobs:
       - name: Install Dependencies
         run: pip install pandas requests
 
-      - name: Run Master Sync
+      - name: Run Master Sync and Check for Changes
+        id: sync
         env:
           INTERVALS_ID: ${{ secrets.INTERVALS_ID }}
           INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO: ${{ github.repository }}
-        run: python sync.py
+        run: |
+          # Generate a fingerprint of current activities before sync
+          [ -f activities.csv ] && md5sum activities.csv > old_hash.txt || echo "none" > old_hash.txt
+          
+          python sync.py
+          
+          # Generate fingerprint after sync
+          md5sum activities.csv > new_hash.txt
+          
+          # Compare fingerprints. If different, set NEW_DATA to true
+          if ! cmp -s old_hash.txt new_hash.txt; then
+            echo "NEW_DATA=true" >> $GITHUB_ENV
+            echo "Changes detected in activity data."
+          else
+            echo "No new activity detected."
+          fi
 
       - name: Send Section 11 Report
+        # ONLY send if new data was found OR it was triggered manually
+        if: env.NEW_DATA == 'true' || github.event_name == 'workflow_dispatch'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Section 11: Report Update"
+          subject: "Section 11: Validation Report"
           to: robbie.whittaker@gmail.com
           from: "Section 11 Audit Bot"
-          body: "New training data has been processed. View the full report in your repo or Gemini chat."
-          attachments: latest.json
+          body: file://latest_report.txt
