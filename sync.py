@@ -4,100 +4,115 @@ import json
 import os
 from datetime import datetime, timedelta
 
-# Configuration
+# --- CONFIGURATION ---
 ATHLETE_ID = os.environ.get('INTERVALS_ID')
 API_KEY = os.environ.get('INTERVALS_API_KEY')
 BASE_URL = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}"
 AUTH = ('athlete', API_KEY)
+ETAPE_DATE = datetime(2026, 7, 19)
+
+# ROBBIE'S REAL BASELINES (Hard-coded to prevent error)
+HRV_MIN, RHR_MAX = 25, 56
 
 def get_data():
-    # 1. Activities (Last 7 days)
-    r = requests.get(f"{BASE_URL}/activities", auth=AUTH)
-    r.raise_for_status()
-    # 2. Wellness (Last 7 days for Sleep/HR analysis)
-    oldest = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+    r_act = requests.get(f"{BASE_URL}/activities", auth=AUTH)
+    oldest = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
     r_well = requests.get(f"{BASE_URL}/wellness?oldest={oldest}", auth=AUTH)
-    r_well.raise_for_status()
-    return r.json(), r_well.json()
+    return r_act.json(), r_well.json()
 
-def audit_sleep_and_hr(wellness_list):
-    """Advanced audit of sleep stages and sleeping heart rate trends."""
-    if not wellness_list: return "No wellness data found."
-    latest = wellness_list[-1]
-    
-    hrv = latest.get('hrv', 0)
+def generate_morning_report(wellness):
+    latest = wellness[-1]
+    rmssd = latest.get('hrv', 0)
+    sdnn = latest.get('hrv_sdnn', 0)
     rhr = latest.get('restingHR', 0)
-    sleep_score = latest.get('sleepQuality', 0)
-    sleep_hours = round((latest.get('sleepSecs', 0) / 3600), 1)
+    sleep = round(latest.get('sleepSecs', 0) / 3600, 1)
+    deep_m = latest.get('deepSleepSecs', 0) // 60
     
-    # Logic based on Section 11 Readiness Decision
-    status = "READY"
-    insight = f"Sleep: {sleep_hours}h (Quality: {sleep_score}/4). RHR: {rhr}bpm, HRV: {hrv}ms."
-    
-    if rhr > latest.get('avgSleepingHR', rhr) + 3:
-        status = "MODIFY"
-        insight += " | High Sleeping HR detected — sign of incomplete recovery or impending illness."
-    if hrv < 50: # Example threshold
-        status = "CAUTION"
-        insight += " | HRV is suppressed. Keep intensity low today."
+    # ImReady4Training Logic
+    status = "GO"
+    if rhr > RHR_MAX or rmssd < HRV_MIN: status = "CAUTION"
+    if rhr > 60 or rmssd < 20: status = "REST"
         
-    return f"STATUS: {status}\nINSIGHT: {insight}"
+    days_to_etape = (ETAPE_DATE - datetime.now()).days
+
+    return f"""
+# COACH TONY: MORNING READINESS (ImReady4Training)
+**Status: {status}** | **Days to L'Etape: {days_to_etape}**
+
+## Autonomic Audit
+- **rMSSD (Recovery):** {rmssd} ms (Baseline: 28-35)
+- **SDNN (Total Stress):** {sdnn} ms
+- **Sleeping HR:** {rhr} bpm (Baseline: 48-52)
+- **Sleep:** {sleep}h (Deep: {deep_m}m)
+
+**Tony's Strategy:** {"Nervous system is primed. Hit your power targets today." if status == "GO" else "Recovery is lagging. Stay in Zone 2 to protect the build."}
+"""
+
+def generate_post_activity_report(activities):
+    act = activities[-1]
+    name = act.get('name', 'Unknown')
+    type = act.get('type', 'Other')
+    days_to_etape = (ETAPE_DATE - datetime.now()).days
+
+    if type in ['Ride', 'VirtualRide']:
+        z4_mins = round(act.get('time_in_z4', 0) / 60, 1)
+        z5_mins = round(act.get('time_in_z5', 0) / 60, 1)
+        elev = act.get('total_elevation_gain', 0)
+        cadence = act.get('average_cadence', 0)
+        hr = act.get('average_heartrate', 0)
+        np = act.get('icu_normalized_watts', 0)
+        vi = round(np / act.get('icu_average_watts', 1), 2)
+        
+        # Tony's Specific Insights
+        climb_note = "Great torque for L'Etape climbs." if cadence < 75 and z4_mins > 10 else "Good fluid cadence."
+        env = "INDOOR (ERG Focus)" if type == 'VirtualRide' else "OUTDOOR (Terrain Audit)"
+
+        return f"""
+# COACH TONY: RIDE DEBRIEF
+**Session:** {name} | **Mode:** {env} | **Days to Etape: {days_to_etape}**
+
+## The Numbers
+- **Z4/Z5 Time:** {z4_mins + z5_mins}m (Essential Stimulus)
+- **Mechanicals:** {cadence} rpm | {hr} bpm avg
+- **Pacing (VI):** {vi} | **Climbing:** {elev}m ascent
+
+**Tony's Verdict:** {climb_note} {"Solid pacing. You didn't surge too hard." if vi < 1.06 else "Pacing was surgy. Practice steady power for the long climbs."}
+
+## Recovery Nutrition
+- **Target:** 80-100g Carbs + 30g Protein immediately.
+"""
+    else:
+        # Walks, Gym, Pilates
+        return f"""
+# COACH TONY: {type.upper()} REPORT
+**Activity:** {name} | **Load:** {act.get('icu_training_load', 0)} TSS
+**Tony's Note:** Structural integrity work. This protects your power on the bike.
+"""
 
 def generate_weekly_report(activities, wellness):
-    """Generates the full Section 11 Weekly Summary."""
-    total_tss = sum(a.get('icu_training_load', 0) for a in activities)
-    total_hours = round(sum(a.get('moving_time', 0) for a in activities) / 3600, 1)
-    
-    report = f"""
---- SECTION 11 WEEKLY SUMMARY ---
-Hours: {total_hours}h | Total TSS: {total_tss}
-Fitness (CTL): {wellness[-1].get('ctl')}
-Form (TSB): {wellness[-1].get('tsb')}%
+    last_7 = activities[-7:]
+    total_tss = sum(a.get('icu_training_load', 0) for a in last_7)
+    days_to_etape = (ETAPE_DATE - datetime.now()).days
+    return f"""
+# COACH TONY: WEEKLY STRATEGY
+**Total Weekly Load:** {total_tss} TSS
+**Fitness (CTL):** {wellness[-1].get('ctl')} | **Form (TSB):** {wellness[-1].get('tsb')}%
 
---- SLEEP & RECOVERY AUDIT ---
-{audit_sleep_and_hr(wellness)}
-
---- INTERPRETATION ---
-Weekly compliance is high. CTL is building toward KAW targets.
-Watch the Sleeping HR trend over the next 48h.
+**Tony's Note:** {days_to_etape} days to the Etape. Keep the ramp rate sustainable. 8 hours is the goal.
 """
-    return report
-
-def generate_post_ride_report(ride, wellness):
-    """Daily audit for post-workout validation."""
-    name = ride.get('name', 'Unknown')
-    z4_time = round(ride.get('time_in_z4', 0) / 60, 1)
-    
-    report = f"""
---- COACH'S POST-RIDE AUDIT ---
-Session: {name}
-Threshold (Z4) Time: {z4_time} mins
-Load: {ride.get('icu_training_load')} TSS
-
---- DAILY READINESS ---
-{audit_sleep_and_hr(wellness)}
-
---- NEXT STEPS ---
-Ensure 80g carbs post-ride. Saturday Endurance is the primary focus.
-"""
-    return report
 
 if __name__ == "__main__":
     activities, wellness = get_data()
-    pd.DataFrame(activities).to_csv("activities.csv", index=False)
-    
-    # Determine which report to send
-    is_monday = datetime.now().weekday() == 0
-    
-    if is_monday:
-        final_text = generate_weekly_report(activities, wellness)
+    now = datetime.now()
+    if now.hour == 8:
+        report = generate_morning_report(wellness)
+    elif now.weekday() == 0 and now.hour == 9:
+        report = generate_weekly_report(activities, wellness)
     else:
-        latest_ride = activities[-1] if activities else {}
-        final_text = generate_post_ride_report(latest_ride, wellness)
-    
+        report = generate_post_activity_report(activities)
+
     with open("latest_report.txt", "w") as f:
-        f.write(final_text)
+        f.write(report)
     
-    # Save for Gemini access
-    with open("latest.json", "w") as f:
-        json.dump({"latest_activity": activities[-1], "wellness": wellness[-1]}, f)
+    pd.DataFrame(activities).to_csv("activities.csv", index=False)
+    pd.DataFrame(wellness).to_csv("wellness.csv", index=False)
