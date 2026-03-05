@@ -27,25 +27,22 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO: ${{ github.repository }}
         run: |
-          # 1. Fingerprint current activity file before sync
+          # Fingerprint activities before sync
           [ -f activities.csv ] && md5sum activities.csv > old_hash.txt || echo "none" > old_hash.txt
           
-          # 2. Run the actual script (generates latest.json)
+          # Run the master script
           python sync.py
           
-          # 3. Fingerprint after sync
+          # Fingerprint after sync
           md5sum activities.csv > new_hash.txt
           
-          # 4. Detect changes
+          # Logic: If hashes differ, set NEW_DATA to true
           if ! cmp -s old_hash.txt new_hash.txt; then
             echo "NEW_DATA=true" >> $GITHUB_ENV
-            echo "Activity change detected."
-          else
-            echo "No activity change detected."
           fi
 
       - name: Send Section 11 Report
-        # Fire if new data is found OR if you manually click 'Run Workflow'
+        # Firing logic: Only if data changed OR if you hit "Run Workflow" manually
         if: env.NEW_DATA == 'true' || github.event_name == 'workflow_dispatch'
         uses: dawidd6/action-send-mail@v3
         with:
@@ -53,8 +50,8 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Section 11: Workout Validation"
+          subject: "Section 11: Workout Validation Audit"
           to: robbie.whittaker@gmail.com
-          from: "Section 11 Audit Bot"
-          body: "New activity data processed for Athlete i156193. See attached Section 11 JSON for metrics."
-          attachments: latest.json
+          from: "Section 11 Bot"
+          body: "Section 11 Audit complete. Data for Athlete i156193 is attached as latest.json."
+          attachments: "latest.json"
