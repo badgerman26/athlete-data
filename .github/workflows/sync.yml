@@ -1,7 +1,7 @@
 name: Section 11 Auto-Sync & Email
 on:
   schedule:
-    - cron: '*/10 * * * *' # Checks every 10 mins (best balance for Actions)
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -27,24 +27,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO: ${{ github.repository }}
         run: |
-          # Generate a fingerprint of current activities before sync
+          # 1. Fingerprint current activity file before sync
           [ -f activities.csv ] && md5sum activities.csv > old_hash.txt || echo "none" > old_hash.txt
           
+          # 2. Run the actual script (generates latest.json)
           python sync.py
           
-          # Generate fingerprint after sync
+          # 3. Fingerprint after sync
           md5sum activities.csv > new_hash.txt
           
-          # Compare fingerprints. If different, set NEW_DATA to true
+          # 4. Detect changes
           if ! cmp -s old_hash.txt new_hash.txt; then
             echo "NEW_DATA=true" >> $GITHUB_ENV
-            echo "Changes detected in activity data."
+            echo "Activity change detected."
           else
-            echo "No new activity detected."
+            echo "No activity change detected."
           fi
 
       - name: Send Section 11 Report
-        # ONLY send if new data was found OR it was triggered manually
+        # Fire if new data is found OR if you manually click 'Run Workflow'
         if: env.NEW_DATA == 'true' || github.event_name == 'workflow_dispatch'
         uses: dawidd6/action-send-mail@v3
         with:
@@ -52,7 +53,8 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Section 11: Validation Report"
+          subject: "Section 11: Workout Validation"
           to: robbie.whittaker@gmail.com
           from: "Section 11 Audit Bot"
-          body: file://latest_report.txt
+          body: "New activity data processed for Athlete i156193. See attached Section 11 JSON for metrics."
+          attachments: latest.json
