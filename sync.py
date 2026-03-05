@@ -11,108 +11,89 @@ BASE_URL = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}"
 AUTH = ('athlete', API_KEY)
 ETAPE_DATE = datetime(2026, 7, 19)
 
-# ROBBIE'S REAL BASELINES (Hard-coded to prevent error)
+# ROBBIE'S REAL BASELINES
 HRV_MIN, RHR_MAX = 25, 56
 
 def get_data():
-    r_act = requests.get(f"{BASE_URL}/activities", auth=AUTH)
-    oldest = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
-    r_well = requests.get(f"{BASE_URL}/wellness?oldest={oldest}", auth=AUTH)
-    return r_act.json(), r_well.json()
+    try:
+        r_act = requests.get(f"{BASE_URL}/activities", auth=AUTH)
+        r_act.raise_for_status()
+        oldest = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
+        r_well = requests.get(f"{BASE_URL}/wellness?oldest={oldest}", auth=AUTH)
+        r_well.raise_for_status()
+        return r_act.json(), r_well.json()
+    except Exception as e:
+        print(f"API Error: {e}")
+        return [], []
 
 def generate_morning_report(wellness):
+    if not wellness: return "No wellness data found."
     latest = wellness[-1]
-    rmssd = latest.get('hrv', 0)
-    sdnn = latest.get('hrv_sdnn', 0)
-    rhr = latest.get('restingHR', 0)
+    rmssd = latest.get('hrv', 'N/A')
+    # Use .get() with multiple possible names for SDNN
+    sdnn = latest.get('hrv_sdnn') or latest.get('sdnn', 'N/A')
+    rhr = latest.get('restingHR', 'N/A')
     sleep = round(latest.get('sleepSecs', 0) / 3600, 1)
-    deep_m = latest.get('deepSleepSecs', 0) // 60
     
-    # ImReady4Training Logic
     status = "GO"
-    if rhr > RHR_MAX or rmssd < HRV_MIN: status = "CAUTION"
-    if rhr > 60 or rmssd < 20: status = "REST"
-        
+    if isinstance(rhr, (int, float)) and rhr > RHR_MAX: status = "CAUTION"
+    if isinstance(rmssd, (int, float)) and rmssd < HRV_MIN: status = "CAUTION"
+    
     days_to_etape = (ETAPE_DATE - datetime.now()).days
 
     return f"""
-# COACH TONY: MORNING READINESS (ImReady4Training)
+# COACH TONY: MORNING READINESS
 **Status: {status}** | **Days to L'Etape: {days_to_etape}**
 
 ## Autonomic Audit
-- **rMSSD (Recovery):** {rmssd} ms (Baseline: 28-35)
+- **rMSSD (Recovery):** {rmssd} ms
 - **SDNN (Total Stress):** {sdnn} ms
-- **Sleeping HR:** {rhr} bpm (Baseline: 48-52)
-- **Sleep:** {sleep}h (Deep: {deep_m}m)
+- **Sleeping HR:** {rhr} bpm
+- **Sleep:** {sleep}h
 
-**Tony's Strategy:** {"Nervous system is primed. Hit your power targets today." if status == "GO" else "Recovery is lagging. Stay in Zone 2 to protect the build."}
+**Tony's Strategy:** {"System is primed. Stay on plan." if status == "GO" else "Metrics are flagging. Zone 2 only."}
 """
 
 def generate_post_activity_report(activities):
+    if not activities: return "No activity data found."
     act = activities[-1]
     name = act.get('name', 'Unknown')
     type = act.get('type', 'Other')
     days_to_etape = (ETAPE_DATE - datetime.now()).days
 
     if type in ['Ride', 'VirtualRide']:
-        z4_mins = round(act.get('time_in_z4', 0) / 60, 1)
-        z5_mins = round(act.get('time_in_z5', 0) / 60, 1)
+        z4 = round(act.get('time_in_z4', 0) / 60, 1)
+        z5 = round(act.get('time_in_z5', 0) / 60, 1)
         elev = act.get('total_elevation_gain', 0)
-        cadence = act.get('average_cadence', 0)
-        hr = act.get('average_heartrate', 0)
-        np = act.get('icu_normalized_watts', 0)
-        vi = round(np / act.get('icu_average_watts', 1), 2)
+        hr = act.get('average_heartrate', 'N/A')
         
-        # Tony's Specific Insights
-        climb_note = "Great torque for L'Etape climbs." if cadence < 75 and z4_mins > 10 else "Good fluid cadence."
-        env = "INDOOR (ERG Focus)" if type == 'VirtualRide' else "OUTDOOR (Terrain Audit)"
-
         return f"""
 # COACH TONY: RIDE DEBRIEF
-**Session:** {name} | **Mode:** {env} | **Days to Etape: {days_to_etape}**
+**Session:** {name} | **Days to Etape: {days_to_etape}**
 
-## The Numbers
-- **Z4/Z5 Time:** {z4_mins + z5_mins}m (Essential Stimulus)
-- **Mechanicals:** {cadence} rpm | {hr} bpm avg
-- **Pacing (VI):** {vi} | **Climbing:** {elev}m ascent
+## Performance Audit
+- **Z4/Z5 Quality:** {z4 + z5}m
+- **Hills:** {elev}m ascent
+- **Avg HR:** {hr} bpm
 
-**Tony's Verdict:** {climb_note} {"Solid pacing. You didn't surge too hard." if vi < 1.06 else "Pacing was surgy. Practice steady power for the long climbs."}
-
-## Recovery Nutrition
-- **Target:** 80-100g Carbs + 30g Protein immediately.
+**Tony's Verdict:** {"Good durability." if z4 > 15 else "Focus on time-in-zone."}
 """
     else:
-        # Walks, Gym, Pilates
-        return f"""
-# COACH TONY: {type.upper()} REPORT
-**Activity:** {name} | **Load:** {act.get('icu_training_load', 0)} TSS
-**Tony's Note:** Structural integrity work. This protects your power on the bike.
-"""
-
-def generate_weekly_report(activities, wellness):
-    last_7 = activities[-7:]
-    total_tss = sum(a.get('icu_training_load', 0) for a in last_7)
-    days_to_etape = (ETAPE_DATE - datetime.now()).days
-    return f"""
-# COACH TONY: WEEKLY STRATEGY
-**Total Weekly Load:** {total_tss} TSS
-**Fitness (CTL):** {wellness[-1].get('ctl')} | **Form (TSB):** {wellness[-1].get('tsb')}%
-
-**Tony's Note:** {days_to_etape} days to the Etape. Keep the ramp rate sustainable. 8 hours is the goal.
-"""
+        return f" # COACH TONY: {type.upper()} REPORT\nActivity: {name}\nNote: Good consistent movement."
 
 if __name__ == "__main__":
     activities, wellness = get_data()
     now = datetime.now()
+    
+    # Logic to decide which report to write to file
     if now.hour == 8:
         report = generate_morning_report(wellness)
-    elif now.weekday() == 0 and now.hour == 9:
-        report = generate_weekly_report(activities, wellness)
     else:
         report = generate_post_activity_report(activities)
 
     with open("latest_report.txt", "w") as f:
         f.write(report)
     
-    pd.DataFrame(activities).to_csv("activities.csv", index=False)
-    pd.DataFrame(wellness).to_csv("wellness.csv", index=False)
+    # Push data to repo
+    if activities: pd.DataFrame(activities).to_csv("activities.csv", index=False)
+    if wellness: pd.DataFrame(wellness).to_csv("wellness.csv", index=False)
