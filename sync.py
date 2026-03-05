@@ -1,36 +1,67 @@
 import os
 import requests
-import json
 import pandas as pd
+import json
 from datetime import datetime, timedelta
 
-# Load credentials from GitHub Secrets
-ATHLETE_ID = os.environ.get('ATHLETE_ID')
-INTERVALS_KEY = os.environ.get('INTERVALS_KEY')
+# Configuration from GitHub Secrets
+ATHLETE_ID = os.environ.get('INTERVALS_ID')
+API_KEY = "API_KEY"
+INTERVALS_KEY = os.environ.get('INTERVALS_API_KEY')
 
-def fetch_intervals_data():
-    # Fetch Wellness
-    wellness_url = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}/wellness.csv"
-    r_well = requests.get(wellness_url, auth=('API_KEY', INTERVALS_KEY))
-    
-    # Fetch Activities
-    activities_url = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}/activities.csv"
-    r_act = requests.get(activities_url, auth=('API_KEY', INTERVALS_KEY))
-    
-    if r_well.status_code == 200 and r_act.status_code == 200:
-        # Save CSVs for history
-        with open('wellness.csv', 'w') as f: f.write(r_well.text)
-        with open('activities.csv', 'w') as f: f.write(r_act.text)
-        
-        # Create latest.json (Last 7 days of data)
-        df_well = pd.read_csv('wellness.csv').tail(7)
-        latest_data = df_well.to_dict(orient='records')
-        
-        with open('latest.json', 'w') as f:
-            json.dump(latest_data, f, indent=4)
-        print("Sync Complete: latest.json created.")
+# Authentication Header
+AUTH = (API_KEY, INTERVALS_KEY)
+BASE_URL = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}"
+
+def fetch_wellness():
+    print("Fetching Wellness Data...")
+    url = f"{BASE_URL}/wellness.csv"
+    r = requests.get(url, auth=AUTH)
+    if r.status_code == 200:
+        with open('wellness.csv', 'wb') as f:
+            f.write(r.content)
     else:
-        print(f"Error: {r_well.status_code} / {r_act.status_code}")
+        print(f"Wellness Error: {r.status_code}")
+
+def fetch_activities():
+    print("Fetching Activities...")
+    url = f"{BASE_URL}/activities.csv"
+    r = requests.get(url, auth=AUTH)
+    if r.status_code == 200:
+        with open('activities.csv', 'wb') as f:
+            f.write(r.content)
+    else:
+        print(f"Activities Error: {r.status_code}")
+
+def fetch_events():
+    print("Fetching Calendar Events (Planned & A-Events)...")
+    start = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+    end = (datetime.now() + timedelta(days=90)).strftime('%Y-%m-%d')
+    url = f"{BASE_URL}/events?oldest={start}&newest={end}"
+    r = requests.get(url, auth=AUTH)
+    if r.status_code == 200:
+        # Save as JSON to preserve structured workout details
+        with open('events.json', 'w') as f:
+            json.dump(r.json(), f)
+    else:
+        print(f"Events Error: {r.status_code}")
+
+def upload_planned_workout():
+    # Looks for a file created by Gemini to push back to Intervals
+    if os.path.exists('planned_workout.json'):
+        print("Found a new planned workout. Uploading...")
+        with open('planned_workout.json', 'r') as f:
+            payload = json.load(f)
+        url = f"{BASE_URL}/events"
+        r = requests.post(url, auth=AUTH, json=payload)
+        if r.status_code == 200:
+            print("Successfully pushed to Intervals.icu.")
+            os.remove('planned_workout.json')
+        else:
+            print(f"Upload failed: {r.status_code} - {r.text}")
 
 if __name__ == "__main__":
-    fetch_intervals_data()
+    fetch_wellness()
+    fetch_activities()
+    fetch_events()
+    upload_planned_workout()
