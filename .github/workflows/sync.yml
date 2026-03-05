@@ -1,29 +1,41 @@
-name: Section 11 Sync
+name: Section 11 Auto-Sync & Email
 on:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+    - cron: '*/5 * * * *' # Runs every 5 mins to catch your ride upload
+  workflow_dispatch: # Allows you to trigger it manually for testing
+
 jobs:
-  sync:
+  sync-and-audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - name: Install dependencies
+
+      - name: Install Dependencies
         run: pip install pandas requests
-      - name: Run Sync
+
+      - name: Run Master Sync
         env:
-          ATHLETE_ID: ${{ secrets.ATHLETE_ID }}
-          INTERVALS_KEY: ${{ secrets.INTERVALS_KEY }}
+          INTERVALS_ID: ${{ secrets.INTERVALS_ID }}
+          INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
         run: python sync.py
-      - name: Commit changes
-        run: |
-          git config --global user.name "robot"
-          git config --global user.email "robot@section11.nz"
-          git add .
-          git commit -m "Update data" || exit 0
-          git push
+
+      - name: Send Section 11 Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Section 11: Report Update"
+          to: robbie.whittaker@gmail.com
+          from: "Section 11 Audit Bot"
+          body: "New training data has been processed. View the full report in your repo or Gemini chat."
+          attachments: latest.json
