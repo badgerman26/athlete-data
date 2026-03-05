@@ -1,12 +1,15 @@
-name: Section 11 Auto-Sync & Email
+name: Section 11 Master Sync
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/10 * * * *' # Post-ride check
+    - cron: '0 8 * * *'    # 8 AM Morning Wellness
   workflow_dispatch:
 
 jobs:
   sync-and-audit:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -19,39 +22,30 @@ jobs:
       - name: Install Dependencies
         run: pip install pandas requests
 
-      - name: Run Master Sync and Check for Changes
-        id: sync
+      - name: Run Master Sync
         env:
           INTERVALS_ID: ${{ secrets.INTERVALS_ID }}
           INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPO: ${{ github.repository }}
-        run: |
-          # Fingerprint activities before sync
-          [ -f activities.csv ] && md5sum activities.csv > old_hash.txt || echo "none" > old_hash.txt
-          
-          # Run the master script
-          python sync.py
-          
-          # Fingerprint after sync
-          md5sum activities.csv > new_hash.txt
-          
-          # Logic: If hashes differ, set NEW_DATA to true
-          if ! cmp -s old_hash.txt new_hash.txt; then
-            echo "NEW_DATA=true" >> $GITHUB_ENV
-          fi
+        run: python sync.py
 
-      - name: Send Section 11 Report
-        # Firing logic: Only if data changed OR if you hit "Run Workflow" manually
-        if: env.NEW_DATA == 'true' || github.event_name == 'workflow_dispatch'
+      - name: Commit and Push Data
+        run: |
+          git config --global user.name "Section 11 Bot"
+          git config --global user.email "bot@section11.com"
+          git add latest.json activities.csv latest_report.txt
+          git commit -m "Update training data [skip ci]" || echo "No changes"
+          git push
+
+      - name: Send Email to Robbie
+        if: success()
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Section 11: Workout Validation Audit"
+          subject: "Section 11: Coach Report Audit"
           to: robbie.whittaker@gmail.com
           from: "Section 11 Bot"
-          body: "Section 11 Audit complete. Data for Athlete i156193 is attached as latest.json."
-          attachments: "latest.json"
+          body: file://latest_report.txt
