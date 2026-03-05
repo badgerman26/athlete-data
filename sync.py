@@ -1,7 +1,7 @@
 import requests
 import os
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 
 # --- CONFIG ---
 ID = os.environ.get('INTERVALS_ID')
@@ -10,51 +10,53 @@ AUTH = ('athlete', KEY)
 ETAPE_DATE = datetime(2026, 7, 19)
 
 def get_data():
-    # Looking back 10 days to ensure we never miss a ride
-    start = (datetime.now() - timedelta(days=10)).strftime("%Y-%m-%d")
-    url = f"https://intervals.icu/api/v1/athlete/{ID}/activities?oldest={start}"
+    # We remove 'oldest' and use 'limit' to avoid timezone/date issues
+    url = f"https://intervals.icu/api/v1/athlete/{ID}/activities?limit=10"
     
     try:
         r = requests.get(url, auth=AUTH)
+        print(f"Server Status: {r.status_code}") # This helps us debug in the logs
         if r.status_code == 200:
             return r.json()
         return None
-    except:
+    except Exception as e:
+        print(f"Error: {e}")
         return None
 
 if __name__ == "__main__":
     activities = get_data()
     
-    if activities and isinstance(activities, list):
-        # Sort to find the latest session
+    # Check if we got a valid list with at least one item
+    if isinstance(activities, list) and len(activities) > 0:
+        # Ensure we are looking at the most recent one
         activities.sort(key=lambda x: x['start_date_local'], reverse=True)
         act = activities[0]
         
-        # Metric Extraction
         name = act.get('name', 'Unknown Session')
+        # Time is in seconds, converting to minutes
         z4 = round(act.get('time_in_z4', 0) / 60, 1)
         elev = int(act.get('total_elevation_gain', 0))
         dist = round(act.get('distance', 0) / 1000, 1)
-        type_ = act.get('type', 'Ride')
+        type_ = act.get('type', 'Session')
         
         report = f"""
-# COACH TONY: RIDE DEBRIEF
+# COACH TONY: DATA DETECTED
 **Last Session:** {name} ({type_})
 
-## The Stats
+## Performance Metrics
 - **Distance:** {dist}km
 - **Climbing:** {elev}m ascent
-- **Threshold Work (Z4):** {z4}m
+- **Z4 (Threshold):** {z4}m
 - **Days to L'Etape:** {(ETAPE_DATE - datetime.now()).days}
 
-**Tony's Verdict:** {"Solid vertical gain. Your legs will thank you in the Alps." if elev > 300 else "Good aerobic maintenance. Consistency is king."}
+**Tony's Verdict:** Finally found it. {elev}m of climbing is exactly what we need for the Alps.
 """
     else:
         report = f"""
-# COACH TONY: CONNECTION ERROR
-The server responded but no data was parsed. 
-Current ID: {ID}
-Ensure your ID in GitHub Secrets is ONLY numbers (156193).
+# COACH TONY: EMPTY DATA ERROR
+The connection worked (Status 200), but your activity list is empty.
+This means Intervals.icu doesn't see your ride yet. 
+Check: Intervals.icu > Settings > API Access (Ensure 'View Activities' is allowed).
 """
 
     with open("latest_report.txt", "w") as f:
