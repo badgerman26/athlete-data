@@ -16,14 +16,12 @@ HRV_MIN, RHR_MAX = 25, 56
 
 def get_data():
     try:
-        # FORCE a 7-day lookback so the list is never empty
-        seven_days_ago = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
-        r_act = requests.get(f"{BASE_URL}/activities?oldest={seven_days_ago}", auth=AUTH)
+        # AGGRESSIVE FETCH: Grab the last 10 activities regardless of date
+        r_act = requests.get(f"{BASE_URL}/activities?limit=10", auth=AUTH)
         r_act.raise_for_status()
         
-        # 14-day lookback for wellness trends
-        fourteen_days_ago = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
-        r_well = requests.get(f"{BASE_URL}/wellness?oldest={fourteen_days_ago}", auth=AUTH)
+        # Grab the last 14 wellness entries
+        r_well = requests.get(f"{BASE_URL}/wellness?limit=14", auth=AUTH)
         r_well.raise_for_status()
         
         return r_act.json(), r_well.json()
@@ -32,7 +30,7 @@ def get_data():
         return [], []
 
 def generate_morning_report(wellness):
-    if not wellness: return "Coach Tony: Waiting for morning wellness sync..."
+    if not wellness: return "Coach Tony: Waiting for wellness sync..."
     latest = wellness[-1]
     rmssd = latest.get('hrv', 0)
     sdnn = latest.get('hrv_sdnn') or latest.get('sdnn', 0)
@@ -49,9 +47,12 @@ def generate_morning_report(wellness):
 """
 
 def generate_post_activity_report(activities):
-    if not activities: return "Coach Tony: No activities recorded in the last 7 days."
-    # Grab the absolute latest activity from the list
-    act = activities[-1]
+    if not activities: return "Coach Tony: No activities found in Intervals.icu history."
+    
+    # Sort by start_date_local to ensure we have the absolute latest
+    df_temp = pd.DataFrame(activities)
+    df_temp['start_date_local'] = pd.to_datetime(df_temp['start_date_local'])
+    act = df_temp.sort_values('start_date_local').iloc[-1].to_dict()
     
     z4 = round(act.get('time_in_z4', 0) / 60, 1)
     hr = act.get('average_heartrate', 0)
@@ -63,7 +64,7 @@ def generate_post_activity_report(activities):
 **Session:** {act.get('name')} | **Distance:** {dist}km
 
 - **Intensity (Z4):** {z4}m
-- **Climbing:** {elev}m ascent
+- **Climbing:** {int(elev)}m ascent
 - **Avg HR:** {hr} bpm
 **Tony's Verdict:** {"Solid climbing work for the Ridgeway." if elev > 150 else "Good aerobic maintenance miles."}
 """
@@ -76,12 +77,12 @@ if __name__ == "__main__":
     if now.hour == 8:
         report = generate_morning_report(wellness)
     else:
-        # This will now pull the last activity from the 7-day lookback
+        # This will now pull the absolute latest activity from your last 10
         report = generate_post_activity_report(activities)
 
     with open("latest_report.txt", "w") as f:
         f.write(report)
     
-    # Save files to repo for historical 'Deep Research'
+    # Save files to repo
     if activities: pd.DataFrame(activities).to_csv("activities.csv", index=False)
     if wellness: pd.DataFrame(wellness).to_csv("wellness.csv", index=False)
