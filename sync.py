@@ -5,31 +5,38 @@ import os
 KEY = os.environ.get('INTERVALS_API_KEY')
 AUTH = ('athlete', KEY)
 
-def the_final_test():
-    # This endpoint tells us who the key belongs to without needing an ID
-    url = "https://intervals.icu/api/v1/athlete"
+def find_me():
+    # This is the standard 'Me' endpoint for many APIs including Intervals
+    url = "https://intervals.icu/api/v1/me"
     
     try:
-        print("Connecting to Intervals.icu to find your true ID...")
+        print("Knocking on the door...")
         r = requests.get(url, auth=AUTH)
         
         if r.status_code == 200:
             me = r.json()
             athlete_id = me.get('id')
             name = me.get('name')
-            return f"SUCCESS! The Key works. You are {name}. Your ACTUAL ID is: {athlete_id}"
+            return f"SUCCESS! You are {name}. Your ACTUAL ID is: {athlete_id}"
         
-        elif r.status_code == 401:
-            return "ERROR 401: The API Key itself is wrong. Re-copy it from Intervals.icu Settings."
+        elif r.status_code == 404:
+            # Fallback if /me isn't supported, try the profile endpoint
+            print("Fallback to profile endpoint...")
+            r2 = requests.get("https://intervals.icu/api/v1/athlete/profile", auth=AUTH)
+            if r2.status_code == 200:
+                me = r2.json()
+                return f"SUCCESS! You are {me.get('name')}. Your ACTUAL ID is: {me.get('id')}"
+            else:
+                return f"FAILED: Even the fallback failed with status {r2.status_code}."
         
         else:
-            return f"FAILED: Status {r.status_code}. The server rejected the request."
+            return f"FAILED: Status {r.status_code}. If it's 401, re-copy the API Key."
             
     except Exception as e:
         return f"CRASH: {str(e)}"
 
 if __name__ == "__main__":
-    result = the_final_test()
+    result = find_me()
     print(result)
     with open("latest_report.txt", "w") as f:
         f.write(result)
