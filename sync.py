@@ -2,34 +2,38 @@ import requests
 import os
 
 # --- CONFIG ---
+# This pulls the secrets you saved in GitHub
 ATHLETE_ID = os.environ.get('INTERVALS_ID')
 API_KEY = os.environ.get('INTERVALS_API_KEY')
 AUTH = ('athlete', API_KEY)
 
-def debug_sync():
-    # 1. Test the most basic 'Athlete' endpoint
-    print(f"Testing connection for Athlete ID: {ATHLETE_ID}")
-    res = requests.get(f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}", auth=AUTH)
+def nuclear_debug():
+    print("--- STARTING NUCLEAR DEBUG ---")
     
-    if res.status_code != 200:
-        return f"CRITICAL ERROR: API returned status {res.status_code}. Your API Key or Athlete ID is wrong."
-
-    # 2. Test the Activity endpoint with NO filters
-    act_res = requests.get(f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}/activities", auth=AUTH)
-    activities = act_res.json()
+    # 1. Test the 'WHOAMI' endpoint (This doesn't need an ID)
+    # This confirms if the API Key is actually valid for ANYONE.
+    print("Checking API Key validity...")
+    res = requests.get("https://intervals.icu/api/v1/athlete", auth=AUTH)
     
-    if not isinstance(activities, list):
-        return f"ERROR: Expected a list of activities, but got: {type(activities)}"
-    
-    if len(activities) == 0:
-        return "SUCCESSFUL CONNECTION, BUT ZERO ACTIVITIES. Check Intervals.icu -> Settings -> API Key Permissions (ensure 'View Activities' is checked)."
-
-    # 3. If we actually find data, show me the most recent one
-    latest = activities[-1]
-    return f"DATA FOUND! Latest Activity: {latest.get('name')} on {latest.get('start_date_local')}. Total found: {len(activities)}"
+    if res.status_code == 200:
+        me = res.json()
+        print(f"SUCCESS: API Key is valid for Athlete: {me.get('name')} (ID: {me.get('id')})")
+        
+        # Now compare what the API says vs what you put in GitHub
+        if str(me.get('id')) != str(ATHLETE_ID):
+            return f"MATCH ERROR: Your Secret ID is {ATHLETE_ID}, but your API Key belongs to ID {me.get('id')}. Update GitHub Secret to {me.get('id')}."
+        else:
+            return f"ID MATCHES! Key is good for {me.get('name')}. If you still get 403 on activities, it's a server-side permission issue."
+            
+    elif res.status_code == 401:
+        return "ERROR 401: The API Key itself is wrong. Re-copy it from Intervals.icu Settings."
+    elif res.status_code == 403:
+        return f"ERROR 403: The API Key is recognized, but it is explicitly forbidden from seeing Athlete {ATHLETE_ID}."
+    else:
+        return f"UNKNOWN ERROR: Status {res.status_code}"
 
 if __name__ == "__main__":
-    result = debug_sync()
+    result = nuclear_debug()
     print(result)
     with open("latest_report.txt", "w") as f:
         f.write(result)
