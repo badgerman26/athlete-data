@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-03-11T06:14:06.737238",
+    "last_updated": "2026-03-11T06:34:10.377152",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.77"
@@ -26,20 +26,20 @@
     "priority": 3,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 32.1,
-        "delta_pct": null
+        "status": "amber",
+        "value": 27.4,
+        "baseline_7d": 31.5,
+        "delta_pct": -12.9
       },
       "rhr": {
         "status": "unavailable",
         "value": null,
-        "baseline_7d": 60.4,
+        "baseline_7d": 60.2,
         "delta_bpm": null
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
+        "status": "green",
+        "hours": 7.38,
         "quality": null
       },
       "acwr": {
@@ -60,10 +60,10 @@
       }
     },
     "signal_summary": {
-      "green": 3,
-      "amber": 0,
+      "green": 4,
+      "amber": 1,
       "red": 0,
-      "unavailable": 4
+      "unavailable": 2
     },
     "phase_context": {
       "phase": "Build",
@@ -73,7 +73,7 @@
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 3 green, 0 amber (threshold 3), 0 red. Note: 4 signals unavailable \u2014 limited data.",
+    "reason": "P3 green light. 4 green, 1 amber (threshold 3), 0 red.",
     "alarm_refs": []
   },
   "history": {
@@ -176,20 +176,20 @@
     },
     "current_metrics": {
       "weight_kg": 71.5,
-      "resting_hr": 54,
-      "hrv": null,
+      "resting_hr": 59,
+      "hrv": 27.422241,
       "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null
+      "sleep_hours": 7.38,
+      "sleep_formatted": "7h22m"
     }
   },
   "derived_metrics": {
     "recovery_index": null,
-    "hrv_baseline_7d": 32.1,
-    "rhr_baseline_7d": 60.4,
-    "hrv_baseline_28d": 33.5,
-    "rhr_baseline_28d": 57.5,
-    "latest_hrv": null,
+    "hrv_baseline_7d": 31.5,
+    "rhr_baseline_7d": 60.2,
+    "hrv_baseline_28d": 33.3,
+    "rhr_baseline_28d": 57.6,
+    "latest_hrv": 27.422241,
     "latest_rhr": null,
     "acwr": 1.02,
     "acwr_interpretation": "optimal",
@@ -369,10 +369,10 @@
     "p_max": 997,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-03-11T06:14:06.736421",
+    "calculation_timestamp": "2026-03-11T06:34:10.376333",
     "data_quality": {
-      "hrv_data_points": 6,
-      "rhr_data_points": 5,
+      "hrv_data_points": 7,
+      "rhr_data_points": 6,
       "activities_7d": 15,
       "activities_28d": 71,
       "planned_workouts_7d": 4,
@@ -1155,33 +1155,33 @@
     {
       "date": "2026-03-10",
       "weight_kg": null,
-      "resting_hr": null,
+      "resting_hr": 59,
       "hrv_rmssd": 29.739157,
       "hrv_sdnn": null,
-      "sleep_hours": 7.53,
+      "sleep_hours": 7.54,
       "sleep_formatted": "7h32m",
       "sleep_quality": null,
       "sleep_score": 72.0,
       "mental_energy": null,
       "fatigue": null,
       "soreness": null,
-      "avg_sleeping_hr": 55.266293,
-      "vo2max": null
+      "avg_sleeping_hr": 52.0,
+      "vo2max": 35.42
     },
     {
       "date": "2026-03-11",
       "weight_kg": null,
       "resting_hr": null,
-      "hrv_rmssd": null,
+      "hrv_rmssd": 27.422241,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
+      "sleep_hours": 7.38,
+      "sleep_formatted": "7h22m",
       "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_score": 77.0,
       "mental_energy": null,
       "fatigue": null,
       "soreness": null,
-      "avg_sleeping_hr": null,
+      "avg_sleeping_hr": 52.0,
       "vo2max": null
     }
   ],
@@ -1597,8 +1597,8 @@
     "total_training_formatted": "13h22m",
     "total_tss": 490,
     "activities_count": 15,
-    "avg_hrv": 32.1,
-    "avg_resting_hr": 60.4
+    "avg_hrv": 31.5,
+    "avg_resting_hr": 60.2
   },
   "race_calendar": {
     "next_race": {
