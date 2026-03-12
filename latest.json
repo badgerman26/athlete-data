@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-03-12T16:20:47.759952",
+    "last_updated": "2026-03-12T16:47:31.597506",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.77"
@@ -56,7 +56,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": 3.2
+        "value": 5.3
       }
     },
     "signal_summary": {
@@ -135,10 +135,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 64.55,
-      "atl": 61.32,
-      "tsb": 3.23,
-      "ramp_rate": -0.57,
+      "ctl": 64.1,
+      "atl": 58.79,
+      "tsb": 5.31,
+      "ramp_rate": -1.02,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -299,16 +299,15 @@
         "note": "Compares 7d vs 28d Seiler TID to detect distribution shifts. pi_delta positive = more polarized acutely."
       }
     },
-    "consistency_index": 0.5,
+    "consistency_index": 0.67,
     "consistency_details": {
-      "planned_days": 4,
+      "planned_days": 3,
       "completed_days": 5,
       "matched_days": 2,
       "planned_dates": [
         "2026-03-07",
         "2026-03-08",
-        "2026-03-11",
-        "2026-03-12"
+        "2026-03-11"
       ],
       "completed_dates": [
         "2026-03-06",
@@ -330,11 +329,11 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.22,
+          "planned_tss_delta": 1.15,
           "hard_sessions_planned": 2,
           "race_proximity": 62,
           "next_week_load": 0.61,
-          "plan_coverage_current_week": 1.2,
+          "plan_coverage_current_week": 1.0,
           "plan_coverage_next_week": 1.2
         },
         "data_quality": "good",
@@ -368,13 +367,13 @@
     "p_max": 996,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-03-12T16:20:47.759109",
+    "calculation_timestamp": "2026-03-12T16:47:31.596688",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 6,
       "activities_7d": 17,
       "activities_28d": 74,
-      "planned_workouts_7d": 4,
+      "planned_workouts_7d": 3,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -1274,17 +1273,6 @@
   ],
   "planned_workouts": [
     {
-      "id": 86153531,
-      "date": "2026-03-12",
-      "name": "Gym: Mobility & Activation by LeCoach App",
-      "type": "WORKOUT",
-      "planned_tss": 19,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": null,
-      "description": "-45m 50% FTP"
-    },
-    {
       "id": 86153472,
       "date": "2026-03-13",
       "name": "Endurance with Microbursts",
@@ -1673,12 +1661,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 37,
+    "attempted": 36,
     "success": 11,
     "patternA": 11,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 26
+    "bail_no_match": 25
   },
   "weekly_summary": {
     "total_training_hours": 13.56,
