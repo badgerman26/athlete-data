@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-03-13T14:14:55.372057",
+    "last_updated": "2026-03-13T14:32:55.454737",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
@@ -304,9 +304,9 @@
     },
     "phase_detection": {
       "phase": "Build",
-      "confidence": "medium",
+      "confidence": "low",
       "reason_codes": [
-        "BUILD_RESUMING_AFTER_DELOAD"
+        "BUILD_RESUMING_AFTER_DELOAD_TENTATIVE"
       ],
       "basis": {
         "stream_1": {
@@ -317,10 +317,10 @@
         },
         "stream_2": {
           "planned_tss_delta": 2.0,
-          "hard_sessions_planned": 2,
+          "hard_sessions_planned": 1,
           "race_proximity": 61,
           "next_week_load": 0.74,
-          "plan_coverage_current_week": 0.8,
+          "plan_coverage_current_week": 0.6,
           "plan_coverage_next_week": 1.2
         },
         "data_quality": "good",
@@ -333,7 +333,7 @@
     },
     "phase_detected": "Build",
     "phase_triggers": [
-      "BUILD_RESUMING_AFTER_DELOAD"
+      "BUILD_RESUMING_AFTER_DELOAD_TENTATIVE"
     ],
     "seasonal_context": "Late Base / Build",
     "benchmark_indoor": {
@@ -356,7 +356,7 @@
     "p_max": 996,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-03-13T14:14:55.371240",
+    "calculation_timestamp": "2026-03-13T14:32:55.453906",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 6,
@@ -1251,17 +1251,6 @@
       "description": "-5m ramp 50-65% FTP\n-190m 65% FTP\n-10m 60% FTP"
     },
     {
-      "id": 95797085,
-      "date": "2026-03-15",
-      "name": "IntervalCoach - Fat Max Ride",
-      "type": "WORKOUT",
-      "planned_tss": null,
-      "duration_hours": 1.37,
-      "duration_formatted": "1h22m",
-      "workout_summary": null,
-      "description": "Warmup\n- Hi Robin, let's build into it 13m 70% pace\n\nMain Set Fat Max Ride\n- 60m 65% pace\n\nCooldown\n- Great job Robin, bring it down 9m 65% pace\n\n[Weekly Plan - Base]"
-    },
-    {
       "id": 86153542,
       "date": "2026-03-17",
       "name": "Recovery Ride",
@@ -1606,12 +1595,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 36,
+    "attempted": 35,
     "success": 11,
     "patternA": 11,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 25
+    "bail_no_match": 24
   },
   "weekly_summary": {
     "total_training_hours": 12.93,
