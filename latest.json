@@ -15,7 +15,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-03-14T07:03:24.467445",
+    "last_updated": "2026-03-14T07:25:54.400485",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.81"
@@ -316,11 +316,11 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 2.31,
+          "planned_tss_delta": 2.21,
           "hard_sessions_planned": 0,
           "race_proximity": 60,
           "next_week_load": 0.74,
-          "plan_coverage_current_week": 0.4,
+          "plan_coverage_current_week": 0.6,
           "plan_coverage_next_week": 1.2
         },
         "data_quality": "good",
@@ -356,13 +356,13 @@
     "p_max": 996,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-03-14T07:03:24.466576",
+    "calculation_timestamp": "2026-03-14T07:25:54.399677",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 6,
       "activities_7d": 17,
       "activities_28d": 72,
-      "planned_workouts_7d": 4,
+      "planned_workouts_7d": 5,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -1275,11 +1275,22 @@
       "date": "2026-03-14",
       "name": "Long Endurance with SST Efforts",
       "type": "WORKOUT",
-      "planned_tss": 135,
-      "duration_hours": 2.75,
-      "duration_formatted": "2h45m",
+      "planned_tss": 93,
+      "duration_hours": 1.75,
+      "duration_formatted": "1h45m",
       "workout_summary": null,
-      "description": "-5m ramp 50-65% FTP\n\n2x\n-40m 65% FTP\n-15m 88% FTP\n-10m 60% FTP\n\n-20m 65% FTP\n\n-10m 60% FTP"
+      "description": "Warmup\n- 5m ramp 50-65%\n- 20m 65%\n\nWork 1\n- 15m 88%\n\nRecovery\n- 10m 60%\n\nEndurance\n- 20m 65%\n\nWork 2\n- 15m 88%\n\nCooldown\n- 20m 60%"
+    },
+    {
+      "id": 98358863,
+      "date": "2026-03-14",
+      "name": "Gravel endurance",
+      "type": "WORKOUT",
+      "planned_tss": 30,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
+      "description": "Gravel Endurance\n- 60m 55-75% hr"
     },
     {
       "id": 86153505,
@@ -1647,12 +1658,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 35,
+    "attempted": 36,
     "success": 11,
     "patternA": 11,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 24
+    "bail_no_match": 25
   },
   "weekly_summary": {
     "total_training_hours": 12.96,
