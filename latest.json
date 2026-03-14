@@ -16,7 +16,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-03-14T19:38:53.116729",
+    "last_updated": "2026-03-14T19:50:33.479926",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.83"
@@ -53,7 +53,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": -6.6
+        "value": -3.4
       }
     },
     "signal_summary": {
@@ -120,10 +120,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 66.6,
-      "atl": 73.23,
-      "tsb": -6.63,
-      "ramp_rate": 1.25,
+      "ctl": 65.89,
+      "atl": 69.24,
+      "tsb": -3.35,
+      "ramp_rate": 0.54,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -323,11 +323,11 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.86,
+          "planned_tss_delta": 1.33,
           "hard_sessions_planned": 0,
           "race_proximity": 60,
           "next_week_load": 0.64,
-          "plan_coverage_current_week": 0.6,
+          "plan_coverage_current_week": 0.4,
           "plan_coverage_next_week": 1.2
         },
         "data_quality": "good",
@@ -363,13 +363,13 @@
     "p_max": 996,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-03-14T19:38:53.115700",
+    "calculation_timestamp": "2026-03-14T19:50:33.478866",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 6,
       "activities_7d": 18,
       "activities_28d": 73,
-      "planned_workouts_7d": 5,
+      "planned_workouts_7d": 4,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -1360,26 +1360,15 @@
       "description": "Warmup\n- 5m ramp 50-65%\n- 20m 65%\n\nWork 1\n- 15m 88%\n\nRecovery\n- 10m 60%\n\nEndurance\n- 20m 65%\n\nWork 2\n- 15m 88%\n\nCooldown\n- 5m 60%"
     },
     {
-      "id": 98358863,
-      "date": "2026-03-14",
-      "name": "Gravel endurance",
-      "type": "WORKOUT",
-      "planned_tss": 30,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
-      "workout_summary": null,
-      "description": "Gravel Endurance\n- 60m 55-75% hr"
-    },
-    {
       "id": 86153505,
       "date": "2026-03-15",
-      "name": "Long Endurance Ride",
+      "name": "2h Endurance 71% FTP by LeCoach App",
       "type": "WORKOUT",
-      "planned_tss": 142,
-      "duration_hours": 3.42,
-      "duration_formatted": "3h25m",
+      "planned_tss": 99,
+      "duration_hours": 2.0,
+      "duration_formatted": "2h",
       "workout_summary": null,
-      "description": "-5m ramp 50-65% FTP\n-190m 65% FTP\n-10m 60% FTP"
+      "description": "-5m ramp 50-65% FTP\n\n-110m 71% FTP\n\n-5m 60% FTP"
     },
     {
       "id": 86153542,
@@ -1736,12 +1725,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 36,
+    "attempted": 35,
     "success": 11,
     "patternA": 11,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 25
+    "bail_no_match": 24
   },
   "weekly_summary": {
     "total_training_hours": 14.74,
