@@ -6,6 +6,7 @@
     "extended_data_note": "ACWR and baselines calculated from 28 days of data",
     "capability_metrics_note": "The 'capability' block in derived_metrics contains durability trend (aggregate decoupling 7d/28d), efficiency factor trend (aggregate EF 7d/28d), HRRc trend (heart rate recovery 7d/28d), and TID comparison (7d vs 28d distribution drift). These measure HOW the athlete expresses fitness, not just load. Use these for coaching context alongside traditional load metrics. Durability and EF trend direction matters more than absolute values. HRRc is display only \u2014 higher = better parasympathetic recovery.",
     "readiness_decision_note": "The 'readiness_decision' block contains a pre-computed go/modify/skip recommendation with priority level (P0=safety, P1=overload, P2=fatigue, P3=green), individual signal statuses, phase-adjusted thresholds, and structured modification guidance. Use this as the baseline for pre-workout recommendations. Override with explanation in the coach note if the AI's contextual judgment disagrees.",
+    "zone_preference": "default (power preferred, HR fallback)",
     "quick_stats": {
       "total_training_hours": 14.74,
       "total_training_formatted": "14h44m",
@@ -15,10 +16,10 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-03-14T15:51:40.604926",
+    "last_updated": "2026-03-14T16:01:02.352035",
     "data_range_days": 7,
     "extended_range_days": 28,
-    "version": "3.81"
+    "version": "3.83"
   },
   "alerts": [],
   "readiness_decision": {
@@ -62,22 +63,20 @@
       "unavailable": 2
     },
     "phase_context": {
-      "phase": "Build",
+      "phase": null,
       "phase_week": 0,
-      "amber_threshold": 3,
-      "modifier_applied": "build_loosened"
+      "amber_threshold": 2,
+      "modifier_applied": "default"
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 3 green, 1 amber (threshold 3), 0 red.",
+    "reason": "P3 green light. 3 green, 1 amber (threshold 2), 0 red.",
     "alarm_refs": []
   },
   "history": {
-    "available": true,
-    "last_generated": "2026-03-13",
-    "age_days": 1,
-    "total_months": 35,
-    "history_confidence": "high"
+    "available": false,
+    "history_confidence": "low",
+    "note": "No history.json available. Longitudinal analysis limited to current 28-day window."
   },
   "summary": {
     "period_description": "Last 7 days of training (including today)",
@@ -194,7 +193,8 @@
       "z2_hours": 3.27,
       "z3_hours": 1.09,
       "z4_plus_hours": 1.1,
-      "total_hours": 13.97
+      "total_hours": 13.97,
+      "zone_basis": "mixed"
     },
     "grey_zone_percentage": 7.8,
     "grey_zone_note": "Gray Zone % (Z3/tempo) - minimize in polarized training",
@@ -212,7 +212,8 @@
       "z2_pct": 7.8,
       "z3_pct": 7.8,
       "polarization_index": 1.93,
-      "classification": "Pyramidal"
+      "classification": "Pyramidal",
+      "zone_basis": "mixed"
     },
     "seiler_tid_7d_primary": {
       "z1_seconds": 24982,
@@ -223,6 +224,7 @@
       "z3_pct": 12.0,
       "polarization_index": 1.88,
       "classification": "Pyramidal",
+      "zone_basis": "mixed",
       "sport": "cycling"
     },
     "seiler_tid_28d": {
@@ -233,7 +235,8 @@
       "z2_pct": 8.8,
       "z3_pct": 5.3,
       "polarization_index": null,
-      "classification": "Pyramidal"
+      "classification": "Pyramidal",
+      "zone_basis": "mixed"
     },
     "seiler_tid_28d_primary": {
       "z1_seconds": 82770,
@@ -244,6 +247,7 @@
       "z3_pct": 10.9,
       "polarization_index": null,
       "classification": "Pyramidal",
+      "zone_basis": "mixed",
       "sport": "cycling"
     },
     "capability": {
@@ -304,37 +308,39 @@
       ]
     },
     "phase_detection": {
-      "phase": "Build",
+      "phase": null,
       "confidence": "low",
       "reason_codes": [
-        "BUILD_RESUMING_AFTER_DELOAD_TENTATIVE"
+        "INSUFFICIENT_LOOKBACK",
+        "INSUFFICIENT_DATA"
       ],
       "basis": {
         "stream_1": {
-          "ctl_slope": 0.7,
-          "acwr_trend": "falling",
-          "hard_day_pattern": 3.2,
-          "weeks_available": 4
+          "ctl_slope": null,
+          "acwr_trend": null,
+          "hard_day_pattern": null,
+          "weeks_available": 0
         },
         "stream_2": {
-          "planned_tss_delta": 2.12,
+          "planned_tss_delta": null,
           "hard_sessions_planned": 0,
           "race_proximity": 60,
-          "next_week_load": 0.74,
+          "next_week_load": null,
           "plan_coverage_current_week": 0.6,
           "plan_coverage_next_week": 1.2
         },
-        "data_quality": "good",
+        "data_quality": "poor",
         "stream_agreement": null
       },
-      "previous_phase": "Deload",
+      "previous_phase": null,
       "phase_duration_weeks": 0,
       "dossier_declared": null,
       "dossier_agreement": null
     },
-    "phase_detected": "Build",
+    "phase_detected": null,
     "phase_triggers": [
-      "BUILD_RESUMING_AFTER_DELOAD_TENTATIVE"
+      "INSUFFICIENT_LOOKBACK",
+      "INSUFFICIENT_DATA"
     ],
     "seasonal_context": "Late Base / Build",
     "benchmark_indoor": {
@@ -357,7 +363,7 @@
     "p_max": 996,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-03-14T15:51:40.604119",
+    "calculation_timestamp": "2026-03-14T16:00:59.215803",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 6,
@@ -422,7 +428,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": true
     },
     {
       "id": "i131762920",
@@ -475,7 +482,8 @@
           "z6_time": 106,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": true
     },
     {
       "id": "i131739809",
@@ -528,7 +536,8 @@
           "z6_time": 14,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": true
     },
     {
       "id": "i131651860",
@@ -572,7 +581,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131541733",
@@ -616,7 +626,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131541748",
@@ -660,7 +671,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131497416",
@@ -704,7 +716,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131486648",
@@ -748,7 +761,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131397687",
@@ -792,7 +806,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131397698",
@@ -836,7 +851,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131004933",
@@ -880,7 +896,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i131004958",
@@ -924,7 +941,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": true
     },
     {
       "id": "i130969511",
@@ -968,7 +986,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i130868488",
@@ -1012,7 +1031,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i130745691",
@@ -1056,7 +1076,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i130626352",
@@ -1109,7 +1130,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": true
     },
     {
       "id": "i130607766",
@@ -1153,7 +1175,8 @@
           "z6_time": 0,
           "z7_time": 0
         }
-      }
+      },
+      "has_intervals": false
     },
     {
       "id": "i130431761",
@@ -1206,7 +1229,8 @@
           "z6_time": 297,
           "z7_time": 120
         }
-      }
+      },
+      "has_intervals": true
     }
   ],
   "wellness_data": [
