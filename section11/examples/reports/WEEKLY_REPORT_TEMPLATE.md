@@ -59,6 +59,17 @@ HRRc (when 28d has ≥ 3 qualifying sessions):
   [If 7d ≥ 1]: [XX] bpm 7d mean([X]) / [XX] bpm 28d mean([X]) ([trend])
   [If 7d = 0]: [XX] bpm 28d mean([X]) — 7d: no data
 
+Power Curve Delta (28d vs prior 28d — omit section if null):
+  Rotation: [+/-X.X] ([sprint-biased/endurance-biased/balanced])
+  Notable shifts: [anchor] [+/-X.X]%, [anchor] [+/-X.X]% (list anchors with |pct_change| ≥ 2%)
+  [If all |pct_change| < 2%]: No significant shifts
+
+HR Curve Delta (28d vs prior 28d — omit section if null):
+  Rotation: [+/-X.X] ([intensity-biased/endurance-biased/balanced])
+  Notable shifts: [anchor] [+/-X.X]%, [anchor] [+/-X.X]% (list anchors with |pct_change| ≥ 2%)
+  [If rising HR]: Cross-reference with HRV/RHR trends — rising HR is ambiguous
+  [If all |pct_change| < 2%]: No significant shifts
+
 Fitness:
   CTL: [XX.X] → [XX.X] (Δ [+/-X.X])
   ATL: [XX.X] → [XX.X]
@@ -102,6 +113,8 @@ focus areas. Reference load targets and phase progression.]
 | **Durability** | Aggregate decoupling from steady-state sessions | VI ≤ 1.05, ≥ 90min, power data. Trend direction matters more than absolute values |
 | **Efficiency Factor** | Aggregate EF from steady-state cycling | VI ≤ 1.05, ≥ 20min, power+HR. Rising EF = improving aerobic fitness. Compare like-for-like only |
 | **HRRc** | Aggregate heart rate recovery from capability.hrrc | Largest 60s HR drop after threshold. Higher = better. Omit entire section if 28d < 3 qualifying sessions. Display only when `hrrc` is non-null per activity |
+| **Power Curve Delta** | MMP comparison from capability.power_curve_delta | Rotation index + notable anchor shifts (≥2% change). Omit section if power_curve_delta.anchors is null. Sprint-biased (positive rotation) vs endurance-biased (negative) |
+| **HR Curve Delta** | Max sustained HR comparison from capability.hr_curve_delta | Rotation index + notable shifts (≥2%). Omit if null. AMBIGUOUS: rising HR may be fitness or fatigue — cross-reference with HRV/RHR/RPE required |
 | **ACWR breakdown** | 7d acute / 28d chronic | Show components so athlete understands the ratio |
 | **Wellness arrows** | Week-over-week comparison | ↑ improving, ↓ declining, → stable |
 | **Avg Feel** | Activity-level average from `weekly_180d.avg_feel` | 1=Strong to 5=Weak. Count = sessions with feel populated. Omit line if 0 sessions. Lower is better |

@@ -1,11 +1,14 @@
 {
-  "notification_id": "2026-03-17",
+  "notification_id": "2026-04-02",
   "changes": [
-    "— sync.py v3.84 — Activity description and chat_notes on completed activities. Phase week off-by-one fix (2026-03-15) —",
-    "— sync.py v3.85 + SECTION_11.md v11.16 — Remaining wellness fields added (~20 new). wellness_field_scales legend. hrvSDNN case fix (2026-03-15) —",
-    "— sync.py v3.86 — planned_tss_delta filters to primary sport. sport_tss_breakdown on weekly rows (2026-03-15) —",
-    "— SECTION_11.md v11.17 — Phase context and tomorrow preview in pre/post-workout report templates (2026-03-17) —",
-    "— Documentation — JSON examples refreshed to v3.85 schema, moved to examples/json-examples/. Strava data stripping warning in README + SETUP_ASSISTANT (2026-03-15) —",
-    "Most files touched — recommend pulling a fresh copy."
+    "— sync.py v3.93–v3.96 + SECTION_11.md v11.23–v11.25 (2026-03-24–04-02) —",
+    "v3.93: Route & Terrain Intelligence — GPX/TCX attachments parsed into routes.json. Climb detection (Cat 4–HC), descent detection, course character, elevation smoothing. Cached by attachment ID. has_terrain flag on events.",
+    "v3.94: Phase detection rewrite — live 4-week bucketing from activities_28d. Eliminates stale history.json row bug. recent_activities widened to 28 days.",
+    "v3.95: 500m polyline in routes.json, start_time on planned events, indoor flag passthrough.",
+    "v3.96: Course character fix — elevation_per_km only, absolute thresholds removed.",
+    "v11.23: No Conversational Data Substitution — AI must re-read JSON before citing metrics. No cached values from prior messages.",
+    "v11.24–v11.25: Route & Terrain Protocol — terrain-adjusted power, wind overlay, segment reasoning, drafting, nutrition timing, pre-ride briefing flow, course character table. 11 evidence base entries.",
+    "Hash-based cache invalidation on all cached files. On-demand sync path (phone/browser). Pre-workout terrain context block. Report template/example alignment. External API reference (Strava + yr.no). routes.json documentation sweep.",
+    "Upgrade: replace your sync.py + pull fresh docs. Most files touched."
   ]
 }

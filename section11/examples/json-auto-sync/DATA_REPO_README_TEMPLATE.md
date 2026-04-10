@@ -19,6 +19,10 @@
 Automated training data pipeline from [Intervals.icu](https://intervals.icu) for AI coaching analysis.
 Built on the [Section 11 Protocol](https://github.com/CrankAddict/section-11).
 
+## Sync Now
+
+[🔄 Sync Now](../../actions/workflows/auto-sync.yml) — tap **Run workflow** to trigger a fresh sync. When the run completes, download the **training-data** artifact ZIP from the run page.
+
 ## Data URLs
 
 | File | Description | Link |
@@ -26,6 +30,7 @@ Built on the [Section 11 Protocol](https://github.com/CrankAddict/section-11).
 | `latest.json` | Current 7-day snapshot + derived metrics | [View](https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/latest.json) |
 | `history.json` | Longitudinal data (daily/weekly/monthly) | [View](https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/history.json) |
 | `intervals.json` | Per-interval data for structured sessions | [View](https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/intervals.json) |
+| `routes.json` | Route/terrain data (when GPX/TCX attachments exist) | [View](https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/routes.json) |
 
 ## Auto-Sync
 
@@ -38,6 +43,7 @@ Analyze my training using these data files:
 - Current: https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/latest.json
 - History: https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/history.json
 - Intervals: https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/intervals.json
+- Routes: https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO_NAME/main/routes.json
 ```
 
 For best results, pair with the [Section 11 instruction set](https://github.com/CrankAddict/section-11).

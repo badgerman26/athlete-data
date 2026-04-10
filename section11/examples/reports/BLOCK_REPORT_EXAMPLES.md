@@ -11,6 +11,11 @@
 Block 2 Report (13 Jan – 09 Feb 2026)
 Weeks in block: 4
 Phase: Threshold Development
+Phase Timeline:
+  Wk 1: Build (confidence: high)
+  Wk 2: Build (confidence: high)
+  Wk 3: Build (confidence: high)
+  Wk 4: Build (confidence: high)
 
 Volume Progression:
   Wk 1: 13.8h / 498 TSS | CTL 74.5
@@ -38,6 +43,23 @@ Key Performance Markers:
   Long ride decoupling trend: 4.8% → 2.1% ↑ improving
   Best 20-min power: 278W (week 3)
   Best 5-min power: 318W (week 3)
+  Power curve rotation: +0.6 (sprint-biased)
+  Strongest adaptation: 5min (+4.2%)
+  HR curve rotation: -0.3 (endurance-biased)
+  HR context: Stable HRV/RHR — lower sustained HR at endurance durations = aerobic efficiency gain
+
+Sustainability Ceilings:
+  Coverage: 7/7 anchors observed (100%) — cycling
+  5min: 326W (4.35 W/kg) — observed_indoor | Coggan 330W | CP model 335W | divergence -2.7%
+  10min: 301W (4.01 W/kg) — observed_indoor | Coggan 303W | CP model 301W | divergence 0.0%
+  20min: 281W (3.75 W/kg) — observed_indoor | Coggan 289W | CP model 285W | divergence -1.4%
+  30min: 270W (3.60 W/kg) — observed_indoor | Coggan 275W | CP model 280W | divergence -3.6%
+  60min: 256W (3.41 W/kg) — observed_indoor | Coggan 256W | CP model 274W | divergence -6.6%
+  90min: 247W (3.29 W/kg) — observed_indoor | Coggan 248W | CP model 272W | divergence -9.2%
+  120min: 241W (3.21 W/kg) — observed_indoor | Coggan 242W | CP model 271W | divergence -11.1%
+  FTP used: 275W | W′: 20000J | FTP staleness: 14 days
+  Model trust: CP/W′ primary ≤20min, Coggan reference ≥60min
+  Block-over-block: Ceilings rose at 5min (+3.8%) and 20min (+2.4%), consistent with threshold focus. Coverage maintained at 100%. Model divergence stable — inputs current.
 
 Polarization (block average):
   Z1+Z2: 85%
@@ -64,6 +86,13 @@ Efficiency Factor by Week:
   Wk 2: mean(4) EF 1.45
   Wk 3: mean(4) EF 1.48
   Wk 4: mean(2) EF 1.50
+  Block trend: improving
+
+HRRc by Week (block total: 6 qualifying sessions):
+  Wk 1: mean(1) 32 bpm
+  Wk 2: mean(2) 36 bpm
+  Wk 3: mean(2) 40 bpm
+  Wk 4: mean(1) 38 bpm
   Block trend: improving
 
 Wellness (block avg vs previous block):
@@ -123,6 +152,12 @@ Next Block Plan:
 Block 3 Report (10 Feb – 16 Mar 2026)
 Weeks in block: 5
 Phase: Aerobic Base (extended)
+Phase Timeline:
+  Wk 1: Build (confidence: high)
+  Wk 2: Build (confidence: high)
+  Wk 3: Build (confidence: medium)
+  Wk 4: Recovery (confidence: high)
+  Wk 5: Base (confidence: medium)
 
 Volume Progression:
   Wk 1: 14.8h / 510 TSS | CTL 80.1
@@ -157,6 +192,19 @@ Key Performance Markers:
   Long ride decoupling trend: 2.1% → 3.8% → slightly regressed
   Best 20-min power: 272W (week 2)
   Best 5-min power: 308W (week 2)
+  Power curve rotation: -1.2 (endurance-biased)
+  Strongest adaptation: 20min (-5.1%) — regression across all anchors post-illness
+  HR curve rotation: +0.6 (intensity-biased)
+  HR context: HRV declining 11%, RHR elevated — rising HR reflects fatigue, not fitness
+
+Sustainability Ceilings:
+  Coverage: 3/7 anchors observed (43%) — cycling ⚠️ heavily model-dependent
+  5min: 312W (4.16 W/kg) — observed_indoor | Coggan 330W | CP model 335W | divergence -6.9%
+  20min: 268W (3.57 W/kg) — observed_indoor | Coggan 289W | CP model 285W | divergence -6.0%
+  60min: 244W (3.25 W/kg) — observed_indoor | Coggan 256W | CP model 274W | divergence -10.9%
+  FTP used: 275W | W′: 20000J | FTP staleness: 38 days
+  Model trust: CP/W′ primary ≤20min, Coggan reference ≥60min
+  Block-over-block: Ceilings dropped across all observed anchors (5min -4.3%, 20min -4.6%, 60min -4.7%). Coverage fell from 100% to 43% — missing durations due to no sprint or long efforts during illness weeks. Model divergence widened — FTP staleness 38 days means model inputs may be stale; defer ceiling interpretation until FTP retested.
 
 Polarization (block average):
   Z1+Z2: 89%
@@ -186,6 +234,14 @@ Efficiency Factor by Week:
   Wk 3: mean(2) EF 1.39 ⚠️
   Wk 4: mean(0) EF N/A (illness)
   Wk 5: mean(2) EF 1.41
+  Block trend: declining (illness-driven)
+
+HRRc by Week (block total: 4 qualifying sessions):
+  Wk 1: mean(1) 35 bpm
+  Wk 2: mean(2) 34 bpm
+  Wk 3: mean(1) 24 bpm ⚠️
+  Wk 4: — no data (illness)
+  Wk 5: — no data
   Block trend: declining (illness-driven)
 
 Wellness (block avg vs previous block):
@@ -253,10 +309,176 @@ Next Block Plan:
 
 ---
 
+## Example 3: Aerobic Base Block with DFA a1 Calibration Surfacing
+
+```
+Block 4 Report (17 Mar – 27 Apr 2026)
+Weeks in block: 6
+Phase: Aerobic Base
+Phase Timeline:
+  Wk 1: Base (confidence: high)
+  Wk 2: Base (confidence: high)
+  Wk 3: Base (confidence: high)
+  Wk 4: Base (confidence: high)
+  Wk 5: Base (confidence: high)
+  Wk 6: deload (confidence: high)
+
+Volume Progression:
+  Wk 1: 13.2h / 458 TSS | CTL 75.5
+  Wk 2: 14.0h / 482 TSS | CTL 78.0
+  Wk 3: 14.8h / 510 TSS | CTL 80.6
+  Wk 4: 15.5h / 538 TSS | CTL 83.1
+  Wk 5: 15.8h / 545 TSS | CTL 85.4
+  Wk 6: deload — 9.2h / 305 TSS | CTL 83.0
+  Block total: 82h30m / 2838 TSS
+
+Compliance:
+  Sessions: 32/33 completed (97%)
+  Missed/modified: Wk 4 Tue strength swap (minor calf strain)
+
+Fitness Progression:
+  CTL: 73.8 → 83.0 (Δ +9.2)
+  ATL: 70.5 → 58.4
+  TSB: -3.3 → +24.6
+  Avg ramp rate: 1.18/week
+  FTP: 282W → 282W (unchanged — test scheduled next block)
+  eFTP: 280W → 289W
+
+Key Performance Markers:
+  Sweetspot power: 248W → 256W (target: 252W — hit ✅)
+  Long ride duration: 3h45m → 5h00m
+  Long ride decoupling trend: 4.2% → 2.4% ↑ improving
+  Best 20-min power: 285W (week 5)
+  Best 60-min power: 268W (week 5)
+  Power curve rotation: -0.4 (endurance-biased)
+  Strongest adaptation: 60min (+3.8%)
+
+Sustainability Ceilings:
+  Coverage: 6/7 anchors observed (86%) — cycling
+  10min: 312W (4.42 W/kg) — observed_outdoor | Coggan 314W | CP model 316W | divergence -1.3%
+  20min: 285W (4.04 W/kg) — observed_outdoor | Coggan 290W | CP model 287W | divergence -0.7%
+  60min: 268W (3.80 W/kg) — observed_outdoor | Coggan 265W | CP model 270W | divergence -0.7%
+  90min: 252W (3.57 W/kg) — observed_outdoor | Coggan 252W | CP model 268W | divergence -6.0%
+  120min: 244W (3.46 W/kg) — observed_outdoor | Coggan 244W | CP model 266W | divergence -8.3%
+  FTP used: 282W | W′: 21500J | FTP staleness: 38 days
+  Model trust: CP/W′ primary ≤20min, Coggan reference ≥60min
+  Block-over-block: 60min ceiling rose 6W, 90min rose 5W. Aerobic ceilings tracking up.
+
+DFA a1 Calibration:
+  Sessions in window: 7 sufficient (LT1 crossings: 6, LT2 crossings: 2)
+  Confidence: moderate
+  Average DFA a1: 1.18 (drift mean: -0.08)
+  Empirical LT1: 145 bpm / 218 W (from 6 sessions in 0.95–1.05 band)
+  Empirical LT2: not enough sessions in band — base block had little time near 0.5 (lt2_crossing_sessions: 2)
+  Dossier LT1 (cycling): 152 bpm / 232 W
+  Dossier LT2 (cycling): 168 bpm / 268 W
+  Delta: LT1 -4.6% HR / -6.0% W (empirical lower than dossier)
+  Coaching note: empirical LT1 trending below dossier values across the base block —
+  consistent with what aerobic base work should produce (lower HR/power at the same internal
+  intensity). This is a calibration observation, not an action. Recommend formal LT1 retest
+  or 60-min step test before the next threshold block to confirm and update dossier zones if
+  the gap holds.
+
+Polarization (block average):
+  Z1+Z2: 89%
+  Z3 (Grey Zone): 4% (target <5%)
+  Z4+ (Quality): 7% (target ~20% of intensity sessions)
+  TID 28d (block-scale): Polarized (PI: 3.42)
+  Hard days/week avg: 1.8
+
+Polarization by Week:
+  Wk 1: Z1+Z2 91%, Z3 3%, Z4+ 6%
+  Wk 2: Z1+Z2 88%, Z3 5%, Z4+ 7%
+  Wk 3: Z1+Z2 90%, Z3 4%, Z4+ 6%
+  Wk 4: Z1+Z2 87%, Z3 5%, Z4+ 8%
+  Wk 5: Z1+Z2 86%, Z3 6%, Z4+ 8%
+  Wk 6: Z1+Z2 95%, Z3 2%, Z4+ 3%
+
+Durability by Week:
+  Wk 1: mean(3) dec 3.8%, 0 high-drift
+  Wk 2: mean(3) dec 3.2%, 0 high-drift
+  Wk 3: mean(4) dec 2.8%, 0 high-drift
+  Wk 4: mean(4) dec 2.4%, 0 high-drift
+  Wk 5: mean(4) dec 2.2%, 0 high-drift
+  Wk 6: mean(2) dec 2.0%, 0 high-drift
+  Block trend: improving
+
+Efficiency Factor by Week:
+  Wk 1: mean(3) EF 1.42
+  Wk 2: mean(3) EF 1.45
+  Wk 3: mean(4) EF 1.48
+  Wk 4: mean(4) EF 1.50
+  Wk 5: mean(4) EF 1.52
+  Wk 6: mean(2) EF 1.51
+  Block trend: improving
+
+HRRc by Week:
+  Wk 1: mean(2) 32 bpm
+  Wk 2: mean(2) 33 bpm
+  Wk 3: mean(3) 34 bpm
+  Wk 4: mean(3) 35 bpm
+  Wk 5: mean(3) 36 bpm
+  Wk 6: mean(1) 36 bpm
+  Block trend: improving
+
+Wellness (block avg vs previous block):
+  HRV: 58 ms (prev block: 54 ms) ↑ improving
+  RHR: 47 bpm (prev block: 49 bpm) ↑ improving
+  Sleep: 7h22m (prev block: 7h05m) ↑ improving
+  Avg Feel: 2.2/5 (32 sessions) (prev block: 2.5/5)
+  Avg RPE: 4.2/10 (32 sessions) (prev block: 4.4/10)
+  Avg RI: 0.94 (prev block: 0.90)
+  Avg Monotony: 1.65 (normal)
+
+Section 11 Flags During Block:
+  None
+
+Phase Progression Check:
+  Block objective: Build aerobic base, improve durability and efficiency
+  Criteria met: Yes
+    - CTL target of 82 reached (actual: 83.0)
+    - Long ride decoupling improved to <3% (actual: 2.4%)
+    - Durability trend strongly improving (3.8% → 2.0%)
+    - EF trend improving (1.42 → 1.52)
+    - Wellness improving across all markers
+    - Compliance >85% (actual: 97%)
+  Phase recommendation: Progress to Threshold Development
+  Rationale: All base phase criteria met with margin. Aerobic engine has clearly built
+  (durability, EF, HRRc all trending favorably). DFA a1 calibration delta on LT1 reinforces
+  the same picture — internal intensity is now lower than dossier zones predict, which is
+  the fingerprint of aerobic base work paying off. Athlete is ready for threshold-targeted
+  stimulus.
+
+Interpretation:
+Strong base block. CTL rose 9.2 points at a sustainable 1.18/week ramp. Every aerobic
+quality metric moved in the right direction: durability 3.8% → 2.0%, EF 1.42 → 1.52, HRRc
++4 bpm, wellness uniformly improving. The DFA a1 calibration section is the new addition
+this block — with moderate confidence on 7 cycling sessions, empirical LT1 came in at 145
+bpm / 218W against dossier 152 bpm / 232W. That 5–6% gap is the kind of signal a base
+block should produce, and it argues for a formal LT1 retest before the threshold block to
+confirm. LT2 crossings were too few (2) to estimate — base work doesn't spend much time
+near DFA a1 = 0.5, which is exactly what the lt2_crossing_sessions diagnostic is for.
+Block ends fresh (TSB +24.6) with the aerobic base in good shape.
+
+Next Block Plan:
+  Phase: Threshold Development
+  Duration: 4 weeks
+  Focus: Sweet spot and threshold intervals on existing aerobic base
+  Key changes: Add 2 quality sessions per week (sweet spot Tue, threshold Fri),
+    maintain long ride volume, schedule formal LT1 step test in week 1 to
+    validate the DFA calibration delta
+  Targets: FTP test week 4 (expect 287–292W from eFTP trend), CTL maintenance
+    82–85, durability holds <3%, validate or update LT1 dossier zones from
+    week 1 step test
+```
+
+---
+
 ## Notes
 
 - **Example 1** shows a clean, successful block — all criteria met, clear progression
 - **Example 2** shows how the template handles real-world disruption — illness, regression, and the protocol's decision to NOT progress
+- **Example 3** shows the DFA a1 Calibration section in action — moderate confidence after 7 sufficient cycling sessions, an empirical-vs-dossier LT1 delta surfaced as a coaching observation (not an auto-update), and lt2_estimate appropriately omitted because base work doesn't dwell near DFA a1 = 0.5
 - **Polarization by Week** caught the grey zone creep in Example 2 that the block average partially masked
 - **Durability by Week** caught the aerobic efficiency regression in Example 2 before wellness metrics crashed — the aggregate trend is a leading indicator of fatigue
 - **Week-by-week CTL** in Volume Progression tells the trajectory story — Example 2's dip-and-partial-recovery is immediately visible

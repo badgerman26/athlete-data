@@ -84,6 +84,8 @@ Check that they have:
 
 Confirm before continuing.
 
+**Optional — DFA a1 features.** Section 11 v11.30+ includes a DFA a1 Protocol that provides empirical aerobic/threshold zone calibration from in-activity HRV. This is an **optional feature** with a hard hardware/software requirement: **Garmin head unit + AlphaHRV Connect IQ data field + chest strap that broadcasts beat-to-beat RR (HRM-Pro Plus, Polar H10) + direct Garmin → Intervals.icu sync**. The athlete can skip this entirely and Section 11 still works fully — DFA a1 just won't appear in their reports. If they're on Wahoo, Suunto, Karoo, Coros, Polar, or any non-Garmin platform, point them at [`examples/dfa_a1/NON_GARMIN.md`](examples/dfa_a1/NON_GARMIN.md) — it documents what's known about their platform and how to help us verify a path. **Do not promise DFA a1 features to non-Garmin athletes** — only Garmin + AlphaHRV is verified end-to-end as of v11.30.
+
 ### Step 2: Get Intervals.icu credentials
 
 Walk them through:
@@ -194,6 +196,7 @@ Walk them through:
 - A `latest.json` file should now exist in the repo root with their training data
 - A `history.json` file should also appear
 - An `intervals.json` file may appear if the athlete has recent structured interval sessions
+- A `routes.json` file may appear if the athlete has planned events with GPX/TCX file attachments
 
 If the run fails (red ✗), ask them to click into the failed run and share the error message so you can help troubleshoot.
 
@@ -310,15 +313,16 @@ You are my endurance coach. Follow Section 11 protocol strictly.
 
 ## DATA ACCESS:
 Read data using the first method that works:
-1. **Connected repo/filesystem** — If data files are available via connector (GitHub, Google Drive, OneDrive — platform support varies) or local filesystem, read latest.json, history.json, and intervals.json directly
+1. **Connected repo/filesystem** — If data files are available via connector (GitHub, Google Drive, OneDrive — platform support varies) or local filesystem, read latest.json, history.json, intervals.json, and routes.json directly
 2. **URL fetch** — Fetch https://raw.githubusercontent.com/[USERNAME]/[REPO]/main/latest.json (append ?date= with today's date). Same for history.json
 3. If activities don't match today's date, re-fetch or re-read before concluding no data exists
 4. Load intervals.json when analysing a specific activity with `has_intervals: true` — use for interval compliance, pacing, cardiac drift, recovery quality
+5. Load routes.json when a planned event has `has_terrain: true` — use for route analysis, terrain-adjusted pacing, pre-ride briefing
 
 Do NOT ask me for data — read or fetch it yourself.
 
 ## SOURCE HIERARCHY:
-1. **JSON data** — Current metrics from latest.json (READ/FETCH FIRST) + longitudinal data from history.json + interval detail from intervals.json (on-demand)
+1. **JSON data** — Current metrics from latest.json (READ/FETCH FIRST) + longitudinal data from history.json + interval detail from intervals.json (on-demand) + route/terrain data from routes.json (when events have GPX/TCX attachments)
 2. **Section 11 protocol** (attached) — Coaching rules, thresholds, metric hierarchy
 3. **Dossier** — Athlete profile, zones, goals
 4. **Report templates** — Fetch from https://github.com/CrankAddict/section-11/tree/main/examples/reports if not attached
@@ -475,7 +479,8 @@ For local setups, the AI coach reads files from the data directory instead of fe
 1. Read latest.json from the data directory
 2. Read history.json from the data directory
 3. Read intervals.json when analysing a specific activity with has_intervals: true
-4. Read protocol from section11/SECTION_11.md
+4. Read routes.json when a planned event has has_terrain: true
+5. Read protocol from section11/SECTION_11.md
 5. Read report templates from section11/examples/reports/
 6. Read workout templates from section11/examples/workout-library/WORKOUT_REFERENCE.md
 7. If data files appear stale, ask the athlete to run sync

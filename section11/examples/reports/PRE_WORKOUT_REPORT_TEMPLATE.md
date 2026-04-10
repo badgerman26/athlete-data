@@ -34,10 +34,15 @@ Total activities, last 7 days: [XX]
 Total TSS, last 7 days: [XXX]
 
 Planned Workouts for Today (Planned TSS: [XXX]):
-[WorkoutType] [Duration] — [structure/targets]
+[WorkoutType] [Duration] — [main set condensed, e.g., "3×12m @260W"]
+[Use workout_summary as source. Condense to main set — omit warmup/cooldown/recovery steps. If workout_summary is null, use description_preview.]
 
 [If rest day: "Rest day — no sessions scheduled."]
 [If rest day: "Next session: [Day] — [workout preview]"]
+
+Terrain Context ([course_character], [total_distance_km] km, [total_elevation_m]m):
+[Key climbs condensed: "Cat 2 at km 48 (6.8 km, 6.3% avg, max 11%). Cat 4 at km 71 (1.4 km, 4.8% avg)."]
+[Pacing note: one sentence connecting terrain to today's effort strategy.]
 
 Recommendation: [readiness_decision.recommendation — Go / Modify / Skip]
 
@@ -58,13 +63,14 @@ AI may override the pre-computed recommendation with explicit rationale.]
 |-------|------|
 | Phase | Include only when `phase_detection.confidence` is "high" or "medium". Omit when "low" or phase is null |
 | Weather | Include if athlete location is available via profile or memory |
-| Coach note (weather) | Include only if actionable (e.g., dress warm, indoor day) |
+| Coach note (weather) | Include only if actionable (e.g., dress warm, indoor day). When forecast triggers heat stress Tier 1+: Tier 1 — note hydration emphasis. Tier 2 — specify session modification per Environmental Conditions Protocol session-type rules (e.g., "Threshold intervals planned — keep power targets, consider reducing from 4×8min to 3×8min"). Tier 3 — recommend reschedule or endurance-only. See **Environmental Conditions Protocol** in SECTION_11.md for tier definitions and session-type rules. |
 | Monotony | Include **only** if > 2.3. Omit entirely when normal |
 | Durability | Include if qualifying sessions exist. Omit if 0 qualifying sessions in 7d |
 | EF | Include if qualifying sessions exist. Omit if 0 qualifying sessions in 7d |
 | TID 28d + drift | Include as separate line **only** if drift is "shifting" or "acute_depolarization". Omit entire line when "consistent" |
 | Load/Recovery context | Include tolerance note only when within 0.2 of threshold |
 | Next session | Include only on rest days |
+| Terrain Context | Include when `has_terrain: true` on a planned event and `routes.json` has the corresponding terrain data. Omit entirely otherwise. Full pre-ride briefing available on request |
 | Modify/Skip rationale | Required when recommendation is not "Go" |
 
 ## Readiness Decision Logic

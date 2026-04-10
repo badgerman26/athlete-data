@@ -124,6 +124,10 @@ jobs:
               git add intervals.json
               echo "✅ Staged intervals.json"
             fi
+            if [ -f routes.json ]; then
+              git add routes.json
+              echo "✅ Staged routes.json"
+            fi
             
             # Now pull - autostash will safely stash staged changes
             git pull --rebase --autostash origin main
@@ -171,6 +175,20 @@ jobs:
               echo "⚠️ No changes detected in README"
             fi
           fi
+      
+      - name: Upload data files for download
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: training-data
+          path: |
+            latest.json
+            history.json
+            intervals.json
+            routes.json
+            ftp_history.json
+          retention-days: 7
+          if-no-files-found: ignore
       
       - name: Show result
         run: |

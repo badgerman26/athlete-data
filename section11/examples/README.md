@@ -9,11 +9,12 @@ Working implementations for Section 11 integrations.
 | [SETUP_ASSISTANT.md](../SETUP_ASSISTANT.md) | Interactive AI-guided setup — paste into any AI chat | ✅ Ready |
 | [json-auto-sync](json-auto-sync/) | Automated GitHub Actions sync (every 15 min) | ✅ Ready |
 | [json-local-sync](json-local-sync/) | Automated local sync for agentic platforms (no GitHub) | ✅ Ready |
+| [json-on-demand](json-on-demand/) | On-demand sync from phone or browser — no local Python | ✅ Ready |
 | [json-manual](json-manual/) | Manual export from Mac/PC | ✅ Ready |
 | [reports](reports/) | Pre/post workout report templates | ✅ Ready |
 | [agentic](agentic/) | Write planned workouts to Intervals.icu calendar (code execution required) | ✅ Ready |
 | [workout-library](workout-library/) | Structured workout templates for AI prescription | ✅ Ready |
-| [json-examples](json-examples/) | Example JSON output (v3.85 schema reference) | ✅ Ready |
+| [json-examples](json-examples/) | Example JSON output (v3.86 schema reference) | ✅ Ready |
 
 ---
 
@@ -37,6 +38,12 @@ Best for: Agentic platforms (OpenClaw, Claude Code, Cowork, etc.) running on the
 
 → [json-local-sync/SETUP.md](json-local-sync/SETUP.md)
 
+### Option D: On-Demand Sync
+
+Best for: Phone or browser users who want fresh data without a schedule or local Python. Trigger a sync from your repo's README, download the results.
+
+→ [json-on-demand/SETUP.md](json-on-demand/SETUP.md)
+
 ---
 
 ## Shared Files
@@ -48,10 +55,11 @@ Both methods use the same `sync.py` script and produce these files:
 | `latest.json` | Current 7-day training data for AI consumption | Yes |
 | `history.json` | Longitudinal data — daily (90d), weekly (180d), monthly (3y) | Yes |
 | `intervals.json` | Per-interval segment data for recent structured sessions | Yes |
+| `routes.json` | Route/terrain data for events with GPX/TCX attachments | When attachments exist |
 | `ftp_history.json` | FTP tracking for Benchmark Index | Yes |
 | `archive/` | Timestamped snapshots (auto-sync only) | Yes |
 
-See [json-examples/](json-examples/) for example output showing the full v3.85 schema.
+See [json-examples/](json-examples/) for example output showing the full v3.86 schema.
 
 ```bash
 # Manual local export
@@ -109,6 +117,17 @@ intervals.json (on-demand — load when analysing activities with has_intervals:
     ├── activity_id      → Matches id in latest.json recent_activities
     ├── interval_summary → Group summary (e.g., "4x 9m56s 259w")
     └── intervals[]      → WORK + RECOVERY segments with power, HR, cadence, zone, decoupling
+
+routes.json (on-demand — load when planned events have has_terrain: true)
+├── generated_at         → Timestamp
+├── sync_version         → sync.py version
+├── script_hash          → Cache invalidation hash
+└── events[]             → Per-event terrain analysis
+    ├── event_id/name/date/category
+    ├── attachment_id    → GPX/TCX file identifier
+    └── terrain_summary  → Distance, elevation, course character, polyline
+        ├── climbs[]     → Cat 4–HC with position, gradient, coords
+        └── descents[]   → Recovery windows with position, gradient, coords
 ```
 
 ### Derived Metrics
@@ -122,7 +141,7 @@ Pre-calculated values for Section 11 compliance — AI should use these, not cal
 | `monotony` / `strain` | Training variability (Foster) |
 | `grey_zone_percentage` | Z3 time % — minimize in polarized training |
 | `quality_intensity_percentage` | Z4+ time % — target ~20% |
-| `polarisation_index` | Easy time ratio — target ~0.80 |
+| `easy_time_ratio` | Easy time ratio — target ~0.80 |
 | `consistency_index` | Plan adherence (completed/planned) |
 | `phase_detected` | Auto-detected: Build, Base, Peak, Taper, Deload, Recovery, Overreached, null |
 | `phase_detection` | Full phase detection object: phase, confidence, reason_codes, basis (dual-stream), phase_duration_weeks |

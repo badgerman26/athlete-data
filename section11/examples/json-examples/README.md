@@ -11,6 +11,7 @@ Example output from `sync.py` v3.86 for a fictional cyclist in a Build phase. Us
 | `latest.json` | Current 7-day snapshot — activities, wellness, fitness metrics, readiness decision, derived Section 11 values |
 | `history.json` | Longitudinal data — daily (90d), weekly (180d), monthly (up to 3y) |
 | `intervals.json` | Per-interval segment data for recent structured sessions |
+| `routes.json` | Route/terrain data — climbs, descents, course character, polyline for events with GPX/TCX attachments |
 | `ftp_history.json` | FTP change tracking for Benchmark Index calculation |
 
 ## Schema Version
