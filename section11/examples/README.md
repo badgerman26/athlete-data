@@ -94,7 +94,7 @@ latest.json
 ├── derived_metrics      → Section 11 calculated values (see below)
 │   ├── capability       → Durability, EF, HRRc trends + TID drift (7d vs 28d)
 │   └── phase_detection  → Dual-stream phase detection with confidence
-├── recent_activities    → Detailed activity data with zones, EF, HRRc, has_intervals
+├── recent_activities    → Detailed activity data with zones, EF, HRRc, has_intervals, has_dfa, dfa_summary
 ├── wellness_data        → Daily HRV, RHR, sleep, subjective state, vitals, nutrition, lifestyle
 ├── planned_workouts     → Upcoming scheduled sessions with workout_summary
 ├── workout_summary_stats → Planned-vs-actual matching statistics
@@ -110,7 +110,7 @@ history.json
 ├── weekly_180d          → Week-by-week (last 180 days)
 └── monthly_1y/2y/3y     → Month-by-month (up to 3 years)
 
-intervals.json (on-demand — load when analysing activities with has_intervals: true)
+intervals.json (on-demand — load when analyzing activities with has_intervals: true or has_dfa: true)
 ├── generated_at         → Timestamp
 ├── version              → sync.py version
 └── activities[]         → Per-activity interval segments

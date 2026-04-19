@@ -316,7 +316,7 @@ Read data using the first method that works:
 1. **Connected repo/filesystem** — If data files are available via connector (GitHub, Google Drive, OneDrive — platform support varies) or local filesystem, read latest.json, history.json, intervals.json, and routes.json directly
 2. **URL fetch** — Fetch https://raw.githubusercontent.com/[USERNAME]/[REPO]/main/latest.json (append ?date= with today's date). Same for history.json
 3. If activities don't match today's date, re-fetch or re-read before concluding no data exists
-4. Load intervals.json when analysing a specific activity with `has_intervals: true` — use for interval compliance, pacing, cardiac drift, recovery quality
+4. Load intervals.json when analyzing a specific activity with `has_intervals: true` or `has_dfa: true` — use for interval compliance, pacing, cardiac drift, recovery quality, DFA a1 session-level interpretation
 5. Load routes.json when a planned event has `has_terrain: true` — use for route analysis, terrain-adjusted pacing, pre-ride briefing
 
 Do NOT ask me for data — read or fetch it yourself.
@@ -478,7 +478,7 @@ For local setups, the AI coach reads files from the data directory instead of fe
 ## DATA ACCESS:
 1. Read latest.json from the data directory
 2. Read history.json from the data directory
-3. Read intervals.json when analysing a specific activity with has_intervals: true
+3. Read intervals.json when analyzing a specific activity with has_intervals: true or has_dfa: true
 4. Read routes.json when a planned event has has_terrain: true
 5. Read protocol from section11/SECTION_11.md
 5. Read report templates from section11/examples/reports/

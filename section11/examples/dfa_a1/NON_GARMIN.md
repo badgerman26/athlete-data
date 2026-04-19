@@ -26,48 +26,24 @@ If you're on a non-Garmin platform and want DFA a1 to work, this file is for you
 | **Garmin** + AlphaHRV | Connect IQ data field → FIT developer field → Intervals.icu `dfa_a1` stream → `sync.py` | ✅ **Supported** | The reference path. Validated end-to-end. See `SECTION_11.md` DFA a1 Protocol §Overview. |
 | **Suunto** + Zone Sense (DDFA) | SuuntoPlus app → FIT developer field → ? | ⚠️ **Investigational** | Suunto records DDFA (Dynamic DFA) via Zone Sense / Monicardi partnership. **Different algorithm than DFA a1** — values are not directly comparable, threshold mapping (1.0/0.5) may not apply. Even if Intervals.icu surfaces the field, Section 11 would need a separate protocol section to interpret it. |
 | **Hammerhead Karoo** + [veloVigil](https://github.com/velovigil/velovigil-karoo) | Karoo extension (Android sideload) → ? | ⚠️ **Investigational, gaps known** | veloVigil is an open-source Karoo extension (MIT licensed) that connects to Polar H10 over BLE and computes HRV (RMSSD, SDNN, pNN50). **Currently does NOT compute or write DFA a1** — that would require a contribution upstream. Hammerhead's own "log RR to FIT" is on the roadmap but not shipped as of late 2025. |
-| **Phone fallback** (FatMaxxer / HRV Logger) + Intervals.icu CSV upload | Phone app records DFA a1 in parallel → CSV → manually merged into Intervals.icu activity stream → ? | ⚠️ **Investigational, paid tier required** | Intervals.icu added CSV stream upload in October 2025, including support for array-valued streams like HRV. **Requires Intervals.icu Supporter subscription** (paid tier). Verification gap: we don't yet know if a user-uploaded `dfa_a1` column lands as a stream named `dfa_a1` (matching AlphaHRV's slot) or under some other name. If yes, `sync.py` works without changes. If no, sync.py needs a stream-name mapping. |
-| **Wahoo** (ELEMNT, BOLT, ROAM) | — | ❌ **No current path** | Wahoo's ELEMNT firmware does not log RR intervals to the FIT file, and Wahoo has no third-party app platform analogous to Connect IQ. Multiple users on the Wahoo forum have switched to Garmin specifically for DFA a1. Phone fallback (above) is the only option. |
-| **Coros** | — | ❌ **No current path** | Coros watches do not log in-activity HRV/RR. Phone fallback is the only option. |
-| **Polar** (head units / watches) | — | ❌ **No current path** | Polar records HRV but does not share it with third-party platforms via API. Phone fallback is the only option. |
+| **Phone fallback** (FatMaxxer / HRV Logger) | Phone app records on a separate device → CSV export → manual reconciliation with the ride activity | ❌ **Evaluated, not supported** | Both apps output CSV from a phone running in parallel with the head unit. Neither writes into the ride's FIT, so the alpha1 record is always a separate file that has to be time-aligned and merged per ride. Even with Intervals.icu's Supporter-only streams.csv upload, the workflow is manual, fragile, and architecturally distinct from AlphaHRV's "just record the ride" path. See *Phone fallback (evaluated, not supported)* below. |
+| **Wahoo** (ELEMNT, BOLT, ROAM) | — | ❌ **No supported path** | Wahoo's ELEMNT firmware does not log RR intervals to the FIT file, and Wahoo has no third-party app platform analogous to Connect IQ. DFA a1 in Section 11 currently requires Garmin + AlphaHRV. |
+| **Coros** | — | ❌ **No supported path** | Coros watches do not log in-activity HRV/RR. DFA a1 in Section 11 currently requires Garmin + AlphaHRV. |
+| **Polar** (head units / watches) | — | ❌ **No supported path** | Polar records HRV but does not share it with third-party platforms via API. DFA a1 in Section 11 currently requires Garmin + AlphaHRV. |
 
 ---
 
-## Phone fallback workflow
+## Phone fallback (evaluated, not supported)
 
-This is the universal path for any platform — works regardless of head unit, but has real costs.
+Two phone apps can record DFA a1 in parallel with a ride: [FatMaxxer](https://github.com/IanPeake/FatMaxxer) on Android (Polar H10 only, Apache 2.0, [formally validated against Kubios in EJAP, October 2025](https://link.springer.com/article/10.1007/s00421-025-06037-0)) and [HRV Logger](https://www.hrv.tools/) on iOS (paid, by Marco Altini, works with any BLE strap broadcasting RR). Both have been evaluated for Section 11 and **neither is supported**.
 
-### What you need
+The reason is architectural, not algorithmic. Both apps run on a phone, on a device separate from the bike computer that records the ride. Both output CSV — neither writes into the ride's FIT file. That means the alpha1 record is always a second file that has to be time-aligned and merged with the ride per session. Even with Intervals.icu's Supporter-only `streams.csv` upload (added October 2025), the user workflow is: record on two devices, export from the phone, download the activity's stream CSV, manually align timestamps, add an `dfa_a1` column, re-upload. Per ride. Forever. The algorithmic accuracy of FatMaxxer (validated by EJAP) is real but orthogonal — it doesn't make the integration story any less fragile.
 
-- **Android:** [FatMaxxer](https://github.com/IanPeake/FatMaxxer) (Apache 2.0, free, open source). Polar H10 only. [Formally validated against Kubios HRV in EJAP, October 2025.](https://link.springer.com/article/10.1007/s00421-025-06037-0)
-- **iOS:** [HRV Logger](https://www.hrv.tools/) by Marco Altini (paid, closed-source — same author as AlphaHRV). Works with any Bluetooth chest strap that broadcasts RR.
-- **Intervals.icu Supporter subscription** — required for CSV stream upload.
-- A chest strap that broadcasts beat-to-beat RR over Bluetooth (Polar H10 strongly recommended; HRM-Pro Plus works for HRV Logger).
-- Your phone, running in parallel with your head unit during the ride.
+By contrast, AlphaHRV runs *on* the Garmin head unit, writes alpha1 as a FIT developer field into the same file as the ride, and Intervals.icu picks it up natively on upload. Zero user steps after recording. That's the bar Section 11 requires of any supported DFA a1 source: alpha1 must arrive time-aligned with the ride without manual reconciliation.
 
-> **HRV4Training is NOT the right app.** It's a separate (also Marco Altini) app for **resting morning HRV measurements**, not in-activity recording. Use HRV Logger if you're on iOS.
+If a future Android/iOS app records into the ride's FIT directly (rather than producing a parallel file), or if a head-unit-side DFA a1 implementation appears for Wahoo / Coros / Karoo, that path will be re-evaluated. Until then, **Garmin + AlphaHRV is the only supported source.**
 
-### Workflow (untested end-to-end, plausible)
-
-1. **Record the ride normally** on your head unit.
-2. **In parallel**, start FatMaxxer (Android) or HRV Logger (iOS) on your phone with the chest strap paired. Both apps record DFA a1 in real time and export CSV when you stop.
-3. **After the ride**, sync the head unit ride to Intervals.icu via your normal path (direct device sync recommended).
-4. **Export the FatMaxxer / HRV Logger CSV** from your phone.
-5. **In Intervals.icu**, open the activity → Activity Data tab → download the streams CSV.
-6. **Align timestamps** between the phone CSV and the streams CSV (this is the manual step — both files have time columns, you join on them).
-7. **Add a `dfa_a1` column** to the streams CSV with the aligned values from the phone app.
-8. **Re-upload the merged CSV** to Intervals.icu. (Intervals.icu's CSV upload UI: "If the activity has any array valued streams (e.g. HRV or a custom stream using array values) then you need to untick the 'Convert text to numbers, dates and formulas' box.")
-9. **Run sync.py** — if the merged column landed under the stream name `dfa_a1`, the existing pipeline picks it up and produces a `dfa` block in `intervals.json` exactly as it would for an AlphaHRV recording.
-
-**Open question that determines whether this works:** does step 9 succeed, or does Intervals.icu store the user-uploaded column under a different stream name? **No one has verified this yet.** If you try the workflow above, please report back via a GitHub issue (see Contribute section below).
-
-### Costs and caveats
-
-- **Two devices recording the same ride.** Real UX cost. Battery, pairing, time-syncing.
-- **Manual CSV merging per ride.** Could be scripted (Python or Node), but it's still a per-ride workflow.
-- **Intervals.icu Supporter subscription is paid.** No free path for non-Garmin users currently.
-- **Algorithmic differences.** FatMaxxer and HRV Logger may produce slightly different DFA a1 values than AlphaHRV at the margins. The protocol's threshold mapping (1.0 ↔ LT1, 0.5 ↔ LT2) is approximately consistent across the three but not bit-identical. Treat phone-recorded DFA a1 with the same protocol thresholds, but expect ±0.05 noise vs the AlphaHRV reference.
-- **Polar H10 is the gold-standard strap** for all three apps. Other straps work, but artifact rates climb fast.
+> **Note:** HRV4Training is also by Marco Altini but is a separate app for resting morning HRV measurements, not in-activity recording. It is not relevant to DFA a1 in Section 11.
 
 ---
 
@@ -154,69 +130,9 @@ curl -s -u "API_KEY:$KEY" "https://intervals.icu/api/v1/activity/$ACT" \
 - A `dfa_a1` stream → veloVigil (or another Karoo extension) is writing DFA a1 directly. **If this exists, sync.py works on Karoo with zero changes.**
 - Nothing → no Karoo extension is currently writing HRV-related fields that Intervals.icu surfaces. The path is theoretically viable but no app fills it yet.
 
-### Phone fallback: does an uploaded `dfa_a1` CSV column become a `dfa_a1` stream?
+### Phone fallback verification
 
-This is the verification that determines whether the phone fallback path "just works" with Section 11.
-
-**Prerequisites:** Intervals.icu Supporter subscription, an existing activity, a FatMaxxer or HRV Logger CSV from a parallel recording.
-
-```bash
-# 1. Pick a target activity (one you have a phone-app CSV for)
-ACT=i123456789
-
-# 2. Download the activity's existing streams CSV from the Intervals.icu UI
-#    (Activity → Activity Data tab → "Download CSV")
-#    Save as streams.csv
-
-# 3. Merge the phone CSV's dfa_a1 column into streams.csv, aligned by timestamp.
-#    A trivial Python script:
-python3 << 'PY'
-import csv, sys
-# Read phone CSV (FatMaxxer or HRV Logger format — adjust column names as needed)
-phone_dfa = {}  # timestamp -> dfa_a1 value
-with open('phone_export.csv') as f:
-    r = csv.DictReader(f)
-    for row in r:
-        # Adjust 'time' and 'dfa_a1' to match the phone app's actual column names
-        ts = int(row['time'])
-        phone_dfa[ts] = float(row['dfa_a1'])
-
-# Read streams CSV, add dfa_a1 column, write merged
-with open('streams.csv') as fin, open('streams_merged.csv', 'w', newline='') as fout:
-    r = csv.DictReader(fin)
-    fields = r.fieldnames + ['dfa_a1']
-    w = csv.DictWriter(fout, fieldnames=fields)
-    w.writeheader()
-    for row in r:
-        ts = int(float(row['time']))  # streams.csv uses 'time' in seconds-from-start
-        row['dfa_a1'] = phone_dfa.get(ts, '')
-        w.writerow(row)
-print("Wrote streams_merged.csv")
-PY
-
-# 4. Upload streams_merged.csv via the Intervals.icu UI:
-#    Activity → Activity Data tab → "Upload CSV"
-#    UNTICK "Convert text to numbers, dates and formulas" — this is required for array-valued streams.
-
-# 5. After upload, check if a dfa_a1 stream now exists on the activity:
-curl -s -u "API_KEY:$KEY" "https://intervals.icu/api/v1/activity/$ACT/streams" \
-  | python3 -c "
-import sys, json
-for s in json.load(sys.stdin):
-    t = s.get('type')
-    if t in ('dfa_a1', 'dfa', 'alpha1') or 'dfa' in str(t).lower():
-        data = [x for x in (s.get('data') or []) if x is not None]
-        print('FOUND:', t, '| nonnull=', len(data), '| sample=', data[:5])
-        break
-else:
-    print('NO DFA STREAM. Stream types present:', [s.get('type') for s in json.load(open('/dev/stdin'))])
-"
-```
-
-**What we're looking for:**
-- `FOUND: dfa_a1 | nonnull=N | sample=[...]` → **Phone fallback works end-to-end with Section 11. No code changes needed.** The pipeline treats the merged stream identically to an AlphaHRV recording. This is the headline outcome.
-- A different stream name (e.g. `custom_1`, `user_dfa`) → phone fallback works but `sync.py` needs a small mapping change to recognize the alternate name. We'd add the mapping.
-- `NO DFA STREAM` → Intervals.icu doesn't ingest user-uploaded array streams the way we hoped. Phone fallback path is dead until Intervals.icu changes its CSV ingest, or we find a different upload route.
+Not applicable — phone fallback is not supported. See *Phone fallback (evaluated, not supported)* above for the architectural reason.
 
 ---
 
@@ -239,5 +155,5 @@ We don't own non-Garmin hardware, so we can't verify any of this ourselves. Your
 
 - **None of the non-Garmin paths are currently verified end-to-end.** Section 11 supports Garmin + AlphaHRV. Everything else in this file is plausible-but-unverified, clearly labeled.
 - **The Suunto DDFA path may never produce identical numbers to DFA a1.** Different algorithm. Even if Intervals.icu exposes Suunto DDFA, Section 11 would need a separate `DDFA a1 Protocol` section with its own threshold validation before it could be interpreted. We're not building that speculatively.
-- **Phone fallback is paid.** Intervals.icu Supporter is required. There is no free non-Garmin path right now.
-- **Wahoo, Coros, and Polar have no path that doesn't go through the phone fallback.** That's a Wahoo/Coros/Polar problem, not a Section 11 problem.
+- **Phone fallback (FatMaxxer / HRV Logger) was evaluated and is not supported.** Both apps record on a separate device from the bike computer and output CSV, requiring per-ride manual time alignment and merge into the activity stream. AlphaHRV records into the ride's FIT directly, so it has no equivalent reconciliation cost. See *Phone fallback (evaluated, not supported)* above.
+- **Wahoo, Coros, and Polar have no supported DFA a1 path.** Section 11 currently requires Garmin + AlphaHRV. That's a hardware/firmware limitation on those platforms, not a Section 11 design choice — we'd happily support any head unit that records alpha1 (or RR with a recognized alpha1 developer field) into the ride's FIT.

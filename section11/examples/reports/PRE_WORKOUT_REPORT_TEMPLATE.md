@@ -1,7 +1,8 @@
 # Pre-Workout Report Template
 
 > This template defines the standard output format for pre-workout reports.  
-> Fields in `[brackets]` are placeholders. Omit fields that don't apply.
+> Fields in `[brackets]` are placeholders. Omit fields that don't apply.  
+> **Data Freshness:** Every numeric value in a report must come from a current read of its source JSON file. Do not carry forward values from earlier reports or earlier in the conversation — re-read before quoting.
 
 ---
 
@@ -68,6 +69,7 @@ AI may override the pre-computed recommendation with explicit rationale.]
 | Durability | Include if qualifying sessions exist. Omit if 0 qualifying sessions in 7d |
 | EF | Include if qualifying sessions exist. Omit if 0 qualifying sessions in 7d |
 | TID 28d + drift | Include as separate line **only** if drift is "shifting" or "acute_depolarization". Omit entire line when "consistent" |
+| Polarization | Weekly Seiler TID rendered in power-zone labels. Source: `seiler_tid_7d.z1_pct/z2_pct/z3_pct`. Render as `Z1+Z2` (Seiler Easy / below LT1), `Z3` (Seiler Grey Zone / LT1–LT2), `Z4+` (Seiler Hard / above LT2). Do not output raw `Z1/Z2/Z3` labels — they collide with the per-session Power zones line above |
 | Load/Recovery context | Include tolerance note only when within 0.2 of threshold |
 | Next session | Include only on rest days |
 | Terrain Context | Include when `has_terrain: true` on a planned event and `routes.json` has the corresponding terrain data. Omit entirely otherwise. Full pre-ride briefing available on request |

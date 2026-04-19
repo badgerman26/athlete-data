@@ -16,12 +16,14 @@ Example output from `sync.py` v3.86 for a fictional cyclist in a Build phase. Us
 
 ## Schema Version
 
-These examples reflect sync.py v3.86 / Section 11 v11.17. Key fields added since earlier examples:
+These example files were generated from sync.py v3.86 / Section 11 v11.17. Key fields added to the schema since these examples were generated:
 
 - `readiness_decision` — pre-computed go/modify/skip recommendation with signal breakdown
 - `workout_summary_stats` — planned-vs-actual matching statistics
 - `race_calendar` — upcoming races and taper/race-week alerts
-- `has_intervals` — boolean flag on activities linking to intervals.json
+- `has_intervals` — boolean flag indicating structured interval segments exist in intervals.json
+- `has_dfa` — boolean flag indicating AlphaHRV DFA a1 data exists in intervals.json (independent from has_intervals)
+- `dfa_summary` — compact DFA a1 rollup attached when has_dfa is true and data quality is sufficient (omitted otherwise)
 - `efficiency_factor`, `hrrc` — per-activity capability metrics
 - `description` — activity description passthrough
 - `chat_notes` — athlete notes extracted from activity description (conditional)
@@ -31,5 +33,9 @@ These examples reflect sync.py v3.86 / Section 11 v11.17. Key fields added since
 - `feel_count`, `avg_rpe`, `rpe_count` in weekly history rows
 - `primary_sport`, `primary_sport_tss`, `sport_tss_breakdown` on weekly history rows
 - `sport_type` on planned workouts
+- `current_week_hard_days_completed`, `current_week_hard_days_total` in `phase_detection.basis.stream_2`
+- `athlete_profile` — stable identity block (DOB, age, height, sex, location, timezone, platform tenure)
+- `athlete_notes` — raw string passthrough of athlete's Intervals.icu notes
+- `avg_temp_unit`, `wind_speed_unit`, `avg_speed_unit`, `max_speed_unit` — per-activity unit labels
 
 For the full field reference, see [SECTION_11.md](../../SECTION_11.md) (Derived Metrics table).

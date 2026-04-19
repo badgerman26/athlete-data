@@ -155,7 +155,7 @@ Read data using the first method that works:
 1. **Connected repo/filesystem** — If data files are available via connector (GitHub, Google Drive, OneDrive — platform support varies) or local filesystem, read latest.json, history.json, intervals.json, and routes.json directly
 2. **URL fetch** — Fetch https://raw.githubusercontent.com/[USERNAME]/[REPO]/main/latest.json (append ?date= with today's date). Same for history.json
 3. If activities don't match today's date, re-fetch or re-read before concluding no data exists
-4. Load intervals.json when analysing a specific activity with `has_intervals: true` — use for interval compliance, pacing, cardiac drift, recovery quality
+4. Load intervals.json when analyzing a specific activity with `has_intervals: true` or `has_dfa: true` — use for interval compliance, pacing, cardiac drift, recovery quality, DFA a1 session-level interpretation
 5. Load routes.json when a planned event has `has_terrain: true` — use for route analysis, terrain-adjusted pacing, pre-ride briefing
 
 Do NOT ask me for data — read or fetch it yourself.
@@ -499,7 +499,7 @@ The script maintains `ftp_history.json` to track indoor and outdoor FTP changes 
 
 ### Interval-Level Data
 
-The script generates `intervals.json` with per-interval segment data (power, HR, cadence, zone, decoupling, W'bal) for recent structured sessions. Activities with interval data are flagged with `has_intervals: true` in `latest.json`. Incrementally cached with a 72h scan window and 7-day retention. Only activities in whitelisted sport families (cycling, run, ski, rowing, swim) with detected interval structure are included.
+The script generates `intervals.json` with per-interval segment data (power, HR, cadence, zone, decoupling, W'bal) for recent structured sessions, plus per-session DFA a1 rollups when AlphaHRV recorded. Activities in `latest.json` carry two independent flags: `has_intervals: true` (structured segments) and `has_dfa: true` (AlphaHRV session). Either flag indicates an entry in `intervals.json`. Incrementally cached with a 72h scan window and 14-day retention. Only activities in whitelisted sport families (cycling, run, ski, rowing, swim) with either detected interval structure or AlphaHRV data are included.
 
 ### Route & Terrain Data
 

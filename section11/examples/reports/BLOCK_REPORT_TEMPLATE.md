@@ -2,6 +2,8 @@
 
 **Structure only — no data. Replace `[placeholders]` with actual values.**
 
+**Data Freshness:** Every numeric value in a report must come from a current read of its source JSON file. Do not carry forward values from earlier reports or earlier in the conversation — re-read before quoting.
+
 Generated at end of each training block (3–5 weeks).
 
 ---
@@ -63,11 +65,11 @@ DFA a1 Calibration (omit section entirely if dfa_a1_profile null, OR cycling blo
   Sessions in window: [N] sufficient (LT1 crossings: [X], LT2 crossings: [Y])
   Confidence: [moderate / high]
   Average DFA a1: [X.XX] (drift mean: [+/-X.XX])
-  Empirical LT1: [XXX] bpm / [XXX] W (from [N] sessions in 0.95–1.05 band)
-  Empirical LT2: [XXX] bpm / [XXX] W (from [N] sessions in 0.45–0.55 band) [omit line if lt2_estimate null — happens when athlete rarely crosses 0.5]
-  Dossier LT1 (cycling): [XXX] bpm / [XXX] W
-  Dossier LT2 (cycling): [XXX] bpm / [XXX] W
-  Delta: [LT1 +X% / LT2 -Y% / no notable delta] [report only deltas >5% per DFA a1 Protocol §Zone Validation Use]
+  Empirical LT1: [XXX] bpm (from [N] sessions) / outdoor [XXX] W (from [N] sessions) / indoor [XXX] W (from [N] sessions) [omit environment line if n_sessions_outdoor or n_sessions_indoor is 0]
+  Empirical LT2: [XXX] bpm (from [N] sessions) / outdoor [XXX] W (from [N] sessions) / indoor [XXX] W (from [N] sessions) [omit line if lt2_estimate null — happens when athlete rarely crosses 0.5; omit environment if n_sessions is 0]
+  Dossier LT1 (cycling): [XXX] bpm / outdoor [XXX] W / indoor [XXX] W
+  Dossier LT2 (cycling): [XXX] bpm / outdoor [XXX] W / indoor [XXX] W
+  Delta: [LT1 outdoor +X% / LT1 indoor -Y% / LT2 outdoor +Z% / no notable delta] [report only deltas >5% per DFA a1 Protocol §Zone Validation Use; per-environment watts deltas require environment-specific n_sessions ≥4 for moderate confidence]
   [If delta surfaced: 1-2 sentence note flagging the delta as a coaching observation, NOT an auto-update. Recommend formal retest before any dossier change.]
 
 Polarization (block average):
@@ -149,7 +151,7 @@ Next Block Plan:
 | **Power Curve Rotation** | rotation_index from capability.power_curve_delta | Sprint-biased (positive) vs endurance-biased (negative) adaptation across the block. Omit if null |
 | **HR Curve Rotation** | rotation_index from capability.hr_curve_delta | Intensity-biased (positive) vs endurance-biased (negative) HR shift. AMBIGUOUS — cross-reference with HRV/RHR. Omit if null |
 | **Sustainability Ceilings** | capability.sustainability_profile.{sport}.anchors | Per-sport MMP + HR at race-relevant durations. Cycling: Coggan + CP/W' model layers with divergence. Coverage ratio flags data gaps. Block-over-block: compare ceilings, coverage, and divergence shift. Omit if null |
-| **DFA a1 Calibration** | capability.dfa_a1_profile.trailing_by_sport.cycling | Empirical LT1/LT2 estimates from artifact-filtered AlphaHRV data, surfaced only when cycling block present, validated=true, and confidence is moderate or high. Crossing-band averages of HR and power in the ±0.05 windows around DFA a1 = 1.0 (LT1) and 0.5 (LT2). Compare against dossier-defined cycling thresholds; surface deltas >5% as coaching observations only. Never auto-updates dossier zones. lt2_estimate may be null even at moderate/high confidence if the athlete rarely crosses 0.5 — that's by design, surface lt1 only in that case. See `lt1_crossing_sessions` / `lt2_crossing_sessions` for diagnostic counts. Tier-2 interpretive signal — does NOT affect the Phase Progression Check |
+| **DFA a1 Calibration** | capability.dfa_a1_profile.trailing_by_sport.cycling | Empirical LT1/LT2 estimates from artifact-filtered AlphaHRV data, surfaced only when cycling block present, validated=true, and confidence is moderate or high. HR estimates are pooled across all sessions. Watts estimates are split by environment: `watts_outdoor` / `watts_indoor` (always present, null when no sessions in that environment). Compare `watts_outdoor` against dossier `ftp`, `watts_indoor` against `ftp_indoor`. Per-environment `n_sessions_outdoor` / `n_sessions_indoor` must meet the same 3/4–5/≥6 confidence thresholds before surfacing a watts calibration delta for that environment. If only one environment has sufficient data and the dossier lacks a threshold for the other, the available estimate may inform directionally with cross-environment caveat. Never auto-updates dossier zones. lt2_estimate may be null even at moderate/high confidence if the athlete rarely crosses 0.5 — that's by design, surface lt1 only in that case. See `lt1_crossing_sessions` / `lt2_crossing_sessions` for diagnostic counts. Tier-2 interpretive signal — does NOT affect the Phase Progression Check |
 | **Decoupling trend** | Long ride aerobic efficiency | Improving decoupling = aerobic base building |
 | **Polarization by Week** | Weekly zone distributions | Catches grey zone creep within a block. Append classification + PI only when week diverges from block-scale TID |
 | **Durability by Week** | Weekly mean decoupling from steady-state sessions | VI ≤ 1.05, ≥ 90min. Shows aerobic efficiency trajectory across block |

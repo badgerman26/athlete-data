@@ -15,7 +15,7 @@ Completed 2h30m endurance ride and rowing as scheduled. Clean aerobic execution 
 Completed workout: VirtualRide Endurance - Wednesday
 Start time: 09:30:15
 Duration: 2h30m (planned 2h30m)
-Distance: 76.4 km
+Distance: 76.42 km
 Power: 155 W avg / 156 W NP
 Power zones: 12% Zone 1, 88% Zone 2
 Grey Zone (Z3): 0%
@@ -24,7 +24,7 @@ Session profile: Endurance
 HR: 118 avg / 131 max
 HR zones: 100% Zone 1
 Cadence: 88 avg
-Decoupling: 2.14% (good)
+Decoupling: 2.14%
 EF: 1.32
 Variability Index: 1.01 (good)
 Calories: 1396 kcal
@@ -41,7 +41,7 @@ HR zones: 68% Zone 1, 32% Zone 2
 Calories: 165 kcal
 TSS: 10 (planned 10)
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: Build Wk2
 Polarization: Z1+Z2 97%, Z3 1%, Z4+ 3%
 Durability: 2.14% 7d mean(3) / 2.50% 28d mean(11) (stable)
@@ -76,7 +76,7 @@ Tempo ride overshot planned load due to terrain; short ride, SkiErg, and walk al
 Completed workout: Ride Training Session
 Start time: 09:42:18
 Duration: 5m
-Distance: 1.8 km
+Distance: 1.80 km
 Power: 72 W avg / 128 W NP
 HR: 112 avg / 124 max
 TSS: 2
@@ -86,16 +86,16 @@ RPE: 1/10
 Completed workout: Ride Training Session
 Start time: 10:05:33
 Duration: 2h12m (planned 2h00m)
-Distance: 58.4 km
+Distance: 58.37 km
 Power: 142 W avg / 162 W NP
-Power zones: 30% Zone 1, 36% Zone 2
+Power zones: 30% Zone 1, 36% Zone 2, 23% Zone 3, 9% Zone 4, 2% Zone 5
 Grey Zone (Z3): 23%
 Quality (Z4+): 11%
 Session profile: Tempo
 HR: 135 avg / 158 max
 HR zones: 84% Zone 1, 16% Zone 2
 Cadence: 92 avg
-Decoupling: -4.12% (good)
+Decoupling: -4.12%
 EF: 1.20
 Variability Index: 1.14 (variable)
 Calories: 1240 kcal
@@ -115,13 +115,13 @@ TSS: 6 (planned 8)
 Completed workout: Walk Training Session
 Start time: 15:10:22
 Duration: 38m
-Distance: 3.4 km
+Distance: 3.40 km
 HR: 82 avg / 98 max
 HR zones: 100% Zone 1
 Calories: 156 kcal
 TSS: 5
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: Base Wk3
 Polarization: Z1+Z2 88%, Z3 7%, Z4+ 5% — Polarized (PI: 1.85)
 Durability: 3.20% 7d mean(3) / 2.75% 28d mean(12) (stable)
@@ -159,16 +159,16 @@ Completed threshold intervals as scheduled. Power targets hit, HR response appro
 Completed workout: VirtualRide 3x12min Threshold - Friday
 Start time: 08:15:42
 Duration: 1h30m (planned 1h30m)
-Distance: 48.2 km
+Distance: 48.23 km
 Power: 178 W avg / 205 W NP
-Power zones: 28% Zone 1, 31% Zone 2
+Power zones: 28% Zone 1, 31% Zone 2, 3% Zone 3, 33% Zone 4, 4% Zone 5, 1% Zone 6
 Grey Zone (Z3): 3%
 Quality (Z4+): 37%
 Session profile: Threshold
 HR: 138 avg / 162 max
 HR zones: 32% Zone 1, 29% Zone 2, 14% Zone 3, 25% Zone 4
 Cadence: 85 avg
-Decoupling: 3.82% (good)
+Decoupling: 3.82%
 EF: 1.49
 HRRc: 34 bpm
 Variability Index: 1.15
@@ -178,7 +178,7 @@ TSS: 95 (planned 90)
 Feel: 3/5 (Normal)
 RPE: 7/10
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: Build Wk3
 Polarization: Z1+Z2 84%, Z3 2%, Z4+ 13%
 Durability: 2.95% 7d mean(3) / 2.50% 28d mean(11) (stable)
@@ -212,7 +212,7 @@ Endurance ride cut short at 1h30m of planned 2h30m due to knee discomfort. SkiEr
 Completed workout: VirtualRide Endurance - Monday (modified)
 Start time: 10:02:18
 Duration: 1h30m (planned 2h30m)
-Distance: 45.1 km
+Distance: 45.14 km
 Power: 148 W avg / 149 W NP
 Power zones: 19% Zone 1, 81% Zone 2
 Grey Zone (Z3): 0%
@@ -221,7 +221,7 @@ Session profile: Endurance
 HR: 115 avg / 128 max
 HR zones: 100% Zone 1
 Cadence: 86 avg
-Decoupling: 1.92% (good)
+Decoupling: 1.92%
 EF: 1.29
 Variability Index: 1.01 (good)
 Calories: 800 kcal
@@ -231,7 +231,7 @@ TSS: 47 (planned 78)
 Skipped workout: VirtualSki Training Session
 Reason: Precautionary — knee discomfort from ride
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: Base Wk4
 Polarization: Z1+Z2 98%, Z3 0%, Z4+ 2%
 Durability: 1.92% 7d mean(2) / 2.40% 28d mean(10) (improving)
@@ -248,7 +248,7 @@ TSS: 132
 
 Interpretation:
 Session cut short — right call given the knee discomfort. Aerobic quality during the 1h30m
-was excellent (decoupling 1.92%, VI 1.00). TSS 47 vs planned 78 means a lighter day than
+was excellent (decoupling 1.92%, VI 1.01). TSS 47 vs planned 78 means a lighter day than
 intended. Monitor knee before tomorrow's session. If persistent, consider swapping to
 upper-body only. 🩹
 ```
@@ -265,13 +265,13 @@ Rest day walk in the rain. Low intensity, full recovery zone.
 Completed workout: Walk Training Session
 Start time: 14:30:08
 Duration: 1h
-Distance: 5.1 km
+Distance: 5.10 km
 HR: 78 avg / 96 max
 HR zones: 100% Zone 1
 Calories: 210 kcal
 TSS: 6
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: Base Wk2
 Polarization: Z1+Z2 97%, Z3 0%, Z4+ 3%
 Durability: 2.30% 7d mean(3) / 2.55% 28d mean(11) (stable)
@@ -303,19 +303,19 @@ Long Z2 ride completed at planned duration but DFA a1 drifted negative across th
 Completed workout: Ride Long Endurance - Saturday
 Start time: 09:15:00
 Duration: 4h12m (planned 4h00m)
-Distance: 118.5 km
+Distance: 118.50 km
 Power: 168 W avg / 174 W NP
-Power zones: 18% Zone 1, 78% Zone 2
+Power zones: 18% Zone 1, 78% Zone 2, 4% Zone 3
 Grey Zone (Z3): 4%
 Quality (Z4+): 0%
 Session profile: Endurance
 HR: 132 avg / 154 max
 HR zones: 62% Zone 1, 36% Zone 2, 2% Zone 3
 Cadence: 87 avg
-Decoupling: 6.85% (watch)
+Decoupling: 6.85%
 EF: 1.32
 HRRc: 28 bpm
-Variability Index: 1.06 (good)
+Variability Index: 1.06 (variable)
 DFA a1: 0.94 avg, 38% Z2/52% transition/10% SS/0% above LT2 (drift -0.31, interpretable)
 Calories: 2480 kcal
 Carbs used: 412 g
@@ -323,7 +323,7 @@ TSS: 218 (planned 210)
 Feel: 3/5 (Normal)
 RPE: 6/10
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: Base Wk4
 Polarization: Z1+Z2 92%, Z3 5%, Z4+ 3%
 Durability: 4.50% 7d mean(3) / 3.20% 28d mean(13) (declining)
@@ -365,16 +365,16 @@ Sweet spot intervals on plan; DFA a1 confirms internal intensity matched the pre
 Completed workout: VirtualRide 4x10min Sweetspot - Tuesday
 Start time: 09:00:00
 Duration: 1h25m (planned 1h25m)
-Distance: 42.8 km
+Distance: 42.85 km
 Power: 195 W avg / 215 W NP
-Power zones: 22% Zone 1, 28% Zone 2
+Power zones: 22% Zone 1, 28% Zone 2, 8% Zone 3, 38% Zone 4, 3% Zone 5, 1% Zone 6
 Grey Zone (Z3): 8%
 Quality (Z4+): 42%
 Session profile: Sweetspot
 HR: 142 avg / 158 max
 HR zones: 25% Zone 1, 33% Zone 2, 22% Zone 3, 20% Zone 4
 Cadence: 89 avg
-Decoupling: 2.45% (good)
+Decoupling: 2.45%
 EF: 1.51
 HRRc: 32 bpm
 Variability Index: 1.10
@@ -385,7 +385,7 @@ TSS: 88 (planned 85)
 Feel: 2/5 (Good)
 RPE: 6/10
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: Build Wk2
 Polarization: Z1+Z2 81%, Z3 6%, Z4+ 13%
 Durability: 2.80% 7d mean(2) / 2.95% 28d mean(12) (stable)

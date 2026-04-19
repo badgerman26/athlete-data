@@ -1,7 +1,8 @@
 # Post-Workout Report Template
 
 > This template defines the standard output format for post-workout reports.  
-> Fields in `[brackets]` are placeholders. Omit fields that don't apply to the activity type.
+> Fields in `[brackets]` are placeholders. Omit fields that don't apply to the activity type.  
+> **Data Freshness:** Every numeric value in a report must come from a current read of its source JSON file. Do not carry forward values from earlier reports or earlier in the conversation — re-read before quoting.
 
 ---
 
@@ -13,14 +14,14 @@ Data (last_updated UTC: [YYYY-MM-DDTHH:MM:SS])
 Completed workout: [ActivityType] [WorkoutName]
 Start time: [HH:MM:SS]
 Duration: [XhYm] (planned [XhYm])
-Distance: [XX.X] km
+Distance: [XX.XX] km
 Power: [XXX] W avg / [XXX] W NP
-Power zones: [XX]% Zone 1, [XX]% Zone 2
+Power zones: [XX]% Zone 1, [XX]% Zone 2, [XX]% Zone 3, ... (list every zone with ≥1% after rounding; omit zones that round to 0%)
 Grey Zone (Z3): [XX]%
 Quality (Z4+): [XX]%
 Session profile: [Classification]
 HR: [XXX] avg / [XXX] max
-HR zones: [XX]% Zone 1, [XX]% Zone 2
+HR zones: [XX]% Zone 1, [XX]% Zone 2, [XX]% Zone 3, ... (list every zone with ≥1% after rounding; omit zones that round to 0%)
 Cadence: [XX] avg
 Decoupling: [X.XX]%
 EF: [X.XX]
@@ -36,12 +37,12 @@ Note: [description or chat_notes text]
 
 [Repeat block for every completed activity whose date falls on the report day (athlete local time). One block per activity ID — never merge. Include walks, ski-erg, short rides, aborted rides, commutes. Never drop secondary sessions. Within a block, omit only fields the activity type does not have (e.g., no power for a walk).]
 
-Weekly totals:
+Weekly totals (rolling 7d):
 Phase: [phase_detection.phase] Wk[phase_detection.phase_duration_weeks]
 Polarization: Z1+Z2 [XX]%, Z3 [X]%, Z4+ [X]% — [Classification] (PI: [X.XX])
 Durability: [X.XX]% 7d mean([X]) / [X.XX]% 28d mean([X]) ([trend])
 EF: [X.XX] 7d mean([X]) / [X.XX] 28d mean([X]) ([trend])
-HRRc: [XX] bpm 7d mean([X]) / [XX] bpm 28d mean([X]) ([trend]) [omit if 28d < 3 sessions; if 7d = 0: "[XX] bpm 28d mean([X]) — 7d: no data"]
+HRRc: [XX] bpm 7d mean([X]) / [XX] bpm 28d mean([X]) ([trend]) [4 cases — (a) 28d ≥ 3 and 7d ≥ 1: full line as shown; (b) 28d ≥ 3 and 7d = 0: "[XX] bpm 28d mean([X]) — 7d: no data"; (c) 28d < 3 and 7d ≥ 1: "[XX] bpm 7d mean([X]) — 28d: insufficient data"; (d) 28d < 3 and 7d = 0: omit entirely]
 TID 28d: [Classification] (PI: [X.XX]) — drift: [consistent/shifting/acute_depolarization]
 TSB: [X.XX]
 CTL: [XX.XX]
@@ -90,7 +91,8 @@ Round zone percentages to the nearest **whole number** (1%). The JSON data sourc
 | Durability (weekly) | Aggregate decoupling 7d/28d | Steady-state sessions only (VI ≤ 1.05, ≥ 90min). Trend direction matters more than absolute value |
 | EF (weekly) | Aggregate EF 7d/28d | Steady-state cycling only (VI ≤ 1.05, ≥ 20min). Trend direction matters more than absolute value |
 | TID 28d (weekly) | 28d Seiler classification + drift | Shows whether acute TID matches chronic pattern. Always include drift label |
-| Weekly totals | Always | Running totals through current day |
+| Polarization (weekly) | Weekly Seiler TID rendered in power-zone labels | Source: `seiler_tid_7d.z1_pct/z2_pct/z3_pct`. Render as `Z1+Z2` (Seiler Easy / below LT1), `Z3` (Seiler Grey Zone / LT1–LT2), `Z4+` (Seiler Hard / above LT2). Do not output raw `Z1/Z2/Z3` labels — they collide with the per-session Power zones line above |
+| Weekly totals (rolling 7d) | Always | Rolling 7-day window (last 7 days including today). Not calendar week. |
 
 ## Assessment Labels
 

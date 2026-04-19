@@ -368,16 +368,17 @@ DFA a1 Calibration:
   Sessions in window: 7 sufficient (LT1 crossings: 6, LT2 crossings: 2)
   Confidence: moderate
   Average DFA a1: 1.18 (drift mean: -0.08)
-  Empirical LT1: 145 bpm / 218 W (from 6 sessions in 0.95–1.05 band)
+  Empirical LT1: 145 bpm (from 6 sessions) / outdoor 220 W (from 4 sessions) / indoor 208 W (from 2 sessions)
   Empirical LT2: not enough sessions in band — base block had little time near 0.5 (lt2_crossing_sessions: 2)
-  Dossier LT1 (cycling): 152 bpm / 232 W
-  Dossier LT2 (cycling): 168 bpm / 268 W
-  Delta: LT1 -4.6% HR / -6.0% W (empirical lower than dossier)
+  Dossier LT1 (cycling): 152 bpm / outdoor 232 W / indoor 222 W
+  Dossier LT2 (cycling): 168 bpm / outdoor 268 W / indoor 258 W
+  Delta: LT1 -4.6% HR / outdoor -5.2% W (from 4 sessions — moderate) / indoor insufficient depth (2 sessions — below confidence floor)
   Coaching note: empirical LT1 trending below dossier values across the base block —
   consistent with what aerobic base work should produce (lower HR/power at the same internal
-  intensity). This is a calibration observation, not an action. Recommend formal LT1 retest
-  or 60-min step test before the next threshold block to confirm and update dossier zones if
-  the gap holds.
+  intensity). Outdoor watts delta is at moderate confidence; indoor watts delta suppressed
+  (only 2 crossing sessions). This is a calibration observation, not an action. Recommend
+  formal LT1 retest or 60-min step test before the next threshold block to confirm and
+  update dossier zones if the gap holds.
 
 Polarization (block average):
   Z1+Z2: 89%
@@ -454,11 +455,14 @@ Strong base block. CTL rose 9.2 points at a sustainable 1.18/week ramp. Every ae
 quality metric moved in the right direction: durability 3.8% → 2.0%, EF 1.42 → 1.52, HRRc
 +4 bpm, wellness uniformly improving. The DFA a1 calibration section is the new addition
 this block — with moderate confidence on 7 cycling sessions, empirical LT1 came in at 145
-bpm / 218W against dossier 152 bpm / 232W. That 5–6% gap is the kind of signal a base
-block should produce, and it argues for a formal LT1 retest before the threshold block to
-confirm. LT2 crossings were too few (2) to estimate — base work doesn't spend much time
-near DFA a1 = 0.5, which is exactly what the lt2_crossing_sessions diagnostic is for.
-Block ends fresh (TSB +24.6) with the aerobic base in good shape.
+bpm against dossier 152 bpm. Outdoor watts (220W from 4 sessions) show a 5.2% gap vs
+dossier 232W — moderate confidence, worth surfacing. Indoor watts (208W from 2 sessions)
+fell below the per-environment confidence floor and were correctly suppressed. That outdoor
+gap is the kind of signal a base block should produce, and it argues for a formal LT1
+retest before the threshold block to confirm. LT2 crossings were too few (2) to estimate —
+base work doesn't spend much time near DFA a1 = 0.5, which is exactly what the
+lt2_crossing_sessions diagnostic is for. Block ends fresh (TSB +24.6) with the aerobic
+base in good shape.
 
 Next Block Plan:
   Phase: Threshold Development
@@ -478,7 +482,7 @@ Next Block Plan:
 
 - **Example 1** shows a clean, successful block — all criteria met, clear progression
 - **Example 2** shows how the template handles real-world disruption — illness, regression, and the protocol's decision to NOT progress
-- **Example 3** shows the DFA a1 Calibration section in action — moderate confidence after 7 sufficient cycling sessions, an empirical-vs-dossier LT1 delta surfaced as a coaching observation (not an auto-update), and lt2_estimate appropriately omitted because base work doesn't dwell near DFA a1 = 0.5
+- **Example 3** shows the DFA a1 Calibration section in action — moderate confidence after 7 sufficient cycling sessions, an empirical-vs-dossier LT1 delta surfaced as a coaching observation (not an auto-update), with watts split by environment (outdoor at moderate confidence, indoor suppressed below per-environment confidence floor), and lt2_estimate appropriately omitted because base work doesn't dwell near DFA a1 = 0.5
 - **Polarization by Week** caught the grey zone creep in Example 2 that the block average partially masked
 - **Durability by Week** caught the aerobic efficiency regression in Example 2 before wellness metrics crashed — the aggregate trend is a leading indicator of fatigue
 - **Week-by-week CTL** in Volume Progression tells the trajectory story — Example 2's dip-and-partial-recovery is immediately visible

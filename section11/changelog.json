@@ -1,14 +1,13 @@
 {
-  "notification_id": "2026-04-02",
+  "notification_id": "2026-04-18",
   "changes": [
-    "— sync.py v3.93–v3.96 + SECTION_11.md v11.23–v11.25 (2026-03-24–04-02) —",
-    "v3.93: Route & Terrain Intelligence — GPX/TCX attachments parsed into routes.json. Climb detection (Cat 4–HC), descent detection, course character, elevation smoothing. Cached by attachment ID. has_terrain flag on events.",
-    "v3.94: Phase detection rewrite — live 4-week bucketing from activities_28d. Eliminates stale history.json row bug. recent_activities widened to 28 days.",
-    "v3.95: 500m polyline in routes.json, start_time on planned events, indoor flag passthrough.",
-    "v3.96: Course character fix — elevation_per_km only, absolute thresholds removed.",
-    "v11.23: No Conversational Data Substitution — AI must re-read JSON before citing metrics. No cached values from prior messages.",
-    "v11.24–v11.25: Route & Terrain Protocol — terrain-adjusted power, wind overlay, segment reasoning, drafting, nutrition timing, pre-ride briefing flow, course character table. 11 evidence base entries.",
-    "Hash-based cache invalidation on all cached files. On-demand sync path (phone/browser). Pre-workout terrain context block. Report template/example alignment. External API reference (Strava + yr.no). routes.json documentation sweep.",
-    "Upgrade: replace your sync.py + pull fresh docs. Most files touched."
+    "— sync.py v3.101–v3.103 + SECTION_11.md v11.32–v11.34 (2026-04-18) —",
+    "v11.32 / v3.101: has_dfa split + dfa_summary — has_dfa is now an independent boolean on recent_activities[], compact dfa_summary block in latest.json when quality is sufficient, quality gate tightened to require valid_pct ≥ 70% (fixes contamination from noisy sessions).",
+    "v3.102: Phase detection fixes — ctl_slope is now a linear regression over finalized weeks (no more spurious negatives), current-week hard-day scoring fixed, backfill no longer classifies the in-progress week.",
+    "v11.33 / v3.103: Athlete profile, notes, activity unit labels — new athlete_profile block (DOB/age/height/sex/location/timezone/tenure), athlete_notes passthrough, per-activity unit sibling fields (*_unit).",
+    "v11.34: Testing Protocol + RPE Expectation Bands — continuous-data-first testing guidance, explicit staleness signals and negative triggers, IF-calibrated RPE bands with duration/indoor/environmental modifiers. Docs-only.",
+    "Report templates — Weekly totals clarified as rolling 7d, Data Freshness rule added, HRRc display expanded to 4 cases, Polarization crosswalk row.",
+    "Docs — EXTERNAL_APIS.md switched to yr.no /complete + Open-Meteo added, intervals.json retention documented as 14d, SKILL.md completeness pass.",
+    "Upgrade: replace sync.py + pull fresh docs/templates."
   ]
 }

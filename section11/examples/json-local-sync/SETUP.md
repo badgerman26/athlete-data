@@ -153,7 +153,7 @@ Add these instructions to your AI platform's project settings (or provide them i
 ## DATA ACCESS:
 1. Read latest.json from the data directory
 2. Read history.json from the data directory
-3. Read intervals.json when analysing a specific activity with has_intervals: true
+3. Read intervals.json when analyzing a specific activity with has_intervals: true or has_dfa: true
 4. Read protocol from section11/SECTION_11.md
 5. Read report templates from section11/examples/reports/
 6. Read workout templates from section11/examples/workout-library/WORKOUT_REFERENCE.md

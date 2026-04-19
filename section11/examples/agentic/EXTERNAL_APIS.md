@@ -87,12 +87,12 @@ No API key required. Requires a `User-Agent` header identifying the application 
 ### Endpoint
 
 ```
-GET https://api.met.no/weatherapi/locationforecast/2.0/compact
+GET https://api.met.no/weatherapi/locationforecast/2.0/complete
   ?lat={latitude}
   &lon={longitude}
 ```
 
-Returns JSON forecast for the next ~9 days at the specified coordinates.
+Returns JSON forecast for the next ~9 days at the specified coordinates. The `complete` endpoint includes `probability_of_precipitation`; the lighter `compact` endpoint does not.
 
 ### Key Fields
 
@@ -104,10 +104,55 @@ From the `timeseries` array, each entry contains `data.instant.details`:
 - **air_temperature** — °C. Cross-reference with Section 11 Environmental Conditions Protocol for heat stress tier
 - **relative_humidity** — %
 
-Precipitation probability is in `data.next_1_hours.summary.symbol_code` and `data.next_1_hours.details.precipitation_amount`.
+From `data.next_1_hours`:
+
+- **details.precipitation_amount** — mm
+- **details.probability_of_precipitation** — % (only available on the `complete` endpoint)
+- **summary.symbol_code** — weather descriptor (e.g., `rain`, `cloudy`, `partlycloudy_day`), not a probability
 
 ### Usage Notes
 
 - Fetch for the ride area at the planned ride time. For long routes, consider fetching for multiple points along the course
 - Cache responses — MET Norway returns `Expires` and `Last-Modified` headers. Do not re-fetch until the cached response expires
 - Creative Commons 4.0 BY license — attribution required: "Data from MET Norway"
+
+---
+
+## 3. Open-Meteo
+
+Open-Meteo provides free weather forecasts with no API key required. Aggregates multiple models (ECMWF, GFS, MET Norway, and others). A simpler alternative to yr.no when key-free setup matters more than regional model quality. For Scandinavia, yr.no's native MET Norway model is marginally better; elsewhere Open-Meteo's multi-model default is a reasonable choice.
+
+### Authentication
+
+No API key required. Free for non-commercial use, with a limit of 10,000 API calls per day. See [open-meteo.com/en/terms](https://open-meteo.com/en/terms) for full terms. For commercial use, see [open-meteo.com/en/pricing](https://open-meteo.com/en/pricing).
+
+### Endpoint
+
+```
+GET https://api.open-meteo.com/v1/forecast
+  ?latitude={lat}
+  &longitude={lon}
+  &hourly=temperature_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation_probability,precipitation,cloud_cover,weather_code
+  &timezone=auto
+```
+
+Returns JSON with hourly forecasts up to 16 days.
+
+### Key Fields
+
+From the `hourly` array:
+
+- **wind_direction_10m** — degrees, meteorological convention (direction wind comes FROM, 0° = north, 90° = east). Feeds directly into Section 11 Wind Overlay headwind/tailwind calculation
+- **wind_speed_10m** — m/s
+- **wind_gusts_10m** — m/s
+- **temperature_2m** — °C. Cross-reference with Section 11 Environmental Conditions Protocol for heat stress tier
+- **precipitation_probability** — %
+- **precipitation** — mm
+- **cloud_cover** — %
+- **weather_code** — WMO weather interpretation codes
+
+### Usage Notes
+
+- No `User-Agent` header required, but caching responses is recommended
+- `precipitation_probability` is provided directly as a percentage — no need to derive it from symbol codes
+- Combines multiple weather models; the default selection is the best available for the queried location
