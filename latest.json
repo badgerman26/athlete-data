@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-20T16:14:04.584600",
+    "last_updated": "2026-04-20T16:41:06.038512",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -620,14 +620,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.84,
+          "planned_tss_delta": 0.88,
           "hard_sessions_planned": 2,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 2,
           "race_proximity": 25,
-          "next_week_load": 0.66,
-          "plan_coverage_current_week": 0.24,
-          "plan_coverage_next_week": 0.29
+          "next_week_load": 0.53,
+          "plan_coverage_current_week": 0.33,
+          "plan_coverage_next_week": 0.19
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -660,7 +660,7 @@
     "p_max": 984,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-20T16:14:04.583458",
+    "calculation_timestamp": "2026-04-20T16:41:06.037334",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -5016,6 +5016,19 @@
   ],
   "planned_workouts": [
     {
+      "id": 86153480,
+      "date": "2026-04-21",
+      "name": "Recovery Ride",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 21,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "-5m ramp 50-65% FTP\n-35m 50% FTP\n-5m 60% FTP"
+    },
+    {
       "id": 86153538,
       "date": "2026-04-21",
       "name": "Recovery Spin",
@@ -5029,21 +5042,21 @@
       "description": "-5m ramp 50-65% FTP\n-40m 50% FTP\n-5m 60% FTP"
     },
     {
-      "id": 86153551,
-      "date": "2026-04-23",
-      "name": "FTP Test",
+      "id": 86153512,
+      "date": "2026-04-22",
+      "name": "Endurance Spin",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 94,
-      "duration_hours": 0.58,
-      "duration_formatted": "35m",
+      "planned_tss": 41,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "-5m 50% FTP\n-1m 65% FTP\n-1m 70% FTP\n-1m 75% FTP\n-1m 80% FTP\n-1m 85% FTP\n-1m 90% FTP\n-1m 95% FTP\n-1m 100% FTP\n-1m 105% FTP\n-1m 110% FTP\n-1m 115% FTP\n-1m 120% FTP\n-1m 125% FTP\n-1m 130% FTP\n-1m 135% FTP\n-1m 140% FTP\n-1m 145% FTP\n-1m 150% FTP\n-1m 155% FTP\n-1m 160% FTP\n-1m 165% FTP\n-1m 170% FTP\n-1m 175% FTP\n-1m 180% FTP\n-1m 185% FTP\n-5m 50% FTP"
+      "description": "-5m ramp 50-65% FTP\n-50m 65% FTP\n-5m 60% FTP"
     },
     {
       "id": 86153556,
-      "date": "2026-04-24",
+      "date": "2026-04-23",
       "name": "Tempo Endurance",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -5053,6 +5066,19 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": "-5m ramp 50-65% FTP\n-60m 75% FTP\n-5m 60% FTP"
+    },
+    {
+      "id": 105564407,
+      "date": "2026-04-24",
+      "name": "gravel",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 50,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": ""
     },
     {
       "id": 86153517,
@@ -5081,19 +5107,6 @@
       "description": "-5m ramp 50-65% FTP\n-190m 65% FTP\n-10m 60% FTP"
     },
     {
-      "id": 86153480,
-      "date": "2026-04-28",
-      "name": "Recovery Ride",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 21,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "-5m ramp 50-65% FTP\n-35m 50% FTP\n-5m 60% FTP"
-    },
-    {
       "id": 86153545,
       "date": "2026-04-29",
       "name": "Short Tempo",
@@ -5117,19 +5130,6 @@
       "duration_formatted": "57m",
       "workout_summary": "5m @158W | 30s @275W | 30s @151W | 3\u00d730s @275W / 30s rec | 5m @165W | 2\u00d78m @242W / 2m rec | 13m @178W | 10m @165W",
       "has_terrain": false
-    },
-    {
-      "id": 86153512,
-      "date": "2026-05-01",
-      "name": "Endurance Spin",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 41,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "-5m ramp 50-65% FTP\n-50m 65% FTP\n-5m 60% FTP"
     },
     {
       "id": 86153481,
@@ -5283,12 +5283,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 20,
+    "attempted": 19,
     "success": 8,
     "patternA": 8,
     "patternB": 0,
     "bail_no_workout_doc": 1,
-    "bail_no_match": 12
+    "bail_no_match": 11
   },
   "weekly_summary": {
     "total_training_hours": 18.5,
