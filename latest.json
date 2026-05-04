@@ -62,15 +62,15 @@
       "menstrual": "menstrual_phase and menstrual_phase_predicted are not on the 1-4 scale. Values: PERIOD, FOLLICULAR, OVULATION, LUTEAL, etc."
     },
     "quick_stats": {
-      "total_training_hours": 17.15,
-      "total_training_formatted": "17h8m",
-      "total_activities": 14,
+      "total_training_hours": 17.39,
+      "total_training_formatted": "17h23m",
+      "total_activities": 15,
       "total_tss": 700
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-04T14:30:55.891782",
+    "last_updated": "2026-05-04T15:26:00.870081",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -158,8 +158,8 @@
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 17.15,
-    "total_activities": 14,
+    "total_duration_decimal_hours": 17.39,
+    "total_activities": 15,
     "by_activity_type": {
       "GravelRide": {
         "duration_decimal_hours": 5.35,
@@ -168,8 +168,8 @@
         "distance_km": 105.8
       },
       "OpenWaterSwim": {
-        "duration_decimal_hours": 0.67,
-        "count": 2,
+        "duration_decimal_hours": 0.91,
+        "count": 3,
         "tss": 27,
         "distance_km": 1.7
       },
@@ -299,28 +299,28 @@
     "tss_7d_total": 700.0,
     "tss_28d_total": 2320.0,
     "zone_distribution_7d": {
-      "z1_hours": 10.38,
+      "z1_hours": 10.58,
       "z2_hours": 2.83,
       "z3_hours": 1.55,
       "z4_plus_hours": 1.86,
-      "total_hours": 16.62,
+      "total_hours": 16.81,
       "zone_basis": "mixed"
     },
-    "grey_zone_percentage": 9.3,
+    "grey_zone_percentage": 9.2,
     "grey_zone_note": "Gray Zone % (Z3/tempo) - minimize in polarized training",
-    "quality_intensity_percentage": 11.2,
+    "quality_intensity_percentage": 11.1,
     "quality_intensity_note": "Quality Intensity % (Z4+/threshold+) - target ~20% in polarized training",
-    "easy_time_ratio": 0.79,
+    "easy_time_ratio": 0.8,
     "easy_time_ratio_note": "Easy time (Z1+Z2) / Total - target ~80% in polarized training",
     "hard_days_this_week": 1,
     "hard_days_note": "Power ladder: z3+ >= 30min, z4+ >= 10min, z5+ >= 5min, z6+ >= 2min, z7 >= 1min. HR fallback (when no power): z4+ >= 10min, z5+ >= 5min. Per Seiler 3-zone model + Foster. HR-based days flagged with intensity_basis: hr",
     "seiler_tid_7d": {
-      "z1_seconds": 47560,
+      "z1_seconds": 48254,
       "z2_seconds": 5584,
       "z3_seconds": 6693,
-      "z1_pct": 79.5,
-      "z2_pct": 9.3,
-      "z3_pct": 11.2,
+      "z1_pct": 79.7,
+      "z2_pct": 9.2,
+      "z3_pct": 11.1,
       "polarization_index": 1.98,
       "classification": "Pyramidal",
       "zone_basis": "mixed"
@@ -338,11 +338,11 @@
       "sport": "cycling"
     },
     "seiler_tid_28d": {
-      "z1_seconds": 187257,
+      "z1_seconds": 187951,
       "z2_seconds": 19314,
       "z3_seconds": 18707,
-      "z1_pct": 83.1,
-      "z2_pct": 8.6,
+      "z1_pct": 83.2,
+      "z2_pct": 8.5,
       "z3_pct": 8.3,
       "polarization_index": null,
       "classification": "Pyramidal",
@@ -650,12 +650,12 @@
     "p_max": 978,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-05-04T14:30:55.890640",
+    "calculation_timestamp": "2026-05-04T15:26:00.868862",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
-      "activities_7d": 14,
-      "activities_28d": 81,
+      "activities_7d": 15,
+      "activities_28d": 82,
       "planned_workouts_7d": 2,
       "ftp_history_days": {
         "indoor": 0,
@@ -664,6 +664,56 @@
     }
   },
   "recent_activities": [
+    {
+      "id": "i145355161",
+      "date": "2026-05-04T14:06:15",
+      "type": "OpenWaterSwim",
+      "name": "Swim",
+      "duration_hours": 0.24,
+      "distance_km": 0.06,
+      "tss": 0,
+      "intensity_factor": 0.0,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": 85,
+      "max_hr": 95,
+      "avg_cadence": null,
+      "avg_speed": 0.3,
+      "avg_speed_unit": "KPH",
+      "max_speed": 5.1,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "MPH",
+      "work_kj": null,
+      "calories": 26,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "feel": null,
+      "rpe": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 694,
+          "z2_time": 0,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": false,
+      "has_dfa": false
+    },
     {
       "id": "i145311480",
       "date": "2026-05-04T08:24:56",
@@ -5331,10 +5381,10 @@
     "bail_no_match": 3
   },
   "weekly_summary": {
-    "total_training_hours": 17.15,
-    "total_training_formatted": "17h8m",
+    "total_training_hours": 17.39,
+    "total_training_formatted": "17h23m",
     "total_tss": 700,
-    "activities_count": 14,
+    "activities_count": 15,
     "avg_hrv": 24.5,
     "avg_resting_hr": 69.0
   },
