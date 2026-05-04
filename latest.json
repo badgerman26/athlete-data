@@ -65,12 +65,12 @@
       "total_training_hours": 17.39,
       "total_training_formatted": "17h23m",
       "total_activities": 15,
-      "total_tss": 700
+      "total_tss": 702
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-04T16:12:23.830826",
+    "last_updated": "2026-05-04T16:54:42.104387",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -119,7 +119,7 @@
       },
       "tsb": {
         "status": "amber",
-        "value": -18.8
+        "value": -19.0
       }
     },
     "signal_summary": {
@@ -170,7 +170,7 @@
       "OpenWaterSwim": {
         "duration_decimal_hours": 0.91,
         "count": 3,
-        "tss": 27,
+        "tss": 29,
         "distance_km": 1.7
       },
       "Pilates": {
@@ -201,10 +201,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 76.12,
-      "atl": 94.89,
-      "tsb": -18.77,
-      "ramp_rate": 4.63,
+      "ctl": 76.17,
+      "atl": 95.16,
+      "tsb": -18.99,
+      "ramp_rate": 4.67,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -293,11 +293,11 @@
     "primary_sport_tss_7d": 631.0,
     "effective_monotony": 1.15,
     "multi_sport_detected": true,
-    "strain": 980.0,
+    "strain": 983.0,
     "stress_tolerance": 7.0,
     "load_recovery_ratio": 6.6,
-    "tss_7d_total": 700.0,
-    "tss_28d_total": 2320.0,
+    "tss_7d_total": 702.0,
+    "tss_28d_total": 2322.0,
     "zone_distribution_7d": {
       "z1_hours": 10.58,
       "z2_hours": 2.83,
@@ -596,9 +596,9 @@
     },
     "phase_detection": {
       "phase": "Taper",
-      "confidence": "medium",
+      "confidence": "high",
       "reason_codes": [
-        "RACE_IMMINENT"
+        "RACE_IMMINENT_VOLUME_REDUCING"
       ],
       "basis": {
         "stream_1": {
@@ -608,13 +608,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.01,
-          "hard_sessions_planned": 3,
+          "planned_tss_delta": 0.68,
+          "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 4,
+          "current_week_hard_days_total": 2,
           "race_proximity": 11,
           "next_week_load": 0.2,
-          "plan_coverage_current_week": 0.24,
+          "plan_coverage_current_week": 0.14,
           "plan_coverage_next_week": 0.33
         },
         "data_quality": "good",
@@ -627,7 +627,7 @@
     },
     "phase_detected": "Taper",
     "phase_triggers": [
-      "RACE_IMMINENT"
+      "RACE_IMMINENT_VOLUME_REDUCING"
     ],
     "seasonal_context": "Build / Early Race Season",
     "benchmark_indoor": {
@@ -650,7 +650,7 @@
     "p_max": 978,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-05-04T16:12:23.829532",
+    "calculation_timestamp": "2026-05-04T16:54:42.103237",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -671,8 +671,8 @@
       "name": "Swim",
       "duration_hours": 0.24,
       "distance_km": 0.06,
-      "tss": 0,
-      "intensity_factor": 0.0,
+      "tss": 2,
+      "intensity_factor": 28.603878,
       "avg_power": null,
       "normalized_power": null,
       "avg_hr": 85,
@@ -699,7 +699,7 @@
       "hrrc": null,
       "elevation_m": null,
       "feel": null,
-      "rpe": null,
+      "rpe": 0,
       "zone_distribution": {
         "hr_zones": {
           "z1_time": 694,
@@ -5214,32 +5214,6 @@
   ],
   "planned_workouts": [
     {
-      "id": 86153484,
-      "date": "2026-05-06",
-      "name": "Tempo Blocks",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 64,
-      "duration_hours": 1.17,
-      "duration_formatted": "1h10m",
-      "workout_summary": "5m @158W | 2\u00d725m @214W / 5m rec | 5m @165W",
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n2x\n-25m 78% FTP\n-5m 60% FTP\n\n-5m 60% FTP"
-    },
-    {
-      "id": 86153485,
-      "date": "2026-05-07",
-      "name": "Threshold Intervals",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 105,
-      "duration_hours": 1.6,
-      "duration_formatted": "1h36m",
-      "workout_summary": "5m @158W | 30s @275W | 30s @151W | 11m @178W | 3\u00d730s @275W / 30s rec | 5m @165W | 2\u00d720m @261W / 5m rec | 11m @178W | 10m @165W",
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n-30s 100% FTP\n-30s 55% FTP\n\n\n-11m 65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n2x\n-20m 95% FTP\n-5m 60% FTP\n\n-11m 65% FTP\n\n-10m 60% FTP"
-    },
-    {
       "id": 86153499,
       "date": "2026-05-08",
       "name": "Endurance with Z3 Efforts",
@@ -5373,9 +5347,9 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 8,
-    "success": 5,
-    "patternA": 5,
+    "attempted": 6,
+    "success": 3,
+    "patternA": 3,
     "patternB": 0,
     "bail_no_workout_doc": 1,
     "bail_no_match": 3
@@ -5383,7 +5357,7 @@
   "weekly_summary": {
     "total_training_hours": 17.39,
     "total_training_formatted": "17h23m",
-    "total_tss": 700,
+    "total_tss": 702,
     "activities_count": 15,
     "avg_hrv": 24.5,
     "avg_resting_hr": 69.0
