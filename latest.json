@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-10T07:54:35.130648",
+    "last_updated": "2026-05-10T08:36:37.761567",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -214,14 +214,14 @@
       "ctl": 72.11,
       "atl": 66.54,
       "tsb": 5.57,
-      "ramp_rate": -0.67,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ramp_rate": -1.05,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
-      "eftp": 264.7,
-      "w_prime": 22585,
+      "eftp": 264.5,
+      "w_prime": 22562,
       "w_prime_kj": 22.6,
-      "p_max": 977,
+      "p_max": 976,
       "vo2max": null,
       "sports": {
         "cycling": {
@@ -257,7 +257,7 @@
       "sleep_quality": 3,
       "sleep_hours": 6.69,
       "sleep_formatted": "6h41m",
-      "sleep_score": 89.6,
+      "sleep_score": 83.0,
       "fatigue": 1,
       "soreness": 1,
       "stress": 1,
@@ -269,7 +269,7 @@
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
-      "baevsky_si": null,
+      "baevsky_si": 2.9,
       "lactate": null,
       "respiration": 15.5,
       "body_fat_pct": null,
@@ -282,7 +282,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 74.0
     }
   },
   "derived_metrics": {
@@ -580,22 +580,21 @@
           },
           "coverage_ratio": 1.0,
           "ftp_used": 275,
-          "w_prime_used": 22585,
+          "w_prime_used": 22562,
           "ftp_staleness_days": 58,
           "model_trust_note": "CP/W' model (P=CP+W'/t) is primary for durations \u226420min where W' contribution is meaningful. Coggan duration factors (Allen & Coggan, 3rd ed.) are the established reference for \u226560min. 30min is the crossover zone where both apply. model_divergence_pct = (actual - CP_model) / CP_model \u00d7 100. Positive divergence at short durations may indicate strong anaerobic capacity or stale W' value. Indoor MMP is typically 3-5% lower than outdoor (cooling, motivation) \u2014 source flag indicates which environment produced each anchor."
         }
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.67,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 3,
+      "planned_days": 2,
       "completed_days": 5,
       "matched_days": 2,
       "planned_dates": [
         "2026-05-08",
-        "2026-05-09",
-        "2026-05-10"
+        "2026-05-09"
       ],
       "completed_dates": [
         "2026-05-04",
@@ -619,13 +618,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.57,
+          "planned_tss_delta": null,
           "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 3,
           "current_week_hard_days_total": 3,
           "race_proximity": 5,
           "next_week_load": 0.2,
-          "plan_coverage_current_week": 0.05,
+          "plan_coverage_current_week": 0.0,
           "plan_coverage_next_week": 0.33
         },
         "data_quality": "good",
@@ -655,19 +654,19 @@
       "benchmark_percentage": "+0.0%",
       "seasonal_expected": false
     },
-    "eftp": 264.7,
-    "w_prime": 22585,
+    "eftp": 264.5,
+    "w_prime": 22562,
     "w_prime_kj": 22.6,
-    "p_max": 977,
+    "p_max": 976,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-10T07:54:35.129460",
+    "calculation_timestamp": "2026-05-10T08:36:37.760374",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 11,
       "activities_28d": 73,
-      "planned_workouts_7d": 3,
+      "planned_workouts_7d": 2,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -4696,11 +4695,11 @@
       "weight_kg": 69.8,
       "resting_hr": 50,
       "hrv_rmssd": 25.161499,
-      "hrv_sdnn": 49.343792,
+      "hrv_sdnn": 52.0,
       "sleep_hours": 7.96,
       "sleep_formatted": "7h57m",
       "sleep_quality": 2,
-      "sleep_score": 87.6,
+      "sleep_score": 85.0,
       "mental_energy": null,
       "avg_sleeping_hr": 54.222164,
       "vo2max": 57.0,
@@ -4717,7 +4716,7 @@
       "diastolic": null,
       "baevsky_si": 4.35,
       "lactate": null,
-      "respiration": 13.5,
+      "respiration": 14.205882,
       "body_fat_pct": 19.78429,
       "abdomen_cm": null,
       "steps": 10702,
@@ -4728,7 +4727,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": 84.0
+      "readiness": 83.0
     },
     {
       "date": "2026-05-10",
@@ -4739,7 +4738,7 @@
       "sleep_hours": 6.69,
       "sleep_formatted": "6h41m",
       "sleep_quality": 3,
-      "sleep_score": 89.6,
+      "sleep_score": 83.0,
       "mental_energy": null,
       "avg_sleeping_hr": 53.527016,
       "vo2max": null,
@@ -4754,7 +4753,7 @@
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
-      "baevsky_si": null,
+      "baevsky_si": 2.9,
       "lactate": null,
       "respiration": 15.5,
       "body_fat_pct": null,
@@ -4767,23 +4766,10 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 74.0
     }
   ],
   "planned_workouts": [
-    {
-      "id": 86153488,
-      "date": "2026-05-10",
-      "name": "Endurance Ride",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 114,
-      "duration_hours": 2.75,
-      "duration_formatted": "2h45m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n-150m 65% FTP\n-10m 60% FTP"
-    },
     {
       "id": 86153489,
       "date": "2026-05-11",
@@ -4880,12 +4866,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 4,
+    "attempted": 3,
     "success": 2,
     "patternA": 2,
     "patternB": 0,
     "bail_no_workout_doc": 1,
-    "bail_no_match": 2
+    "bail_no_match": 1
   },
   "weekly_summary": {
     "total_training_hours": 11.46,
