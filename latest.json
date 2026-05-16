@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-16T18:34:26.957733",
+    "last_updated": "2026-05-16T19:07:32.885574",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -90,10 +90,10 @@
     {
       "metric": "rhr",
       "value": 67.7,
-      "severity": "warning",
+      "severity": "alarm",
       "threshold": "\u2191\u22655bpm vs baseline (56.7)",
-      "context": "RHR 67.7 is 11.0bpm above baseline. Monitor \u2014 alarm if persists >2 days.",
-      "persistence_days": 1,
+      "context": "RHR 67.7 is 11.0bpm above baseline, persisting 3 days.",
+      "persistence_days": 3,
       "tier": 1
     },
     {
@@ -116,8 +116,8 @@
     }
   ],
   "readiness_decision": {
-    "recommendation": "modify",
-    "priority": 2,
+    "recommendation": "skip",
+    "priority": 0,
     "signals": {
       "hrv": {
         "status": "green",
@@ -143,16 +143,12 @@
       "ri": {
         "status": "green",
         "value": 0.91,
-        "value_yesterday": 1.31
-      },
-      "tsb": {
-        "status": "amber",
-        "value": -21.9
+        "value_yesterday": 0.9
       }
     },
     "signal_summary": {
       "green": 3,
-      "amber": 2,
+      "amber": 1,
       "red": 1,
       "unavailable": 0
     },
@@ -162,26 +158,17 @@
       "amber_threshold": 1,
       "modifier_applied": "race_week_tightened"
     },
-    "race_week_defers": true,
-    "modification": {
-      "triggers": [
-        "rhr",
-        "sleep",
-        "tsb"
-      ],
-      "suggested_adjustments": {
-        "intensity": "reduce",
-        "volume": "reduce",
-        "cap_zone": null
-      }
-    },
-    "reason": "P2 signal count. 1 red (rhr), 2 amber (sleep, tsb).",
-    "alarm_refs": []
+    "race_week_defers": false,
+    "modification": null,
+    "reason": "P0 safety stop. tier-1 alarms: rhr.",
+    "alarm_refs": [
+      "rhr"
+    ]
   },
   "history": {
     "available": true,
     "last_generated": "2026-04-19",
-    "age_days": 26,
+    "age_days": 27,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -259,7 +246,7 @@
       "sleep_quality": 3,
       "sleep_hours": 6.96,
       "sleep_formatted": "6h57m",
-      "sleep_score": 90.4,
+      "sleep_score": 85.0,
       "fatigue": 3,
       "soreness": 3,
       "stress": 1,
@@ -271,7 +258,7 @@
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
-      "baevsky_si": null,
+      "baevsky_si": 5.02,
       "lactate": null,
       "respiration": null,
       "body_fat_pct": null,
@@ -284,16 +271,16 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 86.0
     }
   },
   "derived_metrics": {
     "recovery_index": 0.91,
-    "recovery_index_yesterday": 1.31,
+    "recovery_index_yesterday": 0.9,
     "hrv_baseline_7d": 25.1,
     "rhr_baseline_7d": 56.7,
     "hrv_baseline_28d": 25.9,
-    "rhr_baseline_28d": 66.0,
+    "rhr_baseline_28d": 66.8,
     "latest_hrv": 27.1896,
     "latest_rhr": 67.710945,
     "acwr": 1.05,
@@ -660,7 +647,7 @@
     "p_max": 971,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-05-16T18:34:26.956543",
+    "calculation_timestamp": "2026-05-16T19:07:32.884362",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3820,13 +3807,13 @@
     {
       "date": "2026-05-15",
       "weight_kg": null,
-      "resting_hr": 51,
+      "resting_hr": 74,
       "hrv_rmssd": 29.597898,
-      "hrv_sdnn": 59.583138,
+      "hrv_sdnn": 50.0,
       "sleep_hours": 5.03,
       "sleep_formatted": "5h1m",
       "sleep_quality": 4,
-      "sleep_score": 60.5,
+      "sleep_score": 72.0,
       "mental_energy": null,
       "avg_sleeping_hr": 57.039253,
       "vo2max": 57.0,
@@ -3841,9 +3828,9 @@
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
-      "baevsky_si": null,
+      "baevsky_si": 4.23,
       "lactate": null,
-      "respiration": 16.0,
+      "respiration": 13.857142,
       "body_fat_pct": null,
       "abdomen_cm": null,
       "steps": 16269,
@@ -3854,7 +3841,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 85.0
     },
     {
       "date": "2026-05-16",
@@ -3865,7 +3852,7 @@
       "sleep_hours": 6.96,
       "sleep_formatted": "6h57m",
       "sleep_quality": 3,
-      "sleep_score": 90.4,
+      "sleep_score": 85.0,
       "mental_energy": null,
       "avg_sleeping_hr": 67.710945,
       "vo2max": 57.0,
@@ -3880,7 +3867,7 @@
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
-      "baevsky_si": null,
+      "baevsky_si": 5.02,
       "lactate": null,
       "respiration": null,
       "body_fat_pct": null,
@@ -3893,7 +3880,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 86.0
     }
   ],
   "planned_workouts": [
@@ -3940,7 +3927,7 @@
     "total_tss": 577,
     "activities_count": 5,
     "avg_hrv": 25.1,
-    "avg_resting_hr": 57.3
+    "avg_resting_hr": 60.6
   },
   "race_calendar": {
     "next_race": {
