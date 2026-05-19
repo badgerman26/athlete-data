@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-19T16:33:34.003627",
+    "last_updated": "2026-05-19T17:37:58.657995",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -584,9 +584,7 @@
     "phase_detection": {
       "phase": "Build",
       "confidence": "medium",
-      "reason_codes": [
-        "NO_PLANNED_WORKOUTS"
-      ],
+      "reason_codes": [],
       "basis": {
         "stream_1": {
           "ctl_slope": null,
@@ -595,14 +593,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": null,
+          "planned_tss_delta": 0.51,
           "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 0,
           "race_proximity": 61,
-          "next_week_load": null,
-          "plan_coverage_current_week": 0.0,
-          "plan_coverage_next_week": 0.0
+          "next_week_load": 1.17,
+          "plan_coverage_current_week": 0.27,
+          "plan_coverage_next_week": 0.64
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -613,9 +611,7 @@
       "dossier_agreement": null
     },
     "phase_detected": "Build",
-    "phase_triggers": [
-      "NO_PLANNED_WORKOUTS"
-    ],
+    "phase_triggers": [],
     "seasonal_context": "Build / Early Race Season",
     "benchmark_indoor": {
       "current_ftp": 275,
@@ -637,7 +633,7 @@
     "p_max": 971,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-19T16:33:34.002771",
+    "calculation_timestamp": "2026-05-19T17:37:58.656823",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3623,14 +3619,221 @@
       "readiness": 71.0
     }
   ],
-  "planned_workouts": [],
+  "planned_workouts": [
+    {
+      "id": 111202342,
+      "date": "2026-05-21",
+      "name": "Ride to St Albans",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 60,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": ""
+    },
+    {
+      "id": 111202377,
+      "date": "2026-05-22",
+      "name": "Cafe ride",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 100,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": ""
+    },
+    {
+      "id": 111202417,
+      "date": "2026-05-23",
+      "name": "gravel",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 100,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": ""
+    },
+    {
+      "id": 111199142,
+      "date": "2026-05-25",
+      "name": "Weekly",
+      "type": "TARGET",
+      "sport_type": "Ride",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Re-acclimation"
+    },
+    {
+      "id": 111201084,
+      "date": "2026-05-26",
+      "name": "The Alpine Sweet Spot",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 88,
+      "duration_hours": 1.35,
+      "duration_formatted": "1h21m",
+      "workout_summary": "10m @164W | 3\u00d71m @275W / 1m rec | 3\u00d715m @248W / 5m rec | 5m @137W",
+      "has_terrain": false,
+      "description": "Warmup\n- 10m ramp 50-70% FTP\n\nActivation\n3x\n- 1m 100% FTP\n- 1m 50% FTP\n\nThe Col\n3x\n- 15m 88-92% FTP\n- 5m 50% FTP\n\nCooldown\n- 5m 50% FTP"
+    },
+    {
+      "id": 111201876,
+      "date": "2026-05-27",
+      "name": "Zone 2",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 127,
+      "duration_hours": 3.0,
+      "duration_formatted": "3h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "-180m Z2-Z2"
+    },
+    {
+      "id": 111201534,
+      "date": "2026-05-28",
+      "name": "The L'Etape Threshold Builder",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 101,
+      "duration_hours": 1.48,
+      "duration_formatted": "1h29m",
+      "workout_summary": "15m @164W | 5m @220W | 3m @137W | 4\u00d710m @268W / 4m rec | 10m @137W",
+      "has_terrain": false
+    },
+    {
+      "id": 111202046,
+      "date": "2026-05-29",
+      "name": "Recovery Zone 1",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 18,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "- 45m Z1-Z1"
+    },
+    {
+      "id": 111202161,
+      "date": "2026-05-30",
+      "name": "The Weekend Mountain Simulation",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 254,
+      "duration_hours": 4.75,
+      "duration_formatted": "4h45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "Zone 2 Base\n- 120m 65-75% FTP\nClimb 1"
+    },
+    {
+      "id": 111202268,
+      "date": "2026-05-31",
+      "name": "3 hours steady Zone 2",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 105,
+      "duration_hours": 3.0,
+      "duration_formatted": "3h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "- 180m Z1-Z2"
+    },
+    {
+      "id": 111199399,
+      "date": "2026-06-01",
+      "name": "Weekly",
+      "type": "TARGET",
+      "sport_type": "Ride",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "Week 2 (Sweet Spot Base): ~595 TSS  We add duration to the Wednesday and Saturday Zone 2 rides. You'll hit roughly 10 hours of riding this week."
+    },
+    {
+      "id": 111201433,
+      "date": "2026-06-02",
+      "name": "The Switchback Over/Unders",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 84,
+      "duration_hours": 1.25,
+      "duration_formatted": "1h15m",
+      "workout_summary": "10m @164W | 3m @247W | 3m @137W | 4\u00d72m @240W / 1m rec | 6m @137W | 4\u00d72m @240W / 1m rec | 6m @137W | 4\u00d72m @240W / 1m rec | 6m @137W | 5m @137W",
+      "has_terrain": false
+    },
+    {
+      "id": 111199433,
+      "date": "2026-06-08",
+      "name": "Weekly",
+      "type": "TARGET",
+      "sport_type": "Ride",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "Week 3 (The Big Overload): ~665 TSS  The hardest week of the block. You are doing the nasty Switchback Over/Unders, Threshold work, and the 5-hour Weekend Mountain Simulation. Your legs will be begging for mercy by Sunday."
+    },
+    {
+      "id": 111199465,
+      "date": "2026-06-15",
+      "name": "Weekly",
+      "type": "TARGET",
+      "sport_type": "Ride",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "Week 4 (Adaptation / Rest Week): ~265 TSS  Crucial: We slash the volume and intensity by more than half. Fitness isn't made when you train; it's made when you recover from the training. You absorb the previous 3 weeks of work here."
+    },
+    {
+      "id": 111199523,
+      "date": "2026-06-22",
+      "name": "Weekly",
+      "type": "TARGET",
+      "sport_type": "Ride",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "Week 5 (Raising the Roof): ~635 TSS  Back to business. High threshold work and a massive 4.5-hour Zone 2 ride on Saturday to keep the fat-burning engine primed."
+    },
+    {
+      "id": 111199603,
+      "date": "2026-06-29",
+      "name": "Weekly",
+      "type": "TARGET",
+      "sport_type": "Ride",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "Week 6 (L'Etape Specificity): ~655 TSS  The final huge week. You will do your last 5-hour Mountain Simulation ride on Saturday. This is the peak of your fitness curve."
+    }
+  ],
   "workout_summary_stats": {
-    "attempted": 0,
-    "success": 0,
-    "patternA": 0,
+    "attempted": 7,
+    "success": 3,
+    "patternA": 3,
     "patternB": 0,
-    "bail_no_workout_doc": 0,
-    "bail_no_match": 0
+    "bail_no_workout_doc": 6,
+    "bail_no_match": 4
   },
   "weekly_summary": {
     "total_training_hours": 24.48,
@@ -3642,7 +3845,7 @@
   },
   "race_calendar": {
     "next_race": {
-      "name": "L'\u00c9tape du Tour",
+      "name": "L'\u00c9tape du Tour de France 2026",
       "date": "2026-07-19",
       "category": "RACE_A",
       "type": "Ride",
@@ -3652,16 +3855,6 @@
       "has_terrain": false
     },
     "all_races": [
-      {
-        "name": "L'\u00c9tape du Tour",
-        "date": "2026-07-19",
-        "category": "RACE_A",
-        "type": "Ride",
-        "days_until": 61,
-        "moving_time_seconds": null,
-        "distance_meters": null,
-        "has_terrain": false
-      },
       {
         "name": "L'\u00c9tape du Tour de France 2026",
         "date": "2026-07-19",
