@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-13T10:18:02.810983",
+    "last_updated": "2026-06-13T11:14:46.670947",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -139,10 +139,10 @@
       "unavailable": 0
     },
     "phase_context": {
-      "phase": "Build",
+      "phase": "Deload",
       "phase_week": 1,
-      "amber_threshold": 3,
-      "modifier_applied": "build_loosened"
+      "amber_threshold": 2,
+      "modifier_applied": "default"
     },
     "race_week_defers": false,
     "modification": {
@@ -597,9 +597,11 @@
       ]
     },
     "phase_detection": {
-      "phase": "Build",
+      "phase": "Deload",
       "confidence": "high",
-      "reason_codes": [],
+      "reason_codes": [
+        "BUILD_HISTORY_REDUCED_LOAD_REBOUND_CONFIRMED"
+      ],
       "basis": {
         "stream_1": {
           "ctl_slope": 3.0,
@@ -608,25 +610,27 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.33,
-          "hard_sessions_planned": 1,
+          "planned_tss_delta": 0.51,
+          "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 4,
-          "current_week_hard_days_total": 5,
+          "current_week_hard_days_total": 4,
           "race_proximity": 36,
           "next_week_load": 1.22,
           "plan_coverage_current_week": 0.08,
           "plan_coverage_next_week": 0.62
         },
         "data_quality": "good",
-        "stream_agreement": null
+        "stream_agreement": false
       },
       "previous_phase": null,
       "phase_duration_weeks": 1,
       "dossier_declared": null,
       "dossier_agreement": null
     },
-    "phase_detected": "Build",
-    "phase_triggers": [],
+    "phase_detected": "Deload",
+    "phase_triggers": [
+      "BUILD_HISTORY_REDUCED_LOAD_REBOUND_CONFIRMED"
+    ],
     "seasonal_context": "Build / Early Race Season",
     "benchmark_indoor": {
       "current_ftp": 275,
@@ -648,7 +652,7 @@
     "p_max": 966,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-13T10:18:02.809766",
+    "calculation_timestamp": "2026-06-13T11:14:46.669823",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3885,15 +3889,15 @@
     {
       "id": 114871451,
       "date": "2026-06-14",
-      "name": "Long Tempo Simulation (Reduced) by LeCoach App",
+      "name": "2h Aerobic Endurance by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 214,
-      "duration_hours": 4.0,
-      "duration_formatted": "4h",
-      "workout_summary": "5m @158W | 40m @178W | 4\u00d720m @233W / 10m rec | 1h10m @178W | 5m @151W",
+      "planned_tss": 82,
+      "duration_hours": 2.0,
+      "duration_formatted": "2h",
+      "workout_summary": null,
       "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n-40m 65% FTP\n\n4x\n-20m 85% FTP\n-10m 65% FTP\n\n-70m 65% FTP\n\n-5m 55% FTP"
+      "description": "-5m ramp 50-65% FTP\n\n-110m 65% FTP\n\n-5m 55% FTP"
     },
     {
       "id": 111199465,
@@ -4419,11 +4423,11 @@
   ],
   "workout_summary_stats": {
     "attempted": 30,
-    "success": 15,
-    "patternA": 15,
+    "success": 14,
+    "patternA": 14,
     "patternB": 0,
     "bail_no_workout_doc": 5,
-    "bail_no_match": 15
+    "bail_no_match": 16
   },
   "weekly_summary": {
     "total_training_hours": 16.6,
