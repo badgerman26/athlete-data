@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-20T08:08:32.255318",
+    "last_updated": "2026-06-20T09:21:59.123593",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -181,10 +181,10 @@
       "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
     },
     "thresholds": {
-      "eftp": 261.3,
-      "w_prime": 22293,
+      "eftp": 261.6,
+      "w_prime": 22315,
       "w_prime_kj": 22.3,
-      "p_max": 964,
+      "p_max": 965,
       "vo2max": null,
       "sports": {
         "cycling": {
@@ -543,7 +543,7 @@
           },
           "coverage_ratio": 1.0,
           "ftp_used": 275,
-          "w_prime_used": 22293,
+          "w_prime_used": 22315,
           "ftp_staleness_days": 99,
           "model_trust_note": "CP/W' model (P=CP+W'/t) is primary for durations \u226420min where W' contribution is meaningful. Coggan duration factors (Allen & Coggan, 3rd ed.) are the established reference for \u226560min. 30min is the crossover zone where both apply. model_divergence_pct = (actual - CP_model) / CP_model \u00d7 100. Positive divergence at short durations may indicate strong anaerobic capacity or stale W' value. Indoor MMP is typically 3-5% lower than outdoor (cooling, motivation) \u2014 source flag indicates which environment produced each anchor."
         }
@@ -573,7 +573,7 @@
     },
     "phase_detection": {
       "phase": "Build",
-      "confidence": "medium",
+      "confidence": "high",
       "reason_codes": [],
       "basis": {
         "stream_1": {
@@ -583,13 +583,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.78,
+          "planned_tss_delta": 1.48,
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
           "race_proximity": 29,
           "next_week_load": 0.82,
-          "plan_coverage_current_week": 0.15,
+          "plan_coverage_current_week": 0.23,
           "plan_coverage_next_week": 0.62
         },
         "data_quality": "good",
@@ -617,19 +617,19 @@
       "benchmark_percentage": null,
       "seasonal_expected": null
     },
-    "eftp": 261.3,
-    "w_prime": 22293,
+    "eftp": 261.6,
+    "w_prime": 22315,
     "w_prime_kj": 22.3,
-    "p_max": 964,
+    "p_max": 965,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-20T08:08:32.254481",
+    "calculation_timestamp": "2026-06-20T09:21:59.122360",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 9,
       "activities_28d": 50,
-      "planned_workouts_7d": 9,
+      "planned_workouts_7d": 10,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -3720,30 +3720,43 @@
   ],
   "planned_workouts": [
     {
-      "id": 114871456,
+      "id": 117380021,
       "date": "2026-06-20",
-      "name": "90m Mountain Simulation by LeCoach App",
+      "name": "High-Intensity Zwift Climb by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 69,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
-      "workout_summary": "5m @158W | 3\u00d710m @206W / 5m rec | 35m @178W | 5m @151W",
+      "planned_tss": 94,
+      "duration_hours": 1.27,
+      "duration_formatted": "1h16m",
+      "workout_summary": "5m @158W | 3\u00d730s @275W / 30s rec | 5m @165W | 3\u00d715m @261W / 5m rec | 3m @151W",
       "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n3x\n-10m 75% FTP 65RPM\n-5m 65% FTP\n\n-35m 65% FTP\n\n-5m 55% FTP"
+      "description": "-5m ramp 50-65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n3x\n-15m 95% FTP\n-5m 65% FTP\n\n-3m 55% FTP"
+    },
+    {
+      "id": 117380022,
+      "date": "2026-06-20",
+      "name": "Z1/2 Gravel Ride by LeCoach App",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 82,
+      "duration_hours": 2.0,
+      "duration_formatted": "2h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "-5m ramp 50-65% FTP\n\n-110m 65% FTP\n\n-5m 55% FTP"
     },
     {
       "id": 114871454,
       "date": "2026-06-21",
-      "name": "Durability Ride by LeCoach App",
+      "name": "30-Mile Endurance Road Ride by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 61,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
+      "planned_tss": 72,
+      "duration_hours": 1.75,
+      "duration_formatted": "1h45m",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n-80m 65% FTP\n\n-5m 55% FTP"
+      "description": "-5m ramp 50-65% FTP\n\n-95m 65% FTP\n\n-5m 55% FTP"
     },
     {
       "id": 111199523,
@@ -4166,12 +4179,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 25,
+    "attempted": 26,
     "success": 13,
     "patternA": 13,
     "patternB": 0,
     "bail_no_workout_doc": 4,
-    "bail_no_match": 12
+    "bail_no_match": 13
   },
   "weekly_summary": {
     "total_training_hours": 10.82,
