@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-07-09T08:53:50.827411",
+    "last_updated": "2026-07-09T11:53:08.551435",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -196,8 +196,8 @@
       "ctl": 82.08,
       "atl": 73.09,
       "tsb": 8.99,
-      "ramp_rate": -0.05,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ramp_rate": -2.33,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
       "eftp": 259.0,
@@ -569,9 +569,9 @@
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.83,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 6,
+      "planned_days": 5,
       "completed_days": 5,
       "matched_days": 5,
       "planned_dates": [
@@ -579,8 +579,7 @@
         "2026-07-04",
         "2026-07-06",
         "2026-07-07",
-        "2026-07-08",
-        "2026-07-09"
+        "2026-07-08"
       ],
       "completed_dates": [
         "2026-07-03",
@@ -604,13 +603,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.08,
+          "planned_tss_delta": 0.96,
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
           "race_proximity": 10,
           "next_week_load": 0.13,
-          "plan_coverage_current_week": 0.2,
+          "plan_coverage_current_week": 0.13,
           "plan_coverage_next_week": 0.47
         },
         "data_quality": "good",
@@ -646,13 +645,13 @@
     "p_max": 956,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-07-09T08:53:50.826238",
+    "calculation_timestamp": "2026-07-09T11:53:08.550249",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 7,
       "activities_7d": 9,
       "activities_28d": 56,
-      "planned_workouts_7d": 9,
+      "planned_workouts_7d": 8,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -4080,19 +4079,6 @@
   ],
   "planned_workouts": [
     {
-      "id": 114871450,
-      "date": "2026-07-09",
-      "name": "Foundation Endurance by LeCoach App",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 40,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n-50m 65% FTP\n\n-5m 55% FTP"
-    },
-    {
       "id": 114871441,
       "date": "2026-07-10",
       "name": "Aerobic Capacity by LeCoach App",
@@ -4211,12 +4197,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 6,
+    "attempted": 5,
     "success": 3,
     "patternA": 3,
     "patternB": 0,
     "bail_no_workout_doc": 1,
-    "bail_no_match": 3
+    "bail_no_match": 2
   },
   "weekly_summary": {
     "total_training_hours": 14.03,
