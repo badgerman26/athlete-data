@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-07-09T17:05:20.595106",
+    "last_updated": "2026-07-09T18:59:00.140645",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -603,13 +603,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.96,
+          "planned_tss_delta": 0.36,
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
           "race_proximity": 10,
           "next_week_load": 0.13,
-          "plan_coverage_current_week": 0.13,
+          "plan_coverage_current_week": 0.07,
           "plan_coverage_next_week": 0.47
         },
         "data_quality": "good",
@@ -645,7 +645,7 @@
     "p_max": 956,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-07-09T17:05:20.593934",
+    "calculation_timestamp": "2026-07-09T18:59:00.139482",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 7,
@@ -4079,30 +4079,17 @@
   ],
   "planned_workouts": [
     {
-      "id": 114871441,
-      "date": "2026-07-10",
-      "name": "Aerobic Capacity by LeCoach App",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 82,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n-110m 65% FTP\n\n-5m 55% FTP"
-    },
-    {
       "id": 114871471,
       "date": "2026-07-11",
       "name": "4x10m 75% FTP 65RPM by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 219,
-      "duration_hours": 5.0,
-      "duration_formatted": "5h",
-      "workout_summary": "5m @158W | 2h10m @178W | 4\u00d710m @206W / 5m rec | 1h40m @178W | 5m @151W",
+      "planned_tss": 113,
+      "duration_hours": 2.42,
+      "duration_formatted": "2h25m",
+      "workout_summary": "5m @158W | 30m @178W | 5\u00d710m @206W / 5m rec | 30m @178W | 5m @151W",
       "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n-130m 65% FTP\n\n4x\n-10m 75% FTP 65RPM\n-5m 65% FTP\n\n-100m 65% FTP\n\n-5m 55% FTP"
+      "description": "-5m ramp 50-65% FTP\n\n-30m 65% FTP\n\n5x\n-10m 75% FTP 65RPM\n-5m 65% FTP\n\n-30m 65% FTP\n\n-5m 55% FTP"
     },
     {
       "id": 111199702,
@@ -4197,12 +4184,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 5,
+    "attempted": 4,
     "success": 3,
     "patternA": 3,
     "patternB": 0,
     "bail_no_workout_doc": 1,
-    "bail_no_match": 2
+    "bail_no_match": 1
   },
   "weekly_summary": {
     "total_training_hours": 14.03,
