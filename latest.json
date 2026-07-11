@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-07-11T04:58:11.460349",
+    "last_updated": "2026-07-11T06:35:17.871383",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -104,27 +104,36 @@
       "context": "RACE_A 'L'\u00c9tape du Tour de France 2026' in 8 days. Begin volume reduction (target 41-60% over 2 weeks). Maintain intensity. CTL should peak now or within the next few days.",
       "persistence_days": null,
       "tier": 1
+    },
+    {
+      "metric": "race_week",
+      "value": 6,
+      "severity": "info",
+      "threshold": "RACE_B within 7 days",
+      "context": "Race week D-6 of 'Alpe d'Huez / Bib Collection by LeCoach App'. Today: Recovery, 0-23 TSS. Z1-Z2 only",
+      "persistence_days": null,
+      "tier": 1
     }
   ],
   "readiness_decision": {
-    "recommendation": "go",
-    "priority": 3,
+    "recommendation": "modify",
+    "priority": 2,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 23.9,
-        "delta_pct": null
+        "status": "green",
+        "value": 26.7,
+        "baseline_7d": 24.4,
+        "delta_pct": 9.6
       },
       "rhr": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 55.2,
-        "delta_bpm": null
+        "status": "green",
+        "value": 56.2,
+        "baseline_7d": 55.4,
+        "delta_bpm": 0.8
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
+        "status": "amber",
+        "hours": 6.88,
         "quality": null
       },
       "acwr": {
@@ -132,9 +141,9 @@
         "value": 0.43
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
-        "value_yesterday": 1.34
+        "status": "green",
+        "value": 1.08,
+        "value_yesterday": 1.11
       },
       "tsb": {
         "status": "green",
@@ -142,20 +151,29 @@
       }
     },
     "signal_summary": {
-      "green": 2,
-      "amber": 0,
+      "green": 5,
+      "amber": 1,
       "red": 0,
-      "unavailable": 4
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Taper",
       "phase_week": 1,
       "amber_threshold": 1,
-      "modifier_applied": "taper_tightened"
+      "modifier_applied": "race_week_tightened"
     },
-    "race_week_defers": false,
-    "modification": null,
-    "reason": "P3 green light. 2 green, 0 amber (threshold 1), 0 red. Note: 4 signals unavailable \u2014 limited data.",
+    "race_week_defers": true,
+    "modification": {
+      "triggers": [
+        "sleep"
+      ],
+      "suggested_adjustments": {
+        "intensity": "preserve",
+        "volume": "reduce",
+        "cap_zone": null
+      }
+    },
+    "reason": "P2 signal count. 1 amber (sleep) >= threshold 1.",
     "alarm_refs": []
   },
   "history": {
@@ -228,12 +246,12 @@
     },
     "current_metrics": {
       "weight_kg": 70.2,
-      "resting_hr": 47,
-      "hrv": null,
+      "resting_hr": 60,
+      "hrv": 26.749367,
       "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_score": null,
+      "sleep_hours": 6.88,
+      "sleep_formatted": "6h53m",
+      "sleep_score": 67.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -241,16 +259,16 @@
       "motivation": null,
       "injury": null,
       "hydration": null,
-      "spO2": null,
+      "spO2": 98.0,
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
-      "baevsky_si": null,
+      "baevsky_si": 3.95,
       "lactate": null,
-      "respiration": null,
+      "respiration": 13.2,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 268,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -258,18 +276,18 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 79.0
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "recovery_index_yesterday": 1.34,
-    "hrv_baseline_7d": 23.9,
-    "rhr_baseline_7d": 55.2,
+    "recovery_index": 1.08,
+    "recovery_index_yesterday": 1.11,
+    "hrv_baseline_7d": 24.4,
+    "rhr_baseline_7d": 55.4,
     "hrv_baseline_28d": 25.7,
-    "rhr_baseline_28d": 58.7,
-    "latest_hrv": null,
-    "latest_rhr": null,
+    "rhr_baseline_28d": 59.1,
+    "latest_hrv": 26.749367,
+    "latest_rhr": 56.20469,
     "acwr": 0.43,
     "acwr_interpretation": "undertraining",
     "monotony": 0.78,
@@ -281,7 +299,7 @@
     "multi_sport_detected": false,
     "strain": 179.0,
     "stress_tolerance": 2.3,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 2.1,
     "tss_7d_total": 229.0,
     "tss_28d_total": 2122.0,
     "zone_distribution_7d": {
@@ -598,8 +616,8 @@
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
-          "race_proximity": 8,
-          "next_week_load": 0.13,
+          "race_proximity": 6,
+          "next_week_load": 0.26,
           "plan_coverage_current_week": 0.07,
           "plan_coverage_next_week": 0.47
         },
@@ -636,10 +654,10 @@
     "p_max": 954,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-07-11T04:58:11.459518",
+    "calculation_timestamp": "2026-07-11T06:35:17.870221",
     "data_quality": {
-      "hrv_data_points": 5,
-      "rhr_data_points": 6,
+      "hrv_data_points": 6,
+      "rhr_data_points": 7,
       "activities_7d": 6,
       "activities_28d": 52,
       "planned_workouts_7d": 7,
@@ -3722,7 +3740,7 @@
     {
       "date": "2026-07-09",
       "weight_kg": null,
-      "resting_hr": 58,
+      "resting_hr": 59,
       "hrv_rmssd": 26.757824,
       "hrv_sdnn": 52.0,
       "sleep_hours": 7.23,
@@ -3745,10 +3763,10 @@
       "diastolic": null,
       "baevsky_si": 3.5,
       "lactate": null,
-      "respiration": 13.346154,
+      "respiration": 13.0,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 7068,
+      "steps": 10037,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3761,9 +3779,9 @@
     {
       "date": "2026-07-10",
       "weight_kg": null,
-      "resting_hr": 47,
+      "resting_hr": 56,
       "hrv_rmssd": 27.341913,
-      "hrv_sdnn": 52.888264,
+      "hrv_sdnn": 44.0,
       "sleep_hours": 6.13,
       "sleep_formatted": "6h7m",
       "sleep_quality": null,
@@ -3778,16 +3796,16 @@
       "motivation": null,
       "injury": null,
       "hydration": null,
-      "spO2": 96.0,
+      "spO2": 95.86667,
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
       "baevsky_si": 4.55,
       "lactate": null,
-      "respiration": 14.5,
+      "respiration": 13.197675,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 135,
+      "steps": 9052,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3795,20 +3813,20 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": 83.0
+      "readiness": 80.0
     },
     {
       "date": "2026-07-11",
       "weight_kg": null,
-      "resting_hr": null,
-      "hrv_rmssd": null,
-      "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
+      "resting_hr": 60,
+      "hrv_rmssd": 26.749367,
+      "hrv_sdnn": 44.52799,
+      "sleep_hours": 6.88,
+      "sleep_formatted": "6h53m",
       "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_score": 67.0,
       "mental_energy": null,
-      "avg_sleeping_hr": null,
+      "avg_sleeping_hr": 56.20469,
       "vo2max": null,
       "fatigue": null,
       "soreness": null,
@@ -3817,16 +3835,16 @@
       "motivation": null,
       "injury": null,
       "hydration": null,
-      "spO2": null,
+      "spO2": 98.0,
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
-      "baevsky_si": null,
+      "baevsky_si": 3.95,
       "lactate": null,
-      "respiration": null,
+      "respiration": 13.2,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 268,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3834,7 +3852,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 79.0
     }
   ],
   "planned_workouts": [
@@ -3879,7 +3897,7 @@
     },
     {
       "id": 114871467,
-      "date": "2026-07-14",
+      "date": "2026-07-13",
       "name": "Taper Openers by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -3892,7 +3910,7 @@
     },
     {
       "id": 114871460,
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "name": "Taper Tempo by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -3904,17 +3922,17 @@
       "description": "-5m ramp 50-65% FTP\n\n2x\n-5m 82% FTP\n-5m 65% FTP\n\n-10m 55% FTP"
     },
     {
-      "id": 114871463,
-      "date": "2026-07-16",
-      "name": "Short Taper Foundation by LeCoach App",
-      "type": "WORKOUT",
+      "id": 122004777,
+      "date": "2026-07-17",
+      "name": "Alpe d'Huez / Bib Collection by LeCoach App",
+      "type": "RACE_B",
       "sport_type": "Ride",
-      "planned_tss": 19,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
+      "planned_tss": 90,
+      "duration_hours": 2.0,
+      "duration_formatted": "2h",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n-20m 65% FTP\n\n-5m 55% FTP"
+      "description": "B-Race: Alpe d'Huez / Bib Collection\nLeisurely pace ride to collect race pack and spin the legs."
     },
     {
       "id": 103609796,
@@ -3944,33 +3962,43 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 4,
+    "attempted": 3,
     "success": 3,
     "patternA": 3,
     "patternB": 0,
-    "bail_no_workout_doc": 1,
-    "bail_no_match": 1
+    "bail_no_workout_doc": 2,
+    "bail_no_match": 0
   },
   "weekly_summary": {
     "total_training_hours": 4.93,
     "total_training_formatted": "4h55m",
     "total_tss": 229,
     "activities_count": 6,
-    "avg_hrv": 23.9,
-    "avg_resting_hr": 55.5
+    "avg_hrv": 24.4,
+    "avg_resting_hr": 57.6
   },
   "race_calendar": {
     "next_race": {
-      "name": "L'\u00c9tape du Tour de France 2026",
-      "date": "2026-07-19",
-      "category": "RACE_A",
+      "name": "Alpe d'Huez / Bib Collection by LeCoach App",
+      "date": "2026-07-17",
+      "category": "RACE_B",
       "type": "Ride",
-      "days_until": 8,
-      "moving_time_seconds": null,
+      "days_until": 6,
+      "moving_time_seconds": 7200,
       "distance_meters": null,
       "has_terrain": false
     },
     "all_races": [
+      {
+        "name": "Alpe d'Huez / Bib Collection by LeCoach App",
+        "date": "2026-07-17",
+        "category": "RACE_B",
+        "type": "Ride",
+        "days_until": 6,
+        "moving_time_seconds": 7200,
+        "distance_meters": null,
+        "has_terrain": false
+      },
       {
         "name": "L'\u00c9tape du Tour de France 2026",
         "date": "2026-07-19",
@@ -4000,7 +4028,56 @@
       "message": "RACE_A 'L'\u00c9tape du Tour de France 2026' in 8 days. Begin volume reduction (target 41-60% over 2 weeks). Maintain intensity. CTL should peak now or within the next few days."
     },
     "race_week": {
-      "active": false
+      "active": true,
+      "event_name": "Alpe d'Huez / Bib Collection by LeCoach App",
+      "event_date": "2026-07-17",
+      "event_category": "RACE_B",
+      "event_type": "Ride",
+      "event_duration_class": "medium",
+      "event_moving_time_seconds": 7200,
+      "days_until_event": 6,
+      "current_day": "D-6",
+      "ctl_baseline": 78.3,
+      "normal_weekly_tss": 547.8,
+      "race_week_tss_budget": {
+        "min": 274,
+        "max": 356
+      },
+      "race_week_tss_spent": 0,
+      "race_week_tss_remaining": {
+        "min": 274,
+        "max": 356
+      },
+      "projected_race_day_tsb": 44.5,
+      "tsb_target_range": {
+        "min": 5,
+        "max": 15
+      },
+      "today": {
+        "label": "Recovery",
+        "load_target_tss": {
+          "min": 0,
+          "max": 23
+        },
+        "zones": "Z1-Z2 only",
+        "purpose": "Active recovery."
+      },
+      "carb_loading": {
+        "applicable": true,
+        "active": false,
+        "starts": "D-4",
+        "start_date": "2026-07-13",
+        "note": "10-12 g\u00b7kg\u207b\u00b9/day. No depletion phase needed."
+      },
+      "opener": {
+        "day": "D-2",
+        "date": "2026-07-15",
+        "intensity": "standard"
+      },
+      "go_no_go": {
+        "tsb_status": "green",
+        "notes": []
+      }
     }
   }
 }
