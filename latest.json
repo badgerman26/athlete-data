@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-07-31T11:36:59.649615",
+    "last_updated": "2026-07-31T13:17:36.288120",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.104"
@@ -129,14 +129,14 @@
       "unavailable": 0
     },
     "phase_context": {
-      "phase": "Build",
-      "phase_week": 1,
-      "amber_threshold": 3,
-      "modifier_applied": "build_loosened"
+      "phase": null,
+      "phase_week": 0,
+      "amber_threshold": 2,
+      "modifier_applied": "default"
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 6 green, 0 amber (threshold 3), 0 red.",
+    "reason": "P3 green light. 6 green, 0 amber (threshold 2), 0 red.",
     "alarm_refs": []
   },
   "history": {
@@ -177,14 +177,14 @@
       "ctl": 72.82,
       "atl": 61.17,
       "tsb": 11.65,
-      "ramp_rate": 0.37,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ramp_rate": -1.25,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
-      "eftp": 255.6,
-      "w_prime": 21808,
+      "eftp": 255.4,
+      "w_prime": 21786,
       "w_prime_kj": 21.8,
-      "p_max": 1019,
+      "p_max": 1018,
       "vo2max": null,
       "sports": {
         "cycling": {
@@ -543,22 +543,21 @@
           },
           "coverage_ratio": 1.0,
           "ftp_used": 275,
-          "w_prime_used": 21808,
+          "w_prime_used": 21786,
           "ftp_staleness_days": 140,
           "model_trust_note": "CP/W' model (P=CP+W'/t) is primary for durations \u226420min where W' contribution is meaningful. Coggan duration factors (Allen & Coggan, 3rd ed.) are the established reference for \u226560min. 30min is the crossover zone where both apply. model_divergence_pct = (actual - CP_model) / CP_model \u00d7 100. Positive divergence at short durations may indicate strong anaerobic capacity or stale W' value. Indoor MMP is typically 3-5% lower than outdoor (cooling, motivation) \u2014 source flag indicates which environment produced each anchor."
         }
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.67,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 3,
+      "planned_days": 2,
       "completed_days": 5,
       "matched_days": 2,
       "planned_dates": [
         "2026-07-29",
-        "2026-07-30",
-        "2026-07-31"
+        "2026-07-30"
       ],
       "completed_dates": [
         "2026-07-25",
@@ -569,9 +568,11 @@
       ]
     },
     "phase_detection": {
-      "phase": "Build",
-      "confidence": "medium",
-      "reason_codes": [],
+      "phase": null,
+      "confidence": "low",
+      "reason_codes": [
+        "BUILD_BASE_AMBIGUOUS"
+      ],
       "basis": {
         "stream_1": {
           "ctl_slope": -8.1,
@@ -580,25 +581,27 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 2.05,
-          "hard_sessions_planned": 2,
+          "planned_tss_delta": 1.48,
+          "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 2,
-          "current_week_hard_days_total": 4,
+          "current_week_hard_days_total": 3,
           "race_proximity": null,
           "next_week_load": 0.42,
-          "plan_coverage_current_week": 0.33,
+          "plan_coverage_current_week": 0.22,
           "plan_coverage_next_week": 0.44
         },
         "data_quality": "good",
         "stream_agreement": null
       },
       "previous_phase": null,
-      "phase_duration_weeks": 1,
+      "phase_duration_weeks": 0,
       "dossier_declared": null,
       "dossier_agreement": null
     },
-    "phase_detected": "Build",
-    "phase_triggers": [],
+    "phase_detected": null,
+    "phase_triggers": [
+      "BUILD_BASE_AMBIGUOUS"
+    ],
     "seasonal_context": "Peak Race Season",
     "benchmark_indoor": {
       "current_ftp": 275,
@@ -614,19 +617,19 @@
       "benchmark_percentage": null,
       "seasonal_expected": null
     },
-    "eftp": 255.6,
-    "w_prime": 21808,
+    "eftp": 255.4,
+    "w_prime": 21786,
     "w_prime_kj": 21.8,
-    "p_max": 1019,
+    "p_max": 1018,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-07-31T11:36:59.648410",
+    "calculation_timestamp": "2026-07-31T13:17:36.286916",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 7,
       "activities_7d": 10,
       "activities_28d": 35,
-      "planned_workouts_7d": 3,
+      "planned_workouts_7d": 2,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -2921,19 +2924,6 @@
   ],
   "planned_workouts": [
     {
-      "id": 125983635,
-      "date": "2026-07-31",
-      "name": "6x5m Strength Threshold Intervals by LeCoach App",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 102,
-      "duration_hours": 1.55,
-      "duration_formatted": "1h33m",
-      "workout_summary": "5m @158W | 3\u00d730s @275W / 30s rec | 5m @165W | 10m @178W | 6\u00d75m @275W / 3m rec | 17m @178W | 5m @151W",
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n-10m 65% FTP\n\n6x\n-5m 100% FTP 65RPM\n-3m 65% FTP\n\n-17m 65% FTP\n\n-5m 55% FTP"
-    },
-    {
       "id": 125983636,
       "date": "2026-08-01",
       "name": "Tempo Rhythms by LeCoach App",
@@ -3239,9 +3229,9 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 24,
-    "success": 12,
-    "patternA": 12,
+    "attempted": 23,
+    "success": 11,
+    "patternA": 11,
     "patternB": 0,
     "bail_no_workout_doc": 0,
     "bail_no_match": 12
