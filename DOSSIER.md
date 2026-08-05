@@ -46,8 +46,8 @@ This document serves as a reference template for endurance athletes using the de
 
 | Goal | Target Date |
 |------|-------------|
-| King Alfred's Way (3 Days) | 13th May 2026 |
-| L'Etape du Tour | 19th July 2026 |
+|  We Ride Flanders| 13th May 2026 |
+| GRALLOCH| 15th May 2027 |
 
 **Current Phase:** Late Base / Build  
 **Training Style:** Pyramidal (High-volume)
@@ -69,9 +69,9 @@ This document serves as a reference template for endurance athletes using the de
 
 | Component | Details |
 |-----------|---------|
-| Bike | Trek Madone Sl5 |
-| Power Meter | [Model] |
-| Head Unit | [Model] |
+| Bike | Trek Madone SL6 & Trek Checkpoint Sl5 |
+| Power Meter | SRAM|
+| Head Unit | Garmin Edge 104 |
 
 ---
 
