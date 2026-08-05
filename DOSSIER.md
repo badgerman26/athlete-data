@@ -46,7 +46,7 @@ This document serves as a reference template for endurance athletes using the de
 
 | Goal | Target Date |
 |------|-------------|
-|  We Ride Flanders| 13th May 2026 |
+|  We Ride Flanders| 4th APril 2027 |
 | GRALLOCH| 15th May 2027 |
 
 **Current Phase:** Late Base / Build  
