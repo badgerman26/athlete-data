@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T15:46:23.314505",
+  "generated_at": "2026-08-07T16:43:17.022841",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1941,176 +1941,68 @@
       "zone_basis": "power"
     },
     {
-      "activity_id": "i173368683",
+      "activity_id": "i173454604",
       "date": "2026-08-07",
-      "start_datetime": "2026-08-07T10:38:12",
-      "type": "Ride",
-      "name": "North Hertfordshire Road Cycling",
+      "start_datetime": "2026-08-07T10:35:44",
+      "type": "VirtualRide",
+      "name": "Morning Virtual Ride",
       "interval_summary": [
-        "1x 18s 436w",
-        "1x 52s 290w",
-        "2x 19s 516w"
+        "1x 1h12m 127bpm"
       ],
       "intervals": [
         {
           "type": "RECOVERY",
-          "duration_secs": 1456,
-          "moving_secs": 1266,
+          "duration_secs": 2,
+          "moving_secs": 2,
           "start_secs": 0,
-          "end_secs": 1456,
-          "avg_power": 158,
-          "max_power": 539,
-          "avg_hr": 122,
-          "max_hr": 145,
-          "min_hr": 72,
-          "avg_cadence": 76.9207,
-          "zone": 2,
-          "w_bal_start": 22000,
-          "w_bal_end": 20434,
-          "training_load": 16.261066
+          "end_secs": 0
         },
         {
           "type": "WORK",
-          "label": "18s@436w79rpm",
-          "duration_secs": 18,
-          "moving_secs": 18,
-          "start_secs": 1456,
-          "end_secs": 1474,
-          "avg_power": 436,
-          "max_power": 547,
-          "avg_hr": 145,
-          "max_hr": 150,
-          "min_hr": 140,
-          "avg_cadence": 79.166664,
-          "zone": 7,
-          "w_bal_start": 20347,
-          "w_bal_end": 17522,
-          "training_load": 0.8760066
-        },
+          "label": "4349s@127bpm",
+          "duration_secs": 4349,
+          "moving_secs": 4349,
+          "start_secs": 0,
+          "end_secs": 4351,
+          "avg_hr": 127,
+          "max_hr": 179,
+          "min_hr": 76,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i173454594",
+      "date": "2026-08-05",
+      "start_datetime": "2026-08-05T18:17:11",
+      "type": "VirtualRide",
+      "name": "Evening Virtual Ride",
+      "interval_summary": [
+        "1x 48m11s 140bpm"
+      ],
+      "intervals": [
         {
           "type": "RECOVERY",
           "duration_secs": 2,
           "moving_secs": 2,
-          "start_secs": 1474,
-          "end_secs": 1476,
-          "avg_power": 343,
-          "max_power": 364,
-          "avg_hr": 151,
-          "max_hr": 151,
-          "min_hr": 151,
-          "avg_cadence": 71.5,
-          "zone": 6,
-          "w_bal_start": 17433,
-          "w_bal_end": 17386,
-          "training_load": 0.11812746
+          "start_secs": 0,
+          "end_secs": 0
         },
         {
           "type": "WORK",
-          "label": "52s@290w73rpm",
-          "duration_secs": 52,
-          "moving_secs": 52,
-          "start_secs": 1476,
-          "end_secs": 1528,
-          "avg_power": 290,
-          "max_power": 336,
-          "avg_hr": 160,
-          "max_hr": 163,
-          "min_hr": 153,
-          "avg_cadence": 73.42308,
-          "zone": 5,
-          "w_bal_start": 17360,
-          "w_bal_end": 16417,
-          "training_load": 2.13073
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 1098,
-          "moving_secs": 1098,
-          "start_secs": 1528,
-          "end_secs": 2626,
-          "avg_power": 159,
-          "max_power": 598,
-          "avg_hr": 133,
+          "label": "2891s@140bpm",
+          "duration_secs": 2891,
+          "moving_secs": 2891,
+          "start_secs": 0,
+          "end_secs": 2893,
+          "avg_hr": 140,
           "max_hr": 166,
-          "min_hr": 99,
-          "avg_cadence": 81.211296,
-          "zone": 2,
-          "w_bal_start": 16422,
-          "w_bal_end": 20784,
-          "training_load": 15.8112
-        },
-        {
-          "type": "WORK",
-          "label": "19s@516w92rpm",
-          "duration_secs": 19,
-          "moving_secs": 19,
-          "start_secs": 2626,
-          "end_secs": 2645,
-          "avg_power": 522,
-          "max_power": 618,
-          "avg_hr": 144,
-          "max_hr": 155,
-          "min_hr": 136,
-          "avg_cadence": 95.31579,
-          "zone": 7,
-          "w_bal_start": 20564,
-          "w_bal_end": 16089,
-          "training_load": 0.6663504
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 1438,
-          "moving_secs": 1424,
-          "start_secs": 2645,
-          "end_secs": 4083,
-          "avg_power": 138,
-          "max_power": 555,
-          "avg_hr": 127,
-          "max_hr": 163,
-          "min_hr": 99,
-          "avg_cadence": 78.90148,
-          "zone": 1,
-          "w_bal_start": 15923,
-          "w_bal_end": 21053,
-          "training_load": 18.486631
-        },
-        {
-          "type": "WORK",
-          "label": "19s@516w92rpm",
-          "duration_secs": 19,
-          "moving_secs": 19,
-          "start_secs": 4083,
-          "end_secs": 4102,
-          "avg_power": 510,
-          "max_power": 736,
-          "avg_hr": 146,
-          "max_hr": 155,
-          "min_hr": 138,
-          "avg_cadence": 88.57895,
-          "zone": 7,
-          "w_bal_start": 20802,
-          "w_bal_end": 16578,
-          "training_load": 0.6114615
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 71,
-          "moving_secs": 71,
-          "start_secs": 4102,
-          "end_secs": 4173,
-          "avg_power": 127,
-          "max_power": 465,
-          "avg_hr": 149,
-          "max_hr": 163,
-          "min_hr": 127,
-          "avg_cadence": 55.338028,
-          "zone": 1,
-          "w_bal_start": 16388,
-          "w_bal_end": 18230,
-          "training_load": 2.3471074
+          "min_hr": 94,
+          "zone": 2
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "hr"
     }
   ],
   "fetch_state": {
@@ -2418,12 +2310,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 14,
+        "attempts": 15,
         "first_seen": "2026-08-05T19:51:42.752253",
-        "last_attempt": "2026-08-07T10:08:39.672577",
+        "last_attempt": "2026-08-07T16:43:17.022841",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-07T16:08:39.672577"
+        "next_retry_at": "2026-08-07T22:43:17.022841"
       }
     },
     "i173184820": {
@@ -2444,22 +2336,40 @@
         "next_retry_at": "2026-08-07T21:46:23.314505"
       }
     },
-    "i173368683": {
+    "i173454604": {
       "date": "2026-08-07",
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-08-07T11:54:39.191163",
-        "last_attempt": "2026-08-07T11:54:39.191163",
+        "first_seen": "2026-08-07T16:43:17.022841",
+        "last_attempt": "2026-08-07T16:43:17.022841",
         "status": "ok",
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
-        "first_seen": "2026-08-07T11:54:39.191163",
-        "last_attempt": "2026-08-07T15:46:23.314505",
+        "attempts": 1,
+        "first_seen": "2026-08-07T16:43:17.022841",
+        "last_attempt": "2026-08-07T16:43:17.022841",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-07T15:51:23.314505"
+        "next_retry_at": "2026-08-07T16:48:17.022841"
+      }
+    },
+    "i173454594": {
+      "date": "2026-08-05",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-07T16:43:17.022841",
+        "last_attempt": "2026-08-07T16:43:17.022841",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-07T16:43:17.022841",
+        "last_attempt": "2026-08-07T16:43:17.022841",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-07T16:48:17.022841"
       }
     }
   }
