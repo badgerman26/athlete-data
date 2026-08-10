@@ -62,15 +62,15 @@
       "menstrual": "menstrual_phase and menstrual_phase_predicted are not on the 1-4 scale. Values: PERIOD, FOLLICULAR, OVULATION, LUTEAL, etc."
     },
     "quick_stats": {
-      "total_training_hours": 17.93,
-      "total_training_formatted": "17h55m",
-      "total_activities": 27,
-      "total_tss": 373
+      "total_training_hours": 20.87,
+      "total_training_formatted": "20h51m",
+      "total_activities": 32,
+      "total_tss": 396
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-08-10T12:50:28.274018",
+    "last_updated": "2026-08-10T14:14:58.401645",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.122"
@@ -95,7 +95,7 @@
     },
     "sex": "M",
     "location": "Hitchin, England, United Kingdom",
-    "timezone": "Europe/London",
+    "timezone": "Canada/Eastern",
     "platform_activated": "2023-09-27",
     "years_on_platform": 2
   },
@@ -106,16 +106,16 @@
     "priority": 3,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 27.5,
-        "delta_pct": null
+        "status": "green",
+        "value": 30.9,
+        "baseline_7d": 27.8,
+        "delta_pct": 11.2
       },
       "rhr": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 57.5,
-        "delta_bpm": null
+        "status": "green",
+        "value": 57,
+        "baseline_7d": 57.4,
+        "delta_bpm": -0.4
       },
       "sleep": {
         "status": "unavailable",
@@ -124,23 +124,23 @@
       },
       "acwr": {
         "status": "green",
-        "value": 0.87
+        "value": 0.91
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
-        "value_yesterday": 1.0
+        "status": "green",
+        "value": 1.12,
+        "value_yesterday": 0.94
       },
       "tsb": {
         "status": "green",
-        "value": 19.1
+        "value": 17.0
       }
     },
     "signal_summary": {
-      "green": 2,
+      "green": 5,
       "amber": 0,
       "red": 0,
-      "unavailable": 4
+      "unavailable": 1
     },
     "phase_context": {
       "phase": null,
@@ -150,7 +150,7 @@
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 2 green, 0 amber (threshold 2), 0 red. Note: 4 signals unavailable \u2014 limited data.",
+    "reason": "P3 green light. 5 green, 0 amber (threshold 2), 0 red.",
     "alarm_refs": []
   },
   "history": {
@@ -163,8 +163,8 @@
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 17.93,
-    "total_activities": 27,
+    "total_duration_decimal_hours": 20.87,
+    "total_activities": 32,
     "by_activity_type": {
       "OpenWaterSwim": {
         "duration_decimal_hours": 0.19,
@@ -203,13 +203,13 @@
         }
       },
       "VirtualRide": {
-        "duration_decimal_hours": 3.94,
-        "count": 4,
-        "tss": 202,
-        "distance_km": 50.0,
+        "duration_decimal_hours": 6.88,
+        "count": 9,
+        "tss": 225,
+        "distance_km": 50.1,
         "display": {
           "distance": {
-            "value": 31.07,
+            "value": 31.13,
             "unit": "mi"
           }
         }
@@ -242,10 +242,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 68.61,
-      "atl": 49.5,
-      "tsb": 19.11,
-      "ramp_rate": -3.06,
+      "ctl": 69.14,
+      "atl": 52.17,
+      "tsb": 16.97,
+      "ramp_rate": -2.54,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -253,7 +253,7 @@
       "w_prime": 21569,
       "w_prime_kj": 21.6,
       "p_max": 1008,
-      "vo2max": null,
+      "vo2max": 53.0,
       "sports": {
         "cycling": {
           "lthr": 174,
@@ -289,8 +289,8 @@
           "unit": "kg"
         }
       },
-      "resting_hr": 59,
-      "hrv": null,
+      "resting_hr": 57,
+      "hrv": 30.923256,
       "sleep_quality": null,
       "sleep_hours": null,
       "sleep_formatted": null,
@@ -336,85 +336,85 @@
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "recovery_index_yesterday": 1.0,
-    "hrv_baseline_7d": 27.5,
-    "rhr_baseline_7d": 57.5,
-    "hrv_baseline_28d": 27.4,
+    "recovery_index": 1.12,
+    "recovery_index_yesterday": 0.94,
+    "hrv_baseline_7d": 27.8,
+    "rhr_baseline_7d": 57.4,
+    "hrv_baseline_28d": 27.5,
     "rhr_baseline_28d": 58.5,
-    "latest_hrv": null,
-    "latest_rhr": null,
-    "acwr": 0.87,
+    "latest_hrv": 30.923256,
+    "latest_rhr": 57,
+    "acwr": 0.91,
     "acwr_interpretation": "optimal",
-    "monotony": 1.34,
-    "monotony_interpretation": "normal (primary sport 0.92, total 1.34 inflated by multi-sport)",
+    "monotony": 1.55,
+    "monotony_interpretation": "normal (primary sport 1.07, total 1.55 inflated by multi-sport)",
     "primary_sport": "cycling",
-    "primary_sport_monotony": 0.92,
-    "primary_sport_tss_7d": 272.0,
-    "effective_monotony": 0.92,
+    "primary_sport_monotony": 1.07,
+    "primary_sport_tss_7d": 295.0,
+    "effective_monotony": 1.07,
     "multi_sport_detected": true,
-    "strain": 500.0,
-    "stress_tolerance": 3.7,
-    "load_recovery_ratio": null,
-    "tss_7d_total": 373.0,
-    "tss_28d_total": 1715.0,
+    "strain": 614.0,
+    "stress_tolerance": 4.0,
+    "load_recovery_ratio": 3.5,
+    "tss_7d_total": 396.0,
+    "tss_28d_total": 1738.0,
     "zone_distribution_7d": {
-      "z1_hours": 14.59,
-      "z2_hours": 2.25,
-      "z3_hours": 0.72,
+      "z1_hours": 17.42,
+      "z2_hours": 2.34,
+      "z3_hours": 0.73,
       "z4_plus_hours": 0.38,
-      "total_hours": 17.94,
+      "total_hours": 20.87,
       "zone_basis": "mixed"
     },
-    "grey_zone_percentage": 4.0,
+    "grey_zone_percentage": 3.5,
     "grey_zone_note": "Gray Zone % (Z3/tempo) - minimize in polarized training",
-    "quality_intensity_percentage": 2.1,
+    "quality_intensity_percentage": 1.8,
     "quality_intensity_note": "Quality Intensity % (Z4+/threshold+) - target ~20% in polarized training",
-    "easy_time_ratio": 0.94,
+    "easy_time_ratio": 0.95,
     "easy_time_ratio_note": "Easy time (Z1+Z2) / Total - target ~80% in polarized training",
     "hard_days_this_week": 0,
     "hard_days_note": "Power ladder: z3+ >= 30min, z4+ >= 10min, z5+ >= 5min, z6+ >= 2min, z7 >= 1min. HR fallback (when no power): z4+ >= 10min, z5+ >= 5min. Per Seiler 3-zone model + Foster. HR-based days flagged with intensity_basis: hr",
     "seiler_tid_7d": {
-      "z1_seconds": 60621,
-      "z2_seconds": 2595,
+      "z1_seconds": 71147,
+      "z2_seconds": 2637,
       "z3_seconds": 1363,
-      "z1_pct": 93.9,
-      "z2_pct": 4.0,
-      "z3_pct": 2.1,
+      "z1_pct": 94.7,
+      "z2_pct": 3.5,
+      "z3_pct": 1.8,
       "polarization_index": null,
       "classification": "Pyramidal",
       "zone_basis": "mixed"
     },
     "seiler_tid_7d_primary": {
-      "z1_seconds": 15997,
-      "z2_seconds": 2595,
+      "z1_seconds": 26523,
+      "z2_seconds": 2637,
       "z3_seconds": 1363,
-      "z1_pct": 80.2,
-      "z2_pct": 13.0,
-      "z3_pct": 6.8,
+      "z1_pct": 86.9,
+      "z2_pct": 8.6,
+      "z3_pct": 4.5,
       "polarization_index": null,
       "classification": "Pyramidal",
       "zone_basis": "mixed",
       "sport": "cycling"
     },
     "seiler_tid_28d": {
-      "z1_seconds": 173658,
-      "z2_seconds": 18812,
+      "z1_seconds": 184184,
+      "z2_seconds": 18854,
       "z3_seconds": 7644,
-      "z1_pct": 86.8,
-      "z2_pct": 9.4,
-      "z3_pct": 3.8,
+      "z1_pct": 87.4,
+      "z2_pct": 8.9,
+      "z3_pct": 3.6,
       "polarization_index": null,
       "classification": "Pyramidal",
       "zone_basis": "mixed"
     },
     "seiler_tid_28d_primary": {
-      "z1_seconds": 97908,
-      "z2_seconds": 18812,
+      "z1_seconds": 108434,
+      "z2_seconds": 18854,
       "z3_seconds": 7644,
-      "z1_pct": 78.7,
-      "z2_pct": 15.1,
-      "z3_pct": 6.1,
+      "z1_pct": 80.4,
+      "z2_pct": 14.0,
+      "z3_pct": 5.7,
       "polarization_index": null,
       "classification": "Pyramidal",
       "zone_basis": "mixed",
@@ -640,7 +640,7 @@
     "consistency_index": 1.0,
     "consistency_details": {
       "planned_days": 2,
-      "completed_days": 6,
+      "completed_days": 7,
       "matched_days": 2,
       "planned_dates": [
         "2026-08-04",
@@ -652,7 +652,8 @@
         "2026-08-06",
         "2026-08-07",
         "2026-08-08",
-        "2026-08-09"
+        "2026-08-09",
+        "2026-08-10"
       ]
     },
     "phase_detection": {
@@ -674,9 +675,9 @@
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 0,
           "race_proximity": null,
-          "next_week_load": 0.82,
+          "next_week_load": 0.8,
           "plan_coverage_current_week": 0.0,
-          "plan_coverage_next_week": 0.12
+          "plan_coverage_next_week": 0.11
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -710,13 +711,13 @@
     "w_prime_kj": 21.6,
     "p_max": 1008,
     "power_model_source": "wellness.sportInfo",
-    "vo2max": null,
-    "calculation_timestamp": "2026-08-10T12:50:28.272675",
+    "vo2max": 53.0,
+    "calculation_timestamp": "2026-08-10T14:14:58.400428",
     "data_quality": {
-      "hrv_data_points": 6,
-      "rhr_data_points": 6,
-      "activities_7d": 27,
-      "activities_28d": 56,
+      "hrv_data_points": 7,
+      "rhr_data_points": 7,
+      "activities_7d": 32,
+      "activities_28d": 61,
       "planned_workouts_7d": 3,
       "ftp_history_days": {
         "indoor": 0,
@@ -725,6 +726,334 @@
     }
   },
   "recent_activities": [
+    {
+      "id": "i174372723",
+      "date": "2026-08-10T01:06:41",
+      "type": "VirtualRide",
+      "name": "Early morning Virtual Ride",
+      "duration_hours": 0.16,
+      "duration_formatted": "9m26s",
+      "distance_km": 0.11,
+      "tss": 1,
+      "intensity_factor": 14.753107,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": 84,
+      "max_hr": 119,
+      "avg_cadence": null,
+      "avg_speed": 0.7,
+      "avg_speed_unit": "KPH",
+      "max_speed": 1.6,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "MPH",
+      "work_kj": null,
+      "calories": 114,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "display": {
+        "distance": {
+          "value": 0.07,
+          "unit": "mi"
+        },
+        "elevation": null,
+        "avg_speed": {
+          "value": 0.4,
+          "unit": "mph"
+        },
+        "max_speed": {
+          "value": 1.0,
+          "unit": "mph"
+        }
+      },
+      "feel": null,
+      "rpe": null,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 566,
+          "z2_time": 0,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": true,
+      "has_dfa": false,
+      "description": "\ud83d\udeb4 Tracked by LeCoach.app\n\u23f1 9 min \u00b7 Load 1"
+    },
+    {
+      "id": "i174372703",
+      "date": "2026-08-09T23:55:05",
+      "type": "VirtualRide",
+      "name": "Night Virtual Ride",
+      "duration_hours": 0.71,
+      "duration_formatted": "42m25s",
+      "distance_km": 0.0,
+      "tss": 4,
+      "intensity_factor": 23.796225,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": 79,
+      "max_hr": 119,
+      "avg_cadence": null,
+      "avg_speed": null,
+      "avg_speed_unit": "KPH",
+      "max_speed": null,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "MPH",
+      "work_kj": null,
+      "calories": 220,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "display": {
+        "distance": {
+          "value": 0.0,
+          "unit": "mi"
+        },
+        "elevation": null,
+        "avg_speed": null,
+        "max_speed": null
+      },
+      "feel": null,
+      "rpe": null,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 2546,
+          "z2_time": 0,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": true,
+      "has_dfa": false,
+      "description": "\ud83d\udeb4 Tracked by LeCoach.app\n\u23f1 42 min \u00b7 Load 4"
+    },
+    {
+      "id": "i174372681",
+      "date": "2026-08-09T23:21:42",
+      "type": "VirtualRide",
+      "name": "Night Virtual Ride",
+      "duration_hours": 0.36,
+      "duration_formatted": "21m42s",
+      "distance_km": 0.0,
+      "tss": 1,
+      "intensity_factor": 16.641006,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": 72,
+      "max_hr": 96,
+      "avg_cadence": null,
+      "avg_speed": 0.0,
+      "avg_speed_unit": "KPH",
+      "max_speed": 1.6,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "MPH",
+      "work_kj": null,
+      "calories": 155,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "display": {
+        "distance": {
+          "value": 0.0,
+          "unit": "mi"
+        },
+        "elevation": null,
+        "avg_speed": {
+          "value": 0.0,
+          "unit": "mph"
+        },
+        "max_speed": {
+          "value": 1.0,
+          "unit": "mph"
+        }
+      },
+      "feel": null,
+      "rpe": null,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 1303,
+          "z2_time": 0,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": true,
+      "has_dfa": false,
+      "description": "\ud83d\udeb4 Tracked by LeCoach.app\n\u23f1 22 min \u00b7 Load 1"
+    },
+    {
+      "id": "i174372656",
+      "date": "2026-08-09T20:03:54",
+      "type": "VirtualRide",
+      "name": "Night Virtual Ride",
+      "duration_hours": 1.18,
+      "duration_formatted": "1h11m4s",
+      "distance_km": 0.0,
+      "tss": 11,
+      "intensity_factor": 30.478243,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": 83,
+      "max_hr": 161,
+      "avg_cadence": null,
+      "avg_speed": 0.0,
+      "avg_speed_unit": "KPH",
+      "max_speed": 3.1,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "MPH",
+      "work_kj": null,
+      "calories": 419,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "display": {
+        "distance": {
+          "value": 0.0,
+          "unit": "mi"
+        },
+        "elevation": null,
+        "avg_speed": {
+          "value": 0.0,
+          "unit": "mph"
+        },
+        "max_speed": {
+          "value": 1.9,
+          "unit": "mph"
+        }
+      },
+      "feel": null,
+      "rpe": null,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 4069,
+          "z2_time": 154,
+          "z3_time": 42,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": true,
+      "has_dfa": false,
+      "description": "\ud83d\udeb4 Tracked by LeCoach.app\n\u23f1 71 min \u00b7 Load 11"
+    },
+    {
+      "id": "i174372633",
+      "date": "2026-08-09T19:19:00",
+      "type": "VirtualRide",
+      "name": "Evening Virtual Ride",
+      "duration_hours": 0.52,
+      "duration_formatted": "31m27s",
+      "distance_km": 0.0,
+      "tss": 6,
+      "intensity_factor": 33.842,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": 88,
+      "max_hr": 154,
+      "avg_cadence": null,
+      "avg_speed": null,
+      "avg_speed_unit": "KPH",
+      "max_speed": null,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "MPH",
+      "work_kj": null,
+      "calories": 176,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "display": {
+        "distance": {
+          "value": 0.0,
+          "unit": "mi"
+        },
+        "elevation": null,
+        "avg_speed": null,
+        "max_speed": null
+      },
+      "feel": null,
+      "rpe": null,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 1713,
+          "z2_time": 175,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": true,
+      "has_dfa": false,
+      "description": "\ud83d\udeb4 Tracked by LeCoach.app\n\u23f1 31 min \u00b7 Load 6"
+    },
     {
       "id": "i174118185",
       "date": "2026-08-09T09:12:13",
@@ -6447,7 +6776,7 @@
       "sleep_score": 84.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
-      "vo2max": 33.672142,
+      "vo2max": 53.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -6481,7 +6810,7 @@
         "weight": null
       },
       "resting_hr": 59,
-      "hrv_rmssd": 28.148077,
+      "hrv_rmssd": 26.938807,
       "hrv_sdnn": null,
       "sleep_hours": 5.93,
       "sleep_formatted": "5h56m",
@@ -6522,8 +6851,8 @@
       "display": {
         "weight": null
       },
-      "resting_hr": null,
-      "hrv_rmssd": null,
+      "resting_hr": 57,
+      "hrv_rmssd": 30.923256,
       "hrv_sdnn": null,
       "sleep_hours": null,
       "sleep_formatted": null,
@@ -6531,7 +6860,7 @@
       "sleep_score": null,
       "mental_energy": null,
       "avg_sleeping_hr": null,
-      "vo2max": null,
+      "vo2max": 53.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -6896,12 +7225,12 @@
     "bail_no_match": 14
   },
   "weekly_summary": {
-    "total_training_hours": 17.93,
-    "total_training_formatted": "17h55m",
-    "total_tss": 373,
-    "activities_count": 27,
-    "avg_hrv": 27.5,
-    "avg_resting_hr": 57.5
+    "total_training_hours": 20.87,
+    "total_training_formatted": "20h51m",
+    "total_tss": 396,
+    "activities_count": 32,
+    "avg_hrv": 27.8,
+    "avg_resting_hr": 57.4
   },
   "race_calendar": {
     "next_race": null,
