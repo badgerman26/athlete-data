@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T15:00:15.564051",
+  "generated_at": "2026-08-15T15:33:03.648191",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1217,6 +1217,84 @@
         }
       ],
       "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i176130186",
+      "date": "2026-08-14",
+      "start_datetime": "2026-08-14T09:22:00",
+      "type": "Ride",
+      "name": "Morning Virtual Ride",
+      "interval_summary": [
+        "1x 44m22s 126bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "2662s@126bpm",
+          "duration_secs": 2662,
+          "moving_secs": 2662,
+          "start_secs": 0,
+          "end_secs": 2662,
+          "avg_hr": 126,
+          "max_hr": 192,
+          "min_hr": 83,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i176129861",
+      "date": "2026-08-13",
+      "start_datetime": "2026-08-13T18:25:43",
+      "type": "Swim",
+      "name": "Evening Swim",
+      "interval_summary": [
+        "1x 1m "
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "1853s@0.00mps",
+          "duration_secs": 1853,
+          "moving_secs": 1853,
+          "start_secs": 0,
+          "end_secs": 1853,
+          "zone": 1
+        }
+      ]
+    },
+    {
+      "activity_id": "i176129850",
+      "date": "2026-08-13",
+      "start_datetime": "2026-08-13T16:46:26",
+      "type": "VirtualRide",
+      "name": "Afternoon Virtual Ride",
+      "interval_summary": [
+        "1x 56m20s 109bpm"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2,
+          "moving_secs": 2,
+          "start_secs": 0,
+          "end_secs": 0
+        },
+        {
+          "type": "WORK",
+          "label": "3380s@109bpm",
+          "duration_secs": 3380,
+          "moving_secs": 3380,
+          "start_secs": 0,
+          "end_secs": 3382,
+          "avg_hr": 109,
+          "max_hr": 147,
+          "min_hr": 60,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
     }
   ],
   "fetch_state": {
@@ -1492,6 +1570,60 @@
         "last_attempt": "2026-08-14T05:00:47.085969",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i176130186": {
+      "date": "2026-08-14",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-15T15:33:03.648191",
+        "last_attempt": "2026-08-15T15:33:03.648191",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-15T15:33:03.648191",
+        "last_attempt": "2026-08-15T15:33:03.648191",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-15T15:38:03.648191"
+      }
+    },
+    "i176129861": {
+      "date": "2026-08-13",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-15T15:33:03.648191",
+        "last_attempt": "2026-08-15T15:33:03.648191",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-15T15:33:03.648191",
+        "last_attempt": "2026-08-15T15:33:03.648191",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-15T15:38:03.648191"
+      }
+    },
+    "i176129850": {
+      "date": "2026-08-13",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-15T15:33:03.648191",
+        "last_attempt": "2026-08-15T15:33:03.648191",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-15T15:33:03.648191",
+        "last_attempt": "2026-08-15T15:33:03.648191",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-15T15:38:03.648191"
       }
     }
   }
