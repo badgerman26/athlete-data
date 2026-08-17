@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T14:28:33.161018",
+  "generated_at": "2026-08-17T14:53:44.074803",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1516,6 +1516,88 @@
         }
       ],
       "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i176797019",
+      "date": "2026-08-16",
+      "start_datetime": "2026-08-16T10:18:35",
+      "type": "VirtualRide",
+      "name": "Morning Virtual Ride",
+      "interval_summary": [
+        "1x 32m17s 113bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "1937s@113bpm",
+          "duration_secs": 1937,
+          "moving_secs": 1937,
+          "start_secs": 0,
+          "end_secs": 1937,
+          "avg_hr": 113,
+          "max_hr": 147,
+          "min_hr": 91,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i176797007",
+      "date": "2026-08-16",
+      "start_datetime": "2026-08-16T08:58:58",
+      "type": "VirtualRide",
+      "name": "Morning Virtual Ride",
+      "interval_summary": [
+        "1x 28m25s 128bpm"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1,
+          "moving_secs": 1,
+          "start_secs": 0,
+          "end_secs": 0
+        },
+        {
+          "type": "WORK",
+          "label": "1705s@128bpm",
+          "duration_secs": 1705,
+          "moving_secs": 1705,
+          "start_secs": 0,
+          "end_secs": 1706,
+          "avg_hr": 128,
+          "max_hr": 155,
+          "min_hr": 83,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i176797003",
+      "date": "2026-08-16",
+      "start_datetime": "2026-08-16T08:57:47",
+      "type": "VirtualRide",
+      "name": "Morning Virtual Ride",
+      "interval_summary": [
+        "1x 1h45m 117bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "6356s@117bpm",
+          "duration_secs": 6356,
+          "moving_secs": 6356,
+          "start_secs": 0,
+          "end_secs": 6356,
+          "avg_hr": 117,
+          "max_hr": 155,
+          "min_hr": 74,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
     }
   ],
   "fetch_state": {
@@ -1861,6 +1943,60 @@
         "status": "pending",
         "reason": "no_data",
         "next_retry_at": "2026-08-17T16:03:27.610301"
+      }
+    },
+    "i176797019": {
+      "date": "2026-08-16",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-17T14:53:44.074803",
+        "last_attempt": "2026-08-17T14:53:44.074803",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-17T14:53:44.074803",
+        "last_attempt": "2026-08-17T14:53:44.074803",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-17T14:58:44.074803"
+      }
+    },
+    "i176797007": {
+      "date": "2026-08-16",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-17T14:53:44.074803",
+        "last_attempt": "2026-08-17T14:53:44.074803",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-17T14:53:44.074803",
+        "last_attempt": "2026-08-17T14:53:44.074803",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-17T14:58:44.074803"
+      }
+    },
+    "i176797003": {
+      "date": "2026-08-16",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-17T14:53:44.074803",
+        "last_attempt": "2026-08-17T14:53:44.074803",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-17T14:53:44.074803",
+        "last_attempt": "2026-08-17T14:53:44.074803",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-17T14:58:44.074803"
       }
     }
   }
