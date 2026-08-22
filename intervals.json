@@ -1,43 +1,11 @@
 {
-  "generated_at": "2026-08-21T23:48:56.886319",
+  "generated_at": "2026-08-22T00:45:58.210256",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i173719165",
-      "date": "2026-08-07",
-      "start_datetime": "2026-08-07T18:35:44",
-      "type": "VirtualRide",
-      "name": "Evening Virtual Ride",
-      "interval_summary": [
-        "1x 1h12m 127bpm"
-      ],
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 2,
-          "moving_secs": 2,
-          "start_secs": 0,
-          "end_secs": 0
-        },
-        {
-          "type": "WORK",
-          "label": "4349s@127bpm",
-          "duration_secs": 4349,
-          "moving_secs": 4349,
-          "start_secs": 0,
-          "end_secs": 4351,
-          "avg_hr": 127,
-          "max_hr": 179,
-          "min_hr": 76,
-          "zone": 1
-        }
-      ],
-      "zone_basis": "hr"
-    },
     {
       "activity_id": "i174372723",
       "date": "2026-08-10",
@@ -793,23 +761,6 @@
     }
   ],
   "fetch_state": {
-    "i173719165": {
-      "date": "2026-08-07",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-08T13:30:57.324128",
-        "last_attempt": "2026-08-08T13:30:57.324128",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 19,
-        "first_seen": "2026-08-08T13:30:57.324128",
-        "last_attempt": "2026-08-10T14:14:56.043797",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i174372723": {
       "date": "2026-08-10",
       "intervals": {
