@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T17:44:07.003456",
+  "generated_at": "2026-08-24T18:04:09.535120",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -766,6 +766,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i179339258",
+      "date": "2026-08-24",
+      "start_datetime": "2026-08-24T17:50:53",
+      "type": "Ride",
+      "name": "Welwyn Hatfield Road Cycling",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3363,
+          "moving_secs": 3298,
+          "start_secs": 0,
+          "end_secs": 3363,
+          "avg_power": 128,
+          "max_power": 649,
+          "avg_hr": 117,
+          "max_hr": 150,
+          "min_hr": 75,
+          "avg_cadence": 74.5401,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21587,
+          "training_load": 34.17981
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -1008,6 +1036,24 @@
         "status": "pending",
         "reason": "no_data",
         "next_retry_at": "2026-08-24T23:44:07.003456"
+      }
+    },
+    "i179339258": {
+      "date": "2026-08-24",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-24T18:04:09.535120",
+        "last_attempt": "2026-08-24T18:04:09.535120",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-24T18:04:09.535120",
+        "last_attempt": "2026-08-24T18:04:09.535120",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-24T18:09:09.535120"
       }
     }
   }
