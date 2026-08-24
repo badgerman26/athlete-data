@@ -62,15 +62,15 @@
       "menstrual": "menstrual_phase and menstrual_phase_predicted are not on the 1-4 scale. Values: PERIOD, FOLLICULAR, OVULATION, LUTEAL, etc."
     },
     "quick_stats": {
-      "total_training_hours": 19.38,
-      "total_training_formatted": "19h22m",
-      "total_activities": 19,
-      "total_tss": 291
+      "total_training_hours": 19.82,
+      "total_training_formatted": "19h49m",
+      "total_activities": 20,
+      "total_tss": 297
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-08-24T19:25:56.619919",
+    "last_updated": "2026-08-24T19:52:41.420191",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.122"
@@ -134,7 +134,7 @@
       },
       "acwr": {
         "status": "green",
-        "value": 0.84
+        "value": 0.85
       },
       "ri": {
         "status": "green",
@@ -143,7 +143,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": 15.8
+        "value": 15.2
       }
     },
     "signal_summary": {
@@ -173,8 +173,8 @@
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 19.38,
-    "total_activities": 19,
+    "total_duration_decimal_hours": 19.82,
+    "total_activities": 20,
     "by_activity_type": {
       "Pilates": {
         "duration_decimal_hours": 1.61,
@@ -224,6 +224,18 @@
           }
         }
       },
+      "WeightTraining": {
+        "duration_decimal_hours": 0.44,
+        "count": 1,
+        "tss": 6,
+        "distance_km": 0.0,
+        "display": {
+          "distance": {
+            "value": 0.0,
+            "unit": "mi"
+          }
+        }
+      },
       "Workout": {
         "duration_decimal_hours": 0.26,
         "count": 1,
@@ -240,10 +252,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 62.59,
-      "atl": 46.76,
-      "tsb": 15.83,
-      "ramp_rate": -3.72,
+      "ctl": 62.73,
+      "atl": 47.56,
+      "tsb": 15.17,
+      "ramp_rate": -3.58,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -345,26 +357,26 @@
     "rhr_baseline_28d": 57.2,
     "latest_hrv": 33.085,
     "latest_rhr": 58,
-    "acwr": 0.84,
+    "acwr": 0.85,
     "acwr_interpretation": "optimal",
-    "monotony": 1.47,
+    "monotony": 1.45,
     "monotony_interpretation": "normal",
     "primary_sport": "cycling",
     "primary_sport_monotony": null,
     "primary_sport_tss_7d": 144.0,
-    "effective_monotony": 1.47,
+    "effective_monotony": 1.45,
     "multi_sport_detected": true,
-    "strain": 428.0,
-    "stress_tolerance": 2.9,
+    "strain": 431.0,
+    "stress_tolerance": 3.0,
     "load_recovery_ratio": 2.4,
-    "tss_7d_total": 291.0,
-    "tss_28d_total": 1385.0,
+    "tss_7d_total": 297.0,
+    "tss_28d_total": 1391.0,
     "zone_distribution_7d": {
-      "z1_hours": 17.81,
+      "z1_hours": 18.26,
       "z2_hours": 1.18,
       "z3_hours": 0.26,
       "z4_plus_hours": 0.13,
-      "total_hours": 19.38,
+      "total_hours": 19.82,
       "zone_basis": "mixed"
     },
     "grey_zone_percentage": 1.3,
@@ -376,7 +388,7 @@
     "hard_days_this_week": 0,
     "hard_days_note": "Power ladder: z3+ >= 30min, z4+ >= 10min, z5+ >= 5min, z6+ >= 2min, z7 >= 1min. HR fallback (when no power): z4+ >= 10min, z5+ >= 5min. Per Seiler 3-zone model + Foster. HR-based days flagged with intensity_basis: hr",
     "seiler_tid_7d": {
-      "z1_seconds": 68356,
+      "z1_seconds": 69958,
       "z2_seconds": 925,
       "z3_seconds": 477,
       "z1_pct": 98.0,
@@ -399,10 +411,10 @@
       "sport": "cycling"
     },
     "seiler_tid_28d": {
-      "z1_seconds": 308512,
+      "z1_seconds": 310114,
       "z2_seconds": 7371,
       "z3_seconds": 3992,
-      "z1_pct": 96.4,
+      "z1_pct": 96.5,
       "z2_pct": 2.3,
       "z3_pct": 1.2,
       "polarization_index": null,
@@ -661,7 +673,7 @@
           "hard_sessions_planned": 3,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 3,
-          "race_proximity": null,
+          "race_proximity": 20,
           "next_week_load": 2.7,
           "plan_coverage_current_week": 0.22,
           "plan_coverage_next_week": 0.22
@@ -697,12 +709,12 @@
     "p_max": 994,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-08-24T19:25:56.618878",
+    "calculation_timestamp": "2026-08-24T19:52:41.418899",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
-      "activities_7d": 19,
-      "activities_28d": 93,
+      "activities_7d": 20,
+      "activities_28d": 94,
       "planned_workouts_7d": 0,
       "ftp_history_days": {
         "indoor": 0,
@@ -825,6 +837,67 @@
       },
       "weather_status": "unavailable",
       "description": "\ud83d\udeb4 Tracked by LeCoach.app\n\u23f1 55 min \u00b7 Load 34"
+    },
+    {
+      "id": "i179380025",
+      "date": "2026-08-24T17:11:53",
+      "type": "WeightTraining",
+      "name": "Functional Strength Training",
+      "duration_hours": 0.44,
+      "duration_formatted": "26m41s",
+      "distance_km": 0.0,
+      "tss": 6,
+      "intensity_factor": 36.742348,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": 100,
+      "max_hr": 126,
+      "avg_cadence": null,
+      "avg_speed": null,
+      "avg_speed_unit": "KPH",
+      "max_speed": null,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "MPH",
+      "work_kj": null,
+      "calories": 95,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "display": {
+        "distance": {
+          "value": 0.0,
+          "unit": "mi"
+        },
+        "elevation": null,
+        "avg_speed": null,
+        "max_speed": null
+      },
+      "feel": null,
+      "rpe": null,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 1602,
+          "z2_time": 0,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": false,
+      "has_dfa": false
     },
     {
       "id": "i179147323",
@@ -8056,17 +8129,17 @@
       "description_preview": "-5m ramp 50-65% FTP\n-100m 65% FTP\n-5m 55% FTP"
     },
     {
-      "id": 125985128,
+      "id": 131452363,
       "date": "2026-09-13",
-      "name": "Long Light by LeCoach App",
-      "type": "WORKOUT",
+      "name": "London to Brighton and Back by LeCoach App",
+      "type": "RACE_B",
       "sport_type": "Ride",
-      "planned_tss": 75,
-      "duration_hours": 1.83,
-      "duration_formatted": "1h50m",
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
       "workout_summary": null,
       "has_terrain": false,
-      "description_preview": "-5m ramp 50-65% FTP\n-100m 65% FTP\n-5m 55% FTP"
+      "description_preview": "-5m ramp 50-65% FTP\n-290m 75% FTP\n-5m 55% FTP"
     },
     {
       "id": 125985130,
@@ -8294,24 +8367,50 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 36,
+    "attempted": 35,
     "success": 18,
     "patternA": 18,
     "patternB": 0,
-    "bail_no_workout_doc": 0,
-    "bail_no_match": 18
+    "bail_no_workout_doc": 1,
+    "bail_no_match": 17
   },
   "weekly_summary": {
-    "total_training_hours": 19.38,
-    "total_training_formatted": "19h22m",
-    "total_tss": 291,
-    "activities_count": 19,
+    "total_training_hours": 19.82,
+    "total_training_formatted": "19h49m",
+    "total_tss": 297,
+    "activities_count": 20,
     "avg_hrv": 27.9,
     "avg_resting_hr": 60.3
   },
   "race_calendar": {
-    "next_race": null,
-    "all_races": [],
+    "next_race": {
+      "name": "London to Brighton and Back by LeCoach App",
+      "date": "2026-09-13",
+      "category": "RACE_B",
+      "type": "Ride",
+      "days_until": 20,
+      "moving_time_seconds": null,
+      "distance_meters": null,
+      "display": {
+        "distance": null
+      },
+      "has_terrain": false
+    },
+    "all_races": [
+      {
+        "name": "London to Brighton and Back by LeCoach App",
+        "date": "2026-09-13",
+        "category": "RACE_B",
+        "type": "Ride",
+        "days_until": 20,
+        "moving_time_seconds": null,
+        "distance_meters": null,
+        "display": {
+          "distance": null
+        },
+        "has_terrain": false
+      }
+    ],
     "taper_alert": {
       "active": false
     },
