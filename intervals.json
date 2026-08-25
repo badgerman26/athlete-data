@@ -1,43 +1,11 @@
 {
-  "generated_at": "2026-08-24T23:58:08.012289",
+  "generated_at": "2026-08-25T01:14:50.045595",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i174372723",
-      "date": "2026-08-10",
-      "start_datetime": "2026-08-10T01:06:41",
-      "type": "VirtualRide",
-      "name": "Early morning Virtual Ride",
-      "interval_summary": [
-        "1x 27m35s 84bpm"
-      ],
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 2,
-          "moving_secs": 2,
-          "start_secs": 0,
-          "end_secs": 0
-        },
-        {
-          "type": "WORK",
-          "label": "1655s@84bpm",
-          "duration_secs": 1655,
-          "moving_secs": 1655,
-          "start_secs": 0,
-          "end_secs": 1657,
-          "avg_hr": 84,
-          "max_hr": 119,
-          "min_hr": 60,
-          "zone": 1
-        }
-      ],
-      "zone_basis": "hr"
-    },
     {
       "activity_id": "i174988227",
       "date": "2026-08-11",
@@ -797,23 +765,6 @@
     }
   ],
   "fetch_state": {
-    "i174372723": {
-      "date": "2026-08-10",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-10T14:14:56.043797",
-        "last_attempt": "2026-08-10T14:14:56.043797",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 20,
-        "first_seen": "2026-08-10T14:14:56.043797",
-        "last_attempt": "2026-08-12T22:08:29.926299",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i174988227": {
       "date": "2026-08-11",
       "intervals": {
@@ -1048,12 +999,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-08-24T18:04:09.535120",
-        "last_attempt": "2026-08-24T23:43:22.944923",
+        "last_attempt": "2026-08-25T01:14:50.045595",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-25T00:13:22.944923"
+        "next_retry_at": "2026-08-25T01:44:50.045595"
       }
     }
   }
