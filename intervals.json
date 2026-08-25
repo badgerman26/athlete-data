@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T17:14:33.701344",
+  "generated_at": "2026-08-25T17:46:01.005732",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -790,6 +790,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i179702011",
+      "date": "2026-08-25",
+      "start_datetime": "2026-08-25T17:36:40",
+      "type": "Ride",
+      "name": "45m Active Recovery by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2106,
+          "moving_secs": 2100,
+          "start_secs": 0,
+          "end_secs": 2106,
+          "avg_power": 158,
+          "max_power": 768,
+          "avg_hr": 135,
+          "max_hr": 159,
+          "min_hr": 88,
+          "avg_cadence": 81.6533,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21407,
+          "training_load": 26.9348
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -973,12 +1001,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 16,
+        "attempts": 17,
         "first_seen": "2026-08-24T07:43:03.881046",
-        "last_attempt": "2026-08-25T11:19:17.605796",
+        "last_attempt": "2026-08-25T17:46:01.005732",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-25T17:19:17.605796"
+        "next_retry_at": "2026-08-25T23:46:01.005732"
       }
     },
     "i179125989": {
@@ -991,12 +1019,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 16,
+        "attempts": 17,
         "first_seen": "2026-08-24T07:43:03.881046",
-        "last_attempt": "2026-08-25T11:19:17.605796",
+        "last_attempt": "2026-08-25T17:46:01.005732",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-25T17:19:17.605796"
+        "next_retry_at": "2026-08-25T23:46:01.005732"
       }
     },
     "i179147323": {
@@ -1045,12 +1073,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 12,
+        "attempts": 13,
         "first_seen": "2026-08-25T09:32:24.951599",
-        "last_attempt": "2026-08-25T17:14:33.701344",
+        "last_attempt": "2026-08-25T17:46:01.005732",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-25T17:44:33.701344"
+        "next_retry_at": "2026-08-25T23:46:01.005732"
+      }
+    },
+    "i179702011": {
+      "date": "2026-08-25",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-25T17:46:01.005732",
+        "last_attempt": "2026-08-25T17:46:01.005732",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-25T17:46:01.005732",
+        "last_attempt": "2026-08-25T17:46:01.005732",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-25T17:51:01.005732"
       }
     }
   }
