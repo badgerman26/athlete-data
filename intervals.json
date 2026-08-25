@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T08:57:18.747810",
+  "generated_at": "2026-08-25T09:32:24.951599",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -762,6 +762,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i179539118",
+      "date": "2026-08-25",
+      "start_datetime": "2026-08-25T09:03:59",
+      "type": "Ride",
+      "name": "North Hertfordshire Road Cycling",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3315,
+          "moving_secs": 3057,
+          "start_secs": 0,
+          "end_secs": 3315,
+          "avg_power": 143,
+          "max_power": 693,
+          "avg_hr": 126,
+          "max_hr": 169,
+          "min_hr": 78,
+          "avg_cadence": 79.06137,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21151,
+          "training_load": 38.821224
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -999,12 +1027,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 13,
+        "attempts": 14,
         "first_seen": "2026-08-24T18:04:09.535120",
-        "last_attempt": "2026-08-25T03:29:29.467835",
+        "last_attempt": "2026-08-25T09:32:24.951599",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-25T09:29:29.467835"
+        "next_retry_at": "2026-08-25T15:32:24.951599"
+      }
+    },
+    "i179539118": {
+      "date": "2026-08-25",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-25T09:32:24.951599",
+        "last_attempt": "2026-08-25T09:32:24.951599",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-25T09:32:24.951599",
+        "last_attempt": "2026-08-25T09:32:24.951599",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-25T09:37:24.951599"
       }
     }
   }
