@@ -1,36 +1,11 @@
 {
-  "generated_at": "2026-08-25T23:46:11.762167",
+  "generated_at": "2026-08-26T00:49:56.928253",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i174988227",
-      "date": "2026-08-11",
-      "start_datetime": "2026-08-11T08:49:43",
-      "type": "VirtualRide",
-      "name": "Morning Virtual Ride",
-      "interval_summary": [
-        "1x 29m56s 92bpm"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "1796s@92bpm",
-          "duration_secs": 1796,
-          "moving_secs": 1796,
-          "start_secs": 0,
-          "end_secs": 1796,
-          "avg_hr": 92,
-          "max_hr": 116,
-          "min_hr": 67,
-          "zone": 1
-        }
-      ],
-      "zone_basis": "hr"
-    },
     {
       "activity_id": "i176130186",
       "date": "2026-08-14",
@@ -821,23 +796,6 @@
     }
   ],
   "fetch_state": {
-    "i174988227": {
-      "date": "2026-08-11",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-12T06:42:28.322878",
-        "last_attempt": "2026-08-12T06:42:28.322878",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 18,
-        "first_seen": "2026-08-12T06:42:28.322878",
-        "last_attempt": "2026-08-14T05:00:47.085969",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i176130186": {
       "date": "2026-08-14",
       "intervals": {
@@ -1091,12 +1049,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-08-25T17:46:01.005732",
-        "last_attempt": "2026-08-25T23:18:44.345478",
+        "last_attempt": "2026-08-26T00:49:56.928253",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-25T23:48:44.345478"
+        "next_retry_at": "2026-08-26T01:19:56.928253"
       }
     }
   }
