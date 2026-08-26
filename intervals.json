@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T08:59:52.807014",
+  "generated_at": "2026-08-26T09:48:15.654638",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -793,6 +793,71 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i179947641",
+      "date": "2026-08-26",
+      "start_datetime": "2026-08-26T08:58:04",
+      "type": "Ride",
+      "name": "Active Recovery by LeCoach App",
+      "interval_summary": [
+        "1x 19s 516w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2861,
+          "moving_secs": 2460,
+          "start_secs": 0,
+          "end_secs": 2861,
+          "avg_power": 127,
+          "max_power": 489,
+          "avg_hr": 127,
+          "max_hr": 162,
+          "min_hr": 90,
+          "avg_cadence": 76.38307,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21300,
+          "training_load": 23.997492
+        },
+        {
+          "type": "WORK",
+          "label": "19s@516w86rpm",
+          "duration_secs": 19,
+          "moving_secs": 19,
+          "start_secs": 2861,
+          "end_secs": 2880,
+          "avg_power": 516,
+          "max_power": 674,
+          "avg_hr": 138,
+          "max_hr": 153,
+          "min_hr": 123,
+          "avg_cadence": 85.789474,
+          "zone": 7,
+          "w_bal_start": 21142,
+          "w_bal_end": 16717,
+          "training_load": 0.7508158
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 734,
+          "moving_secs": 734,
+          "start_secs": 2880,
+          "end_secs": 3614,
+          "avg_power": 139,
+          "max_power": 496,
+          "avg_hr": 136,
+          "max_hr": 160,
+          "min_hr": 117,
+          "avg_cadence": 79.54087,
+          "zone": 1,
+          "w_bal_start": 16567,
+          "w_bal_end": 21682,
+          "training_load": 10.892318
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -1048,12 +1113,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 13,
+        "attempts": 14,
         "first_seen": "2026-08-25T17:46:01.005732",
-        "last_attempt": "2026-08-26T03:30:34.882056",
+        "last_attempt": "2026-08-26T09:48:15.654638",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-26T09:30:34.882056"
+        "next_retry_at": "2026-08-26T15:48:15.654638"
+      }
+    },
+    "i179947641": {
+      "date": "2026-08-26",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-26T09:48:15.654638",
+        "last_attempt": "2026-08-26T09:48:15.654638",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-26T09:48:15.654638",
+        "last_attempt": "2026-08-26T09:48:15.654638",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-26T09:53:15.654638"
       }
     }
   }
