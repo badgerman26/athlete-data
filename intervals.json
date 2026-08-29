@@ -1,36 +1,11 @@
 {
-  "generated_at": "2026-08-28T23:12:03.019033",
+  "generated_at": "2026-08-29T04:09:21.562089",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i176130186",
-      "date": "2026-08-14",
-      "start_datetime": "2026-08-14T09:22:00",
-      "type": "Ride",
-      "name": "Morning Virtual Ride",
-      "interval_summary": [
-        "1x 44m22s 126bpm"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "2662s@126bpm",
-          "duration_secs": 2662,
-          "moving_secs": 2662,
-          "start_secs": 0,
-          "end_secs": 2662,
-          "avg_hr": 126,
-          "max_hr": 192,
-          "min_hr": 83,
-          "zone": 1
-        }
-      ],
-      "zone_basis": "hr"
-    },
     {
       "activity_id": "i176458974",
       "date": "2026-08-15",
@@ -1074,23 +1049,6 @@
     }
   ],
   "fetch_state": {
-    "i176130186": {
-      "date": "2026-08-14",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-15T15:33:03.648191",
-        "last_attempt": "2026-08-15T15:33:03.648191",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 18,
-        "first_seen": "2026-08-15T15:33:03.648191",
-        "last_attempt": "2026-08-17T05:27:44.492566",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i176458974": {
       "date": "2026-08-15",
       "intervals": {
@@ -1308,12 +1266,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-08-26T18:22:45.194322",
-        "last_attempt": "2026-08-28T23:12:03.019033",
+        "last_attempt": "2026-08-29T04:09:21.562089",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-28T23:42:03.019033"
+        "next_retry_at": "2026-08-29T04:39:21.562089"
       }
     },
     "i180729495": {
@@ -1327,12 +1285,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 1,
+        "attempts": 2,
         "first_seen": "2026-08-28T23:12:03.019033",
-        "last_attempt": "2026-08-28T23:12:03.019033",
+        "last_attempt": "2026-08-29T04:09:21.562089",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-28T23:17:03.019033"
+        "next_retry_at": "2026-08-29T04:14:21.562089"
       }
     }
   }
