@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T07:46:38.638705",
+  "generated_at": "2026-09-01T12:54:47.478771",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1289,6 +1289,71 @@
         }
       ],
       "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i182000852",
+      "date": "2026-09-01",
+      "start_datetime": "2026-09-01T09:18:43",
+      "type": "Ride",
+      "name": "North Hertfordshire Road Cycling",
+      "interval_summary": [
+        "1x 21s 449w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3830,
+          "moving_secs": 2430,
+          "start_secs": 0,
+          "end_secs": 3830,
+          "avg_power": 125,
+          "max_power": 563,
+          "avg_hr": 125,
+          "max_hr": 162,
+          "min_hr": 91,
+          "avg_cadence": 74.46631,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21670,
+          "training_load": 23.424397
+        },
+        {
+          "type": "WORK",
+          "label": "21s@449w81rpm",
+          "duration_secs": 21,
+          "moving_secs": 21,
+          "start_secs": 3830,
+          "end_secs": 3851,
+          "avg_power": 449,
+          "max_power": 570,
+          "avg_hr": 136,
+          "max_hr": 151,
+          "min_hr": 119,
+          "avg_cadence": 80.57143,
+          "zone": 7,
+          "w_bal_start": 21542,
+          "w_bal_end": 18000,
+          "training_load": 0.591849
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 726,
+          "moving_secs": 726,
+          "start_secs": 3851,
+          "end_secs": 4577,
+          "avg_power": 129,
+          "max_power": 520,
+          "avg_hr": 132,
+          "max_hr": 159,
+          "min_hr": 86,
+          "avg_cadence": 73.96005,
+          "zone": 1,
+          "w_bal_start": 17889,
+          "w_bal_end": 21469,
+          "training_load": 9.425067
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -1477,12 +1542,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-08-31T13:46:45.021870",
-        "last_attempt": "2026-09-01T07:46:38.638705",
+        "last_attempt": "2026-09-01T12:54:47.478771",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-01T07:51:38.638705"
+        "next_retry_at": "2026-09-01T12:59:47.478771"
       }
     },
     "i181655946": {
@@ -1495,12 +1560,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-08-31T13:46:45.021870",
-        "last_attempt": "2026-09-01T07:46:38.638705",
+        "last_attempt": "2026-09-01T12:54:47.478771",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-01T07:51:38.638705"
+        "next_retry_at": "2026-09-01T12:59:47.478771"
       }
     },
     "i181655899": {
@@ -1513,12 +1578,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-08-31T13:46:45.021870",
-        "last_attempt": "2026-09-01T07:46:38.638705",
+        "last_attempt": "2026-09-01T12:54:47.478771",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-01T07:51:38.638705"
+        "next_retry_at": "2026-09-01T12:59:47.478771"
       }
     },
     "i181655870": {
@@ -1531,12 +1596,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-08-31T13:46:45.021870",
-        "last_attempt": "2026-09-01T07:46:38.638705",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-09-01T07:51:38.638705"
+        "last_attempt": "2026-09-01T12:54:47.478771",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i181837581": {
@@ -1549,12 +1613,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-08-31T19:45:48.084214",
-        "last_attempt": "2026-09-01T07:46:38.638705",
+        "last_attempt": "2026-09-01T12:54:47.478771",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-01T07:51:38.638705"
+        "next_retry_at": "2026-09-01T12:59:47.478771"
+      }
+    },
+    "i182000852": {
+      "date": "2026-09-01",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-01T12:54:47.478771",
+        "last_attempt": "2026-09-01T12:54:47.478771",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-01T12:54:47.478771",
+        "last_attempt": "2026-09-01T12:54:47.478771",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-01T12:59:47.478771"
       }
     }
   }
