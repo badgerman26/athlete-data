@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T04:48:36.131684",
+  "generated_at": "2026-09-03T09:19:59.806197",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1540,6 +1540,71 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i182769939",
+      "date": "2026-09-03",
+      "start_datetime": "2026-09-03T08:22:39",
+      "type": "Ride",
+      "name": "Morning Commute by LeCoach App",
+      "interval_summary": [
+        "1x 15s 437w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2203,
+          "moving_secs": 1850,
+          "start_secs": 0,
+          "end_secs": 2203,
+          "avg_power": 98,
+          "max_power": 430,
+          "avg_hr": 107,
+          "max_hr": 154,
+          "min_hr": 65,
+          "avg_cadence": 65.07652,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 20771,
+          "training_load": 15.077925
+        },
+        {
+          "type": "WORK",
+          "label": "15s@437w74rpm",
+          "duration_secs": 15,
+          "moving_secs": 15,
+          "start_secs": 2203,
+          "end_secs": 2218,
+          "avg_power": 437,
+          "max_power": 523,
+          "avg_hr": 126,
+          "max_hr": 143,
+          "min_hr": 104,
+          "avg_cadence": 73.53333,
+          "zone": 7,
+          "w_bal_start": 20626,
+          "w_bal_end": 18335,
+          "training_load": 0.2764518
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1126,
+          "moving_secs": 1126,
+          "start_secs": 2218,
+          "end_secs": 3344,
+          "avg_power": 108,
+          "max_power": 400,
+          "avg_hr": 113,
+          "max_hr": 152,
+          "min_hr": 82,
+          "avg_cadence": 72.60568,
+          "zone": 1,
+          "w_bal_start": 18275,
+          "w_bal_end": 21977,
+          "training_load": 10.194591
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -1796,12 +1861,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 14,
+        "attempts": 15,
         "first_seen": "2026-08-31T19:45:48.084214",
-        "last_attempt": "2026-09-03T00:25:02.956655",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-09-03T06:25:02.956655"
+        "last_attempt": "2026-09-03T09:19:59.806197",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i182000852": {
@@ -1832,12 +1896,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 12,
+        "attempts": 13,
         "first_seen": "2026-09-01T17:04:42.316259",
-        "last_attempt": "2026-09-03T04:48:36.131684",
+        "last_attempt": "2026-09-03T09:19:59.806197",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-03T05:18:36.131684"
+        "next_retry_at": "2026-09-03T15:19:59.806197"
       }
     },
     "i182379406": {
@@ -1851,12 +1915,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-09-02T09:12:30.805642",
-        "last_attempt": "2026-09-03T04:48:36.131684",
+        "last_attempt": "2026-09-03T09:19:59.806197",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-03T05:18:36.131684"
+        "next_retry_at": "2026-09-03T09:49:59.806197"
       }
     },
     "i182548336": {
@@ -1869,12 +1933,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-09-02T17:20:16.809320",
-        "last_attempt": "2026-09-03T04:48:36.131684",
+        "last_attempt": "2026-09-03T09:19:59.806197",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-03T04:53:36.131684"
+        "next_retry_at": "2026-09-03T09:24:59.806197"
       }
     },
     "i182548396": {
@@ -1887,12 +1951,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-09-02T17:20:16.809320",
-        "last_attempt": "2026-09-03T04:48:36.131684",
+        "last_attempt": "2026-09-03T09:19:59.806197",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-03T04:53:36.131684"
+        "next_retry_at": "2026-09-03T09:24:59.806197"
+      }
+    },
+    "i182769939": {
+      "date": "2026-09-03",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-03T09:19:59.806197",
+        "last_attempt": "2026-09-03T09:19:59.806197",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-03T09:19:59.806197",
+        "last_attempt": "2026-09-03T09:19:59.806197",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-03T09:24:59.806197"
       }
     }
   }
