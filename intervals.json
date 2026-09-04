@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T08:57:39.939728",
+  "generated_at": "2026-09-04T13:09:48.799655",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1670,6 +1670,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i183246083",
+      "date": "2026-09-04",
+      "start_datetime": "2026-09-04T04:27:35",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Endurance Aerobic by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 5864,
+          "moving_secs": 5864,
+          "start_secs": 0,
+          "end_secs": 5864,
+          "avg_power": 152,
+          "max_power": 328,
+          "avg_hr": 111,
+          "max_hr": 139,
+          "min_hr": 56,
+          "avg_cadence": 57.160984,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21925,
+          "training_load": 60.791748
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2034,12 +2062,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-09-03T09:19:59.806197",
-        "last_attempt": "2026-09-04T08:57:39.939728",
+        "last_attempt": "2026-09-04T13:09:48.799655",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-04T09:27:39.939728"
+        "next_retry_at": "2026-09-04T13:39:48.799655"
       }
     },
     "i182987022": {
@@ -2053,12 +2081,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-09-03T19:50:59.171542",
-        "last_attempt": "2026-09-04T08:57:39.939728",
+        "last_attempt": "2026-09-04T13:09:48.799655",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-04T09:02:39.939728"
+        "next_retry_at": "2026-09-04T13:14:48.799655"
+      }
+    },
+    "i183246083": {
+      "date": "2026-09-04",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-04T13:09:48.799655",
+        "last_attempt": "2026-09-04T13:09:48.799655",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-04T13:09:48.799655",
+        "last_attempt": "2026-09-04T13:09:48.799655",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-04T13:14:48.799655"
       }
     }
   }
