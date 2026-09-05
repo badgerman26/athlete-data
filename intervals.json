@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T09:23:22.087977",
+  "generated_at": "2026-09-05T12:53:03.789592",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1698,6 +1698,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i183514344",
+      "date": "2026-09-05",
+      "start_datetime": "2026-09-05T01:15:05",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Aerobic Base Medium by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4640,
+          "moving_secs": 4640,
+          "start_secs": 0,
+          "end_secs": 4640,
+          "avg_power": 175,
+          "max_power": 263,
+          "avg_hr": 127,
+          "max_hr": 147,
+          "min_hr": 69,
+          "avg_cadence": 66.59138,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000,
+          "training_load": 52.79289
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2023,12 +2051,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 16,
+        "attempts": 17,
         "first_seen": "2026-09-02T17:20:16.809320",
-        "last_attempt": "2026-09-05T05:43:45.406973",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-09-05T11:43:45.406973"
+        "last_attempt": "2026-09-05T12:53:03.789592",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i182548396": {
@@ -2041,12 +2068,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 16,
+        "attempts": 17,
         "first_seen": "2026-09-02T17:20:16.809320",
-        "last_attempt": "2026-09-05T05:43:45.406973",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-09-05T11:43:45.406973"
+        "last_attempt": "2026-09-05T12:53:03.789592",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i182769939": {
@@ -2060,12 +2086,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 14,
+        "attempts": 15,
         "first_seen": "2026-09-03T09:19:59.806197",
-        "last_attempt": "2026-09-05T05:43:45.406973",
+        "last_attempt": "2026-09-05T12:53:03.789592",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-05T11:43:45.406973"
+        "next_retry_at": "2026-09-05T18:53:03.789592"
       }
     },
     "i182987022": {
@@ -2098,12 +2124,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-09-04T13:09:48.799655",
-        "last_attempt": "2026-09-05T09:23:22.087977",
+        "last_attempt": "2026-09-05T12:53:03.789592",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-05T09:53:22.087977"
+        "next_retry_at": "2026-09-05T13:23:03.789592"
+      }
+    },
+    "i183514344": {
+      "date": "2026-09-05",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-05T12:53:03.789592",
+        "last_attempt": "2026-09-05T12:53:03.789592",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-05T12:53:03.789592",
+        "last_attempt": "2026-09-05T12:53:03.789592",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-05T12:58:03.789592"
       }
     }
   }
