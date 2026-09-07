@@ -1,68 +1,11 @@
 {
-  "generated_at": "2026-09-06T22:20:49.560985",
+  "generated_at": "2026-09-07T00:07:26.418792",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i179125997",
-      "date": "2026-08-23",
-      "start_datetime": "2026-08-23T06:07:50",
-      "type": "VirtualRide",
-      "name": "Cycle",
-      "interval_summary": [
-        "1x 26m17s 122bpm"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "1577s@122bpm",
-          "duration_secs": 1577,
-          "moving_secs": 1577,
-          "start_secs": 0,
-          "end_secs": 1577,
-          "avg_hr": 122,
-          "max_hr": 154,
-          "min_hr": 79,
-          "zone": 1
-        }
-      ],
-      "zone_basis": "hr"
-    },
-    {
-      "activity_id": "i179125989",
-      "date": "2026-08-23",
-      "start_datetime": "2026-08-23T03:20:11",
-      "type": "VirtualRide",
-      "name": "Cycle",
-      "interval_summary": [
-        "1x 2h24m 127bpm"
-      ],
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 1,
-          "moving_secs": 1,
-          "start_secs": 0,
-          "end_secs": 0
-        },
-        {
-          "type": "WORK",
-          "label": "8651s@127bpm",
-          "duration_secs": 8651,
-          "moving_secs": 8651,
-          "start_secs": 0,
-          "end_secs": 8652,
-          "avg_hr": 127,
-          "max_hr": 169,
-          "min_hr": 67,
-          "zone": 1
-        }
-      ],
-      "zone_basis": "hr"
-    },
     {
       "activity_id": "i179147323",
       "date": "2026-08-24",
@@ -2186,40 +2129,6 @@
     }
   ],
   "fetch_state": {
-    "i179125997": {
-      "date": "2026-08-23",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-24T07:43:03.881046",
-        "last_attempt": "2026-08-24T07:43:03.881046",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 19,
-        "first_seen": "2026-08-24T07:43:03.881046",
-        "last_attempt": "2026-08-26T05:47:42.320922",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
-    "i179125989": {
-      "date": "2026-08-23",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-24T07:43:03.881046",
-        "last_attempt": "2026-08-24T07:43:03.881046",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 18,
-        "first_seen": "2026-08-24T07:43:03.881046",
-        "last_attempt": "2026-08-25T23:46:11.762167",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i179147323": {
       "date": "2026-08-24",
       "intervals": {
@@ -2616,12 +2525,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-09-06T13:28:40.285897",
-        "last_attempt": "2026-09-06T22:20:49.560985",
+        "last_attempt": "2026-09-07T00:07:26.418792",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-06T22:25:49.560985"
+        "next_retry_at": "2026-09-07T00:12:26.418792"
       }
     }
   }
