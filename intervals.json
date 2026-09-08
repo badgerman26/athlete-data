@@ -1,104 +1,11 @@
 {
-  "generated_at": "2026-09-07T22:09:17.069533",
+  "generated_at": "2026-09-08T00:22:30.983298",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i179147323",
-      "date": "2026-08-24",
-      "start_datetime": "2026-08-24T08:40:45",
-      "type": "Ride",
-      "name": "North Hertfordshire Road Cycling",
-      "interval_summary": [
-        "1x 23s 440w"
-      ],
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 1852,
-          "moving_secs": 1845,
-          "start_secs": 0,
-          "end_secs": 1852,
-          "avg_power": 142,
-          "max_power": 557,
-          "avg_hr": 128,
-          "max_hr": 155,
-          "min_hr": 90,
-          "avg_cadence": 80.452126,
-          "zone": 1,
-          "w_bal_start": 22000,
-          "w_bal_end": 21567,
-          "training_load": 19.805475
-        },
-        {
-          "type": "WORK",
-          "label": "23s@440w75rpm",
-          "duration_secs": 23,
-          "moving_secs": 23,
-          "start_secs": 1852,
-          "end_secs": 1875,
-          "avg_power": 440,
-          "max_power": 544,
-          "avg_hr": 136,
-          "max_hr": 149,
-          "min_hr": 124,
-          "avg_cadence": 74.95652,
-          "zone": 7,
-          "w_bal_start": 21416,
-          "w_bal_end": 17757,
-          "training_load": 0.77561325
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 864,
-          "moving_secs": 758,
-          "start_secs": 1875,
-          "end_secs": 2739,
-          "avg_power": 132,
-          "max_power": 504,
-          "avg_hr": 129,
-          "max_hr": 157,
-          "min_hr": 101,
-          "avg_cadence": 75.25627,
-          "zone": 1,
-          "w_bal_start": 17659,
-          "w_bal_end": 21841,
-          "training_load": 9.814532
-        }
-      ],
-      "zone_basis": "power"
-    },
-    {
-      "activity_id": "i179339258",
-      "date": "2026-08-24",
-      "start_datetime": "2026-08-24T17:50:53",
-      "type": "Ride",
-      "name": "Welwyn Hatfield Road Cycling",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 3363,
-          "moving_secs": 3298,
-          "start_secs": 0,
-          "end_secs": 3363,
-          "avg_power": 128,
-          "max_power": 649,
-          "avg_hr": 117,
-          "max_hr": 150,
-          "min_hr": 75,
-          "avg_cadence": 74.5401,
-          "zone": 1,
-          "w_bal_start": 22000,
-          "w_bal_end": 21587,
-          "training_load": 34.17981
-        }
-      ],
-      "zone_basis": "power"
-    },
     {
       "activity_id": "i179539118",
       "date": "2026-08-25",
@@ -2129,40 +2036,6 @@
     }
   ],
   "fetch_state": {
-    "i179147323": {
-      "date": "2026-08-24",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-24T09:11:29.266924",
-        "last_attempt": "2026-08-24T09:11:29.266924",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 22,
-        "first_seen": "2026-08-24T09:11:29.266924",
-        "last_attempt": "2026-08-27T06:22:46.808141",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
-    "i179339258": {
-      "date": "2026-08-24",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-24T18:04:09.535120",
-        "last_attempt": "2026-08-24T18:04:09.535120",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 21,
-        "first_seen": "2026-08-24T18:04:09.535120",
-        "last_attempt": "2026-08-27T17:43:44.120802",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i179539118": {
       "date": "2026-08-25",
       "intervals": {
@@ -2523,12 +2396,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 11,
+        "attempts": 12,
         "first_seen": "2026-09-06T13:28:40.285897",
-        "last_attempt": "2026-09-07T22:09:17.069533",
+        "last_attempt": "2026-09-08T00:22:30.983298",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-07T22:39:17.069533"
+        "next_retry_at": "2026-09-08T00:52:30.983298"
       }
     }
   }
