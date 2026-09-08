@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T13:44:16.481567",
+  "generated_at": "2026-09-08T17:32:12.124936",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -2197,6 +2197,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i184653178",
+      "date": "2026-09-08",
+      "start_datetime": "2026-09-08T17:04:10",
+      "type": "GravelRide",
+      "name": "Welwyn Hatfield Gravel/Unpaved Cycling",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2609,
+          "moving_secs": 2584,
+          "start_secs": 0,
+          "end_secs": 2609,
+          "avg_power": 134,
+          "max_power": 724,
+          "avg_hr": 113,
+          "max_hr": 145,
+          "min_hr": 67,
+          "avg_cadence": 71.61249,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 20927,
+          "training_load": 27.387327
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2579,12 +2607,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-09-08T09:19:08.163369",
-        "last_attempt": "2026-09-08T13:44:16.481567",
+        "last_attempt": "2026-09-08T17:32:12.124936",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-08T13:49:16.481567"
+        "next_retry_at": "2026-09-08T17:37:12.124936"
       }
     },
     "i184456225": {
@@ -2598,12 +2626,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-09-08T09:19:08.163369",
-        "last_attempt": "2026-09-08T13:44:16.481567",
+        "last_attempt": "2026-09-08T17:32:12.124936",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-08T13:49:16.481567"
+        "next_retry_at": "2026-09-08T17:37:12.124936"
+      }
+    },
+    "i184653178": {
+      "date": "2026-09-08",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-08T17:32:12.124936",
+        "last_attempt": "2026-09-08T17:32:12.124936",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-08T17:32:12.124936",
+        "last_attempt": "2026-09-08T17:32:12.124936",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-08T17:37:12.124936"
       }
     }
   }
