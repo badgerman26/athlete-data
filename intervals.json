@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T13:58:55.128844",
+  "generated_at": "2026-09-10T17:30:43.995444",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1961,6 +1961,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i185332946",
+      "date": "2026-09-10",
+      "start_datetime": "2026-09-10T17:11:36",
+      "type": "Ride",
+      "name": "Evening Commute by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2376,
+          "moving_secs": 2374,
+          "start_secs": 0,
+          "end_secs": 2376,
+          "avg_power": 117,
+          "max_power": 467,
+          "avg_hr": 110,
+          "max_hr": 138,
+          "min_hr": 71,
+          "avg_cadence": 75.43636,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21846,
+          "training_load": 17.838888
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2272,12 +2300,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 14,
+        "attempts": 15,
         "first_seen": "2026-09-08T09:19:08.163369",
-        "last_attempt": "2026-09-10T09:54:43.931973",
+        "last_attempt": "2026-09-10T17:30:43.995444",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-10T15:54:43.931973"
+        "next_retry_at": "2026-09-10T23:30:43.995444"
       }
     },
     "i184456225": {
@@ -2291,12 +2319,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 14,
+        "attempts": 15,
         "first_seen": "2026-09-08T09:19:08.163369",
-        "last_attempt": "2026-09-10T09:54:43.931973",
+        "last_attempt": "2026-09-10T17:30:43.995444",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-10T15:54:43.931973"
+        "next_retry_at": "2026-09-10T23:30:43.995444"
       }
     },
     "i184653178": {
@@ -2309,32 +2337,32 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 13,
+        "attempts": 14,
         "first_seen": "2026-09-08T17:32:12.124936",
-        "last_attempt": "2026-09-10T09:54:43.931973",
+        "last_attempt": "2026-09-10T17:30:43.995444",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-10T15:54:43.931973"
+        "next_retry_at": "2026-09-10T23:30:43.995444"
       }
     },
     "i184788525": {
       "date": "2026-09-08",
       "paired_planned": true,
       "intervals": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-09-09T05:37:16.350058",
-        "last_attempt": "2026-09-10T13:58:55.128844",
+        "last_attempt": "2026-09-10T17:30:43.995444",
         "status": "pending",
         "reason": "transient",
-        "next_retry_at": "2026-09-10T14:28:55.128844"
+        "next_retry_at": "2026-09-10T18:00:43.995444"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-09-09T05:37:16.350058",
-        "last_attempt": "2026-09-10T13:58:55.128844",
+        "last_attempt": "2026-09-10T17:30:43.995444",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-10T14:28:55.128844"
+        "next_retry_at": "2026-09-10T18:00:43.995444"
       }
     },
     "i185187015": {
@@ -2348,12 +2376,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-09-10T09:54:43.931973",
-        "last_attempt": "2026-09-10T13:58:55.128844",
+        "last_attempt": "2026-09-10T17:30:43.995444",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-10T14:03:55.128844"
+        "next_retry_at": "2026-09-10T17:35:43.995444"
+      }
+    },
+    "i185332946": {
+      "date": "2026-09-10",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-10T17:30:43.995444",
+        "last_attempt": "2026-09-10T17:30:43.995444",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-10T17:30:43.995444",
+        "last_attempt": "2026-09-10T17:30:43.995444",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-10T17:35:43.995444"
       }
     }
   }
