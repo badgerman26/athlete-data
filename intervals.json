@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T05:21:01.148894",
+  "generated_at": "2026-09-15T10:14:41.032955",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -2157,6 +2157,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i186863175",
+      "date": "2026-09-15",
+      "start_datetime": "2026-09-15T08:26:28",
+      "type": "GravelRide",
+      "name": "10x2m High Cadence by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3093,
+          "moving_secs": 2999,
+          "start_secs": 0,
+          "end_secs": 3093,
+          "avg_power": 107,
+          "max_power": 511,
+          "avg_hr": 113,
+          "max_hr": 148,
+          "min_hr": 66,
+          "avg_cadence": 62.82455,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21676,
+          "training_load": 26.420881
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2453,12 +2481,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-09-13T19:26:29.471371",
-        "last_attempt": "2026-09-15T05:21:01.148894",
+        "last_attempt": "2026-09-15T10:14:41.032955",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-15T05:51:01.148894"
+        "next_retry_at": "2026-09-15T10:44:41.032955"
       }
     },
     "i186374846": {
@@ -2471,12 +2499,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-09-13T19:26:29.471371",
-        "last_attempt": "2026-09-15T05:21:01.148894",
+        "last_attempt": "2026-09-15T10:14:41.032955",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-15T05:51:01.148894"
+        "next_retry_at": "2026-09-15T10:44:41.032955"
+      }
+    },
+    "i186863175": {
+      "date": "2026-09-15",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-15T10:14:41.032955",
+        "last_attempt": "2026-09-15T10:14:41.032955",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-15T10:14:41.032955",
+        "last_attempt": "2026-09-15T10:14:41.032955",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-15T10:19:41.032955"
       }
     }
   }
