@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T06:19:13.944807",
+  "generated_at": "2026-09-17T11:55:17.686265",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -2242,6 +2242,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i187555178",
+      "date": "2026-09-17",
+      "start_datetime": "2026-09-17T08:26:04",
+      "type": "Ride",
+      "name": "North Hertfordshire Road Cycling",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2490,
+          "moving_secs": 2490,
+          "start_secs": 0,
+          "end_secs": 2490,
+          "avg_power": 136,
+          "max_power": 541,
+          "avg_hr": 127,
+          "max_hr": 160,
+          "min_hr": 82,
+          "avg_cadence": 76.61275,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21703,
+          "training_load": 26.743835
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2506,12 +2534,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 6,
+        "attempts": 7,
         "first_seen": "2026-09-16T12:58:32.396722",
-        "last_attempt": "2026-09-17T06:19:13.944807",
+        "last_attempt": "2026-09-17T11:55:17.686265",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-17T06:24:13.944807"
+        "next_retry_at": "2026-09-17T12:25:17.686265"
       }
     },
     "i187256012": {
@@ -2524,12 +2552,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 6,
+        "attempts": 7,
         "first_seen": "2026-09-16T12:58:32.396722",
-        "last_attempt": "2026-09-17T06:19:13.944807",
+        "last_attempt": "2026-09-17T11:55:17.686265",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-17T06:24:13.944807"
+        "next_retry_at": "2026-09-17T12:25:17.686265"
+      }
+    },
+    "i187555178": {
+      "date": "2026-09-17",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-17T11:55:17.686265",
+        "last_attempt": "2026-09-17T11:55:17.686265",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-17T11:55:17.686265",
+        "last_attempt": "2026-09-17T11:55:17.686265",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-17T12:00:17.686265"
       }
     }
   }
