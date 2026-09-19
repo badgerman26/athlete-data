@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T13:07:28.031381",
+  "generated_at": "2026-09-19T16:27:26.809940",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -2422,6 +2422,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i188268864",
+      "date": "2026-09-19",
+      "start_datetime": "2026-09-19T15:57:44",
+      "type": "VirtualRide",
+      "name": "50m 65% FTP by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2279,
+          "moving_secs": 2279,
+          "start_secs": 0,
+          "end_secs": 2279,
+          "avg_power": 149,
+          "max_power": 404,
+          "avg_hr": 114,
+          "max_hr": 150,
+          "min_hr": 62,
+          "avg_cadence": 70.58885,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21999,
+          "training_load": 26.487707
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2703,12 +2731,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 6,
+        "attempts": 7,
         "first_seen": "2026-09-18T19:48:52.325978",
-        "last_attempt": "2026-09-19T13:07:28.031381",
+        "last_attempt": "2026-09-19T16:27:26.809940",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-19T13:12:28.031381"
+        "next_retry_at": "2026-09-19T16:57:26.809940"
+      }
+    },
+    "i188268864": {
+      "date": "2026-09-19",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-19T16:27:26.809940",
+        "last_attempt": "2026-09-19T16:27:26.809940",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-19T16:27:26.809940",
+        "last_attempt": "2026-09-19T16:27:26.809940",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-19T16:32:26.809940"
       }
     }
   }
