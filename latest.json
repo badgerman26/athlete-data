@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-09-21T14:07:00.116378",
+    "last_updated": "2026-09-21T19:24:28.465969",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.122"
@@ -681,13 +681,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.48,
+          "planned_tss_delta": 0.51,
           "hard_sessions_planned": 2,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 2,
           "race_proximity": null,
           "next_week_load": 0.73,
-          "plan_coverage_current_week": 0.22,
+          "plan_coverage_current_week": 0.3,
           "plan_coverage_next_week": 0.13
         },
         "data_quality": "good",
@@ -721,7 +721,7 @@
     "p_max": 989,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-09-21T14:07:00.115425",
+    "calculation_timestamp": "2026-09-21T19:24:28.464738",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -8451,15 +8451,41 @@
     {
       "id": 125985136,
       "date": "2026-09-22",
-      "name": "4x4m VO2max by LeCoach App",
+      "name": "3x3m 115% FTP by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 74,
-      "duration_hours": 1.02,
-      "duration_formatted": "1h1m",
-      "workout_summary": "5m @158W | 3\u00d730s @275W / 30s rec | 5m @165W | 4\u00d74m @308W / 4m rec | 11m @178W | 5m @151W",
+      "planned_tss": 47,
+      "duration_hours": 0.67,
+      "duration_formatted": "40m",
+      "workout_summary": "5m @158W | 3\u00d730s @275W / 30s rec | 5m @165W | 3\u00d73m @316W / 3m rec | 4m @178W | 5m @151W",
       "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n4x\n-4m 112% FTP\n-4m 65% FTP\n\n-11m 65% FTP\n\n-5m 55% FTP"
+      "description": "-5m ramp 50-65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n3x\n-3m 115% FTP\n-3m 65% FTP\n\n-4m 65% FTP\n\n-5m 55% FTP"
+    },
+    {
+      "id": 137839753,
+      "date": "2026-09-22",
+      "name": "Evening Commute by LeCoach App",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 23,
+      "duration_hours": 0.67,
+      "duration_formatted": "40m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "-5m ramp 50-65% FTP\n-30m 60% FTP\n-5m 55% FTP"
+    },
+    {
+      "id": 137839754,
+      "date": "2026-09-22",
+      "name": "Morning Commute by LeCoach App",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 23,
+      "duration_hours": 0.67,
+      "duration_formatted": "40m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "-5m ramp 50-65% FTP\n-30m 60% FTP\n-5m 55% FTP"
     },
     {
       "id": 125985137,
@@ -8855,12 +8881,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 31,
+    "attempted": 33,
     "success": 13,
     "patternA": 13,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 18
+    "bail_no_match": 20
   },
   "weekly_summary": {
     "total_training_hours": 15.94,
