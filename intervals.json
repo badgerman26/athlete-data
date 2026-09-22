@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T06:11:09.649907",
+  "generated_at": "2026-09-22T11:34:36.546209",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -2430,6 +2430,170 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i189148845",
+      "date": "2026-09-22",
+      "start_datetime": "2026-09-22T11:08:03",
+      "type": "Ride",
+      "name": "Morning Commute by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2577,
+          "moving_secs": 2443,
+          "start_secs": 0,
+          "end_secs": 2577,
+          "avg_power": 134,
+          "max_power": 606,
+          "avg_hr": 132,
+          "max_hr": 160,
+          "min_hr": 95,
+          "avg_cadence": 75.529366,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21447,
+          "training_load": 24.686533
+        }
+      ],
+      "zone_basis": "power"
+    },
+    {
+      "activity_id": "i189100827",
+      "date": "2026-09-22",
+      "start_datetime": "2026-09-22T08:16:33",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - 3x3m 115% FTP by LeCoach App",
+      "interval_summary": [
+        "2x 2m59s 311w",
+        "1x 85s 314w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 785,
+          "moving_secs": 785,
+          "start_secs": 0,
+          "end_secs": 785,
+          "avg_power": 170,
+          "max_power": 288,
+          "avg_hr": 121,
+          "max_hr": 143,
+          "min_hr": 68,
+          "avg_cadence": 69.513374,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21970,
+          "training_load": 9.342149
+        },
+        {
+          "type": "WORK",
+          "label": "179s@311w54rpm",
+          "duration_secs": 180,
+          "moving_secs": 180,
+          "start_secs": 785,
+          "end_secs": 965,
+          "avg_power": 315,
+          "max_power": 367,
+          "avg_hr": 155,
+          "max_hr": 169,
+          "min_hr": 123,
+          "avg_cadence": 59.044445,
+          "zone": 5,
+          "w_bal_start": 21970,
+          "w_bal_end": 14664,
+          "training_load": 6.3127933
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 180,
+          "moving_secs": 180,
+          "start_secs": 965,
+          "end_secs": 1145,
+          "avg_power": 178,
+          "max_power": 235,
+          "avg_hr": 143,
+          "max_hr": 166,
+          "min_hr": 127,
+          "avg_cadence": 67.48889,
+          "zone": 2,
+          "w_bal_start": 14677,
+          "w_bal_end": 18661,
+          "training_load": 2.5658844
+        },
+        {
+          "type": "WORK",
+          "label": "85s@314w55rpm",
+          "duration_secs": 85,
+          "moving_secs": 85,
+          "start_secs": 1145,
+          "end_secs": 1230,
+          "avg_power": 314,
+          "max_power": 347,
+          "avg_hr": 146,
+          "max_hr": 163,
+          "min_hr": 127,
+          "avg_cadence": 54.77647,
+          "zone": 5,
+          "w_bal_start": 18669,
+          "w_bal_end": 15222,
+          "training_load": 2.791216
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 278,
+          "moving_secs": 278,
+          "start_secs": 1230,
+          "end_secs": 1508,
+          "avg_power": 205,
+          "max_power": 335,
+          "avg_hr": 148,
+          "max_hr": 164,
+          "min_hr": 128,
+          "avg_cadence": 56.28777,
+          "zone": 2,
+          "w_bal_start": 15199,
+          "w_bal_end": 18928,
+          "training_load": 5.077929
+        },
+        {
+          "type": "WORK",
+          "label": "179s@311w54rpm",
+          "duration_secs": 177,
+          "moving_secs": 177,
+          "start_secs": 1508,
+          "end_secs": 1685,
+          "avg_power": 307,
+          "max_power": 358,
+          "avg_hr": 163,
+          "max_hr": 172,
+          "min_hr": 132,
+          "avg_cadence": 49.265537,
+          "zone": 5,
+          "w_bal_start": 18875,
+          "w_bal_end": 12562,
+          "training_load": 6.1274834
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 432,
+          "moving_secs": 432,
+          "start_secs": 1685,
+          "end_secs": 2117,
+          "avg_power": 148,
+          "max_power": 235,
+          "avg_hr": 130,
+          "max_hr": 173,
+          "min_hr": 96,
+          "avg_cadence": 58.04861,
+          "zone": 1,
+          "w_bal_start": 12585,
+          "w_bal_end": 21214,
+          "training_load": 4.585785
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2692,12 +2856,50 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 12,
+        "attempts": 13,
         "first_seen": "2026-09-20T14:12:44.215230",
-        "last_attempt": "2026-09-22T06:11:09.649907",
+        "last_attempt": "2026-09-22T11:34:36.546209",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-22T06:41:09.649907"
+        "next_retry_at": "2026-09-22T17:34:36.546209"
+      }
+    },
+    "i189148845": {
+      "date": "2026-09-22",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-22T11:34:36.546209",
+        "last_attempt": "2026-09-22T11:34:36.546209",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-22T11:34:36.546209",
+        "last_attempt": "2026-09-22T11:34:36.546209",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-22T11:39:36.546209"
+      }
+    },
+    "i189100827": {
+      "date": "2026-09-22",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-22T11:34:36.546209",
+        "last_attempt": "2026-09-22T11:34:36.546209",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-22T11:34:36.546209",
+        "last_attempt": "2026-09-22T11:34:36.546209",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-22T11:39:36.546209"
       }
     }
   }
