@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T15:41:17.805291",
+  "generated_at": "2026-09-22T19:10:18.011486",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -2594,6 +2594,71 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i189284919",
+      "date": "2026-09-22",
+      "start_datetime": "2026-09-22T17:26:04",
+      "type": "Ride",
+      "name": "Evening Commute by LeCoach App",
+      "interval_summary": [
+        "1x 12s 427w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2667,
+          "moving_secs": 2660,
+          "start_secs": 0,
+          "end_secs": 2667,
+          "avg_power": 114,
+          "max_power": 535,
+          "avg_hr": 107,
+          "max_hr": 132,
+          "min_hr": 75,
+          "avg_cadence": 69.66164,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21850,
+          "training_load": 21.097052
+        },
+        {
+          "type": "WORK",
+          "label": "12s@427w76rpm",
+          "duration_secs": 12,
+          "moving_secs": 12,
+          "start_secs": 2667,
+          "end_secs": 2679,
+          "avg_power": 427,
+          "max_power": 498,
+          "avg_hr": 99,
+          "max_hr": 109,
+          "min_hr": 91,
+          "avg_cadence": 75.5,
+          "zone": 7,
+          "w_bal_start": 21632,
+          "w_bal_end": 20017,
+          "training_load": 0.12888595
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 366,
+          "moving_secs": 361,
+          "start_secs": 2679,
+          "end_secs": 3045,
+          "avg_power": 60,
+          "max_power": 426,
+          "avg_hr": 93,
+          "max_hr": 120,
+          "min_hr": 64,
+          "avg_cadence": 51.41828,
+          "zone": 1,
+          "w_bal_start": 19954,
+          "w_bal_end": 21573,
+          "training_load": 2.6215901
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2855,12 +2920,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 13,
+        "attempts": 14,
         "first_seen": "2026-09-20T14:12:44.215230",
-        "last_attempt": "2026-09-22T11:34:36.546209",
+        "last_attempt": "2026-09-22T19:10:18.011486",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-22T17:34:36.546209"
+        "next_retry_at": "2026-09-23T01:10:18.011486"
       }
     },
     "i189148845": {
@@ -2874,12 +2939,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-09-22T11:34:36.546209",
-        "last_attempt": "2026-09-22T15:41:17.805291",
+        "last_attempt": "2026-09-22T19:10:18.011486",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-22T15:46:17.805291"
+        "next_retry_at": "2026-09-22T19:15:18.011486"
       }
     },
     "i189100827": {
@@ -2893,12 +2958,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-09-22T11:34:36.546209",
-        "last_attempt": "2026-09-22T15:41:17.805291",
+        "last_attempt": "2026-09-22T19:10:18.011486",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-22T15:46:17.805291"
+        "next_retry_at": "2026-09-22T19:15:18.011486"
+      }
+    },
+    "i189284919": {
+      "date": "2026-09-22",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-22T19:10:18.011486",
+        "last_attempt": "2026-09-22T19:10:18.011486",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-22T19:10:18.011486",
+        "last_attempt": "2026-09-22T19:10:18.011486",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-22T19:15:18.011486"
       }
     }
   }
