@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T09:56:15.068966",
+  "generated_at": "2026-09-25T14:55:50.489046",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -2717,6 +2717,56 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i190205496",
+      "date": "2026-09-25",
+      "start_datetime": "2026-09-25T09:52:48",
+      "type": "Ride",
+      "name": "Ride",
+      "interval_summary": [
+        "1x 49m3s 118bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "2943s@118bpm",
+          "duration_secs": 2943,
+          "moving_secs": 2859,
+          "start_secs": 0,
+          "end_secs": 2943,
+          "avg_hr": 118,
+          "max_hr": 154,
+          "min_hr": 69,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i190205490",
+      "date": "2026-09-25",
+      "start_datetime": "2026-09-25T09:09:42",
+      "type": "Ride",
+      "name": "Ride",
+      "interval_summary": [
+        "1x 13m45s 112bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "825s@112bpm",
+          "duration_secs": 825,
+          "moving_secs": 698,
+          "start_secs": 0,
+          "end_secs": 825,
+          "avg_hr": 112,
+          "max_hr": 145,
+          "min_hr": 92,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
     }
   ],
   "fetch_state": {
@@ -2907,12 +2957,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 15,
+        "attempts": 16,
         "first_seen": "2026-09-22T11:34:36.546209",
-        "last_attempt": "2026-09-25T04:54:23.776932",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-09-25T10:54:23.776932"
+        "last_attempt": "2026-09-25T14:55:50.489046",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i189100827": {
@@ -2944,12 +2993,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 14,
+        "attempts": 15,
         "first_seen": "2026-09-22T19:10:18.011486",
-        "last_attempt": "2026-09-25T04:54:23.776932",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-09-25T10:54:23.776932"
+        "last_attempt": "2026-09-25T14:55:50.489046",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i189913150": {
@@ -2963,12 +3011,48 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 6,
+        "attempts": 7,
         "first_seen": "2026-09-24T14:26:20.247137",
-        "last_attempt": "2026-09-25T09:56:15.068966",
+        "last_attempt": "2026-09-25T14:55:50.489046",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-25T10:01:15.068966"
+        "next_retry_at": "2026-09-25T15:25:50.489046"
+      }
+    },
+    "i190205496": {
+      "date": "2026-09-25",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-25T14:55:50.489046",
+        "last_attempt": "2026-09-25T14:55:50.489046",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-25T14:55:50.489046",
+        "last_attempt": "2026-09-25T14:55:50.489046",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-25T15:00:50.489046"
+      }
+    },
+    "i190205490": {
+      "date": "2026-09-25",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-25T14:55:50.489046",
+        "last_attempt": "2026-09-25T14:55:50.489046",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-25T14:55:50.489046",
+        "last_attempt": "2026-09-25T14:55:50.489046",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-25T15:00:50.489046"
       }
     }
   }
