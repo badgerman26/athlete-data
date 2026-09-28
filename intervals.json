@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T15:57:01.060757",
+  "generated_at": "2026-09-28T21:34:05.125828",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1782,6 +1782,42 @@
         }
       ],
       "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i191266764",
+      "date": "2026-09-28",
+      "start_datetime": "2026-09-28T18:28:56",
+      "type": "VirtualRide",
+      "name": "Ride",
+      "interval_summary": [
+        "1x 23m57s 101bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "1437s@101bpm",
+          "duration_secs": 1437,
+          "moving_secs": 1437,
+          "start_secs": 0,
+          "end_secs": 1437,
+          "avg_hr": 101,
+          "max_hr": 127,
+          "min_hr": 65,
+          "zone": 1
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1,
+          "moving_secs": 1,
+          "start_secs": 1437,
+          "end_secs": 1438,
+          "avg_hr": 81,
+          "max_hr": 81,
+          "min_hr": 81,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
     }
   ],
   "fetch_state": {
@@ -2048,6 +2084,24 @@
         "last_attempt": "2026-09-28T15:57:01.060757",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i191266764": {
+      "date": "2026-09-28",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-28T21:34:05.125828",
+        "last_attempt": "2026-09-28T21:34:05.125828",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-28T21:34:05.125828",
+        "last_attempt": "2026-09-28T21:34:05.125828",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-28T21:39:05.125828"
       }
     }
   }
