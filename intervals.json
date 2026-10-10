@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T11:39:50.523223",
+  "generated_at": "2026-10-10T16:22:36.090786",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -41,6 +41,71 @@
         }
       ],
       "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i195755830",
+      "date": "2026-10-10",
+      "start_datetime": "2026-10-10T11:38:16",
+      "type": "Ride",
+      "name": "Endurance Medium by LeCoach App",
+      "interval_summary": [
+        "1x 31s 530w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 563,
+          "moving_secs": 535,
+          "start_secs": 0,
+          "end_secs": 563,
+          "avg_power": 121,
+          "max_power": 498,
+          "avg_hr": 110,
+          "max_hr": 144,
+          "min_hr": 74,
+          "avg_cadence": 76.694916,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21190,
+          "training_load": 5.5463142
+        },
+        {
+          "type": "WORK",
+          "label": "31s@530w75rpm",
+          "duration_secs": 31,
+          "moving_secs": 31,
+          "start_secs": 563,
+          "end_secs": 594,
+          "avg_power": 530,
+          "max_power": 631,
+          "avg_hr": 143,
+          "max_hr": 163,
+          "min_hr": 120,
+          "avg_cadence": 75.32258,
+          "zone": 7,
+          "w_bal_start": 20986,
+          "w_bal_end": 13276,
+          "training_load": 2.0663934
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4183,
+          "moving_secs": 4019,
+          "start_secs": 594,
+          "end_secs": 4777,
+          "avg_power": 117,
+          "max_power": 537,
+          "avg_hr": 119,
+          "max_hr": 168,
+          "min_hr": 84,
+          "avg_cadence": 74.89664,
+          "zone": 1,
+          "w_bal_start": 13139,
+          "w_bal_end": 21629,
+          "training_load": 39.694447
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -59,6 +124,25 @@
         "last_attempt": "2026-10-01T16:25:43.624233",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i195755830": {
+      "date": "2026-10-10",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-10T16:22:36.090786",
+        "last_attempt": "2026-10-10T16:22:36.090786",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-10T16:22:36.090786",
+        "last_attempt": "2026-10-10T16:22:36.090786",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-10T16:27:36.090786"
       }
     }
   }
