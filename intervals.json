@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T09:31:02.912821",
+  "generated_at": "2026-10-12T19:18:33.252022",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -106,6 +106,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i196520852",
+      "date": "2026-10-12",
+      "start_datetime": "2026-10-12T16:15:06",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Steady endurance \u00b7 60m by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3310,
+          "moving_secs": 3310,
+          "start_secs": 0,
+          "end_secs": 3310,
+          "avg_power": 148,
+          "max_power": 231,
+          "avg_hr": 121,
+          "max_hr": 144,
+          "min_hr": 67,
+          "avg_cadence": 60.159214,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000,
+          "training_load": 33.907288
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -137,12 +165,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-10-10T16:22:36.090786",
-        "last_attempt": "2026-10-12T09:31:02.912821",
+        "last_attempt": "2026-10-12T19:18:33.252022",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-12T10:01:02.912821"
+        "next_retry_at": "2026-10-12T19:48:33.252022"
+      }
+    },
+    "i196520852": {
+      "date": "2026-10-12",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-12T19:18:33.252022",
+        "last_attempt": "2026-10-12T19:18:33.252022",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-12T19:18:33.252022",
+        "last_attempt": "2026-10-12T19:18:33.252022",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-12T19:23:33.252022"
       }
     }
   }
