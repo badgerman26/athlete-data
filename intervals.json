@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T08:16:35.700022",
+  "generated_at": "2026-10-13T16:11:41.848933",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -98,6 +98,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i196716387",
+      "date": "2026-10-13",
+      "start_datetime": "2026-10-13T08:51:05",
+      "type": "Ride",
+      "name": "Recovery ride \u00b7 45m by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3510,
+          "moving_secs": 2568,
+          "start_secs": 0,
+          "end_secs": 3510,
+          "avg_power": 129,
+          "max_power": 462,
+          "avg_hr": 134,
+          "max_hr": 167,
+          "min_hr": 104,
+          "avg_cadence": 77.875145,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21860,
+          "training_load": 25.080746
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -129,12 +157,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 3,
+        "attempts": 4,
         "first_seen": "2026-10-12T19:18:33.252022",
-        "last_attempt": "2026-10-13T08:16:35.700022",
+        "last_attempt": "2026-10-13T16:11:41.848933",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-13T08:21:35.700022"
+        "next_retry_at": "2026-10-13T16:16:41.848933"
+      }
+    },
+    "i196716387": {
+      "date": "2026-10-13",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-13T16:11:41.848933",
+        "last_attempt": "2026-10-13T16:11:41.848933",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-13T16:11:41.848933",
+        "last_attempt": "2026-10-13T16:11:41.848933",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-13T16:16:41.848933"
       }
     }
   }
