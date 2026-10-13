@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T16:11:41.848933",
+  "generated_at": "2026-10-13T21:13:28.979803",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -126,6 +126,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i196881664",
+      "date": "2026-10-13",
+      "start_datetime": "2026-10-13T16:46:38",
+      "type": "Ride",
+      "name": "Welwyn Hatfield Road Cycling",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2344,
+          "moving_secs": 2338,
+          "start_secs": 0,
+          "end_secs": 2344,
+          "avg_power": 134,
+          "max_power": 497,
+          "avg_hr": 126,
+          "max_hr": 156,
+          "min_hr": 84,
+          "avg_cadence": 79.31394,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21283,
+          "training_load": 22.537546
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -157,12 +185,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-10-12T19:18:33.252022",
-        "last_attempt": "2026-10-13T16:11:41.848933",
+        "last_attempt": "2026-10-13T21:13:28.979803",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-13T16:16:41.848933"
+        "next_retry_at": "2026-10-13T21:18:28.979803"
       }
     },
     "i196716387": {
@@ -176,12 +204,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 1,
+        "attempts": 2,
         "first_seen": "2026-10-13T16:11:41.848933",
-        "last_attempt": "2026-10-13T16:11:41.848933",
+        "last_attempt": "2026-10-13T21:13:28.979803",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-13T16:16:41.848933"
+        "next_retry_at": "2026-10-13T21:18:28.979803"
+      }
+    },
+    "i196881664": {
+      "date": "2026-10-13",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-13T21:13:28.979803",
+        "last_attempt": "2026-10-13T21:13:28.979803",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-13T21:13:28.979803",
+        "last_attempt": "2026-10-13T21:13:28.979803",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-13T21:18:28.979803"
       }
     }
   }
