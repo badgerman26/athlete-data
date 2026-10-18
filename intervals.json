@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T09:32:22.626532",
+  "generated_at": "2026-10-18T13:32:39.720090",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -210,6 +210,143 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i198622884",
+      "date": "2026-10-18",
+      "start_datetime": "2026-10-18T07:50:29",
+      "type": "Ride",
+      "name": "North Hertfordshire Road Cycling",
+      "interval_summary": [
+        "1x 3m7s 236w",
+        "1x 10s 444w",
+        "1x 25s 434w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4743,
+          "moving_secs": 4512,
+          "start_secs": 0,
+          "end_secs": 4743,
+          "avg_power": 163,
+          "max_power": 684,
+          "avg_hr": 138,
+          "max_hr": 162,
+          "min_hr": 86,
+          "avg_cadence": 81.433716,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 20703,
+          "training_load": 56.059814
+        },
+        {
+          "type": "WORK",
+          "label": "187s@236w81rpm",
+          "duration_secs": 187,
+          "moving_secs": 187,
+          "start_secs": 4743,
+          "end_secs": 4930,
+          "avg_power": 236,
+          "max_power": 631,
+          "avg_hr": 153,
+          "max_hr": 166,
+          "min_hr": 144,
+          "avg_cadence": 81.449196,
+          "zone": 3,
+          "w_bal_start": 20708,
+          "w_bal_end": 19838,
+          "training_load": 3.8580728
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1818,
+          "moving_secs": 1688,
+          "start_secs": 4930,
+          "end_secs": 6748,
+          "avg_power": 190,
+          "max_power": 590,
+          "avg_hr": 150,
+          "max_hr": 167,
+          "min_hr": 106,
+          "avg_cadence": 82.7276,
+          "zone": 2,
+          "w_bal_start": 19841,
+          "w_bal_end": 21162,
+          "training_load": 27.882614
+        },
+        {
+          "type": "WORK",
+          "label": "10s@444w94rpm",
+          "duration_secs": 10,
+          "moving_secs": 10,
+          "start_secs": 6748,
+          "end_secs": 6758,
+          "avg_power": 444,
+          "max_power": 691,
+          "avg_hr": 146,
+          "max_hr": 152,
+          "min_hr": 144,
+          "avg_cadence": 93.6,
+          "zone": 7,
+          "w_bal_start": 20966,
+          "w_bal_end": 19467,
+          "training_load": 0.1943067
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 94,
+          "moving_secs": 94,
+          "start_secs": 6758,
+          "end_secs": 6852,
+          "avg_power": 246,
+          "max_power": 438,
+          "avg_hr": 161,
+          "max_hr": 170,
+          "min_hr": 153,
+          "avg_cadence": 90.797874,
+          "zone": 3,
+          "w_bal_start": 19359,
+          "w_bal_end": 17959,
+          "training_load": 2.334031
+        },
+        {
+          "type": "WORK",
+          "label": "25s@434w90rpm",
+          "duration_secs": 25,
+          "moving_secs": 25,
+          "start_secs": 6852,
+          "end_secs": 6877,
+          "avg_power": 434,
+          "max_power": 553,
+          "avg_hr": 174,
+          "max_hr": 179,
+          "min_hr": 170,
+          "avg_cadence": 90.04,
+          "zone": 7,
+          "w_bal_start": 17855,
+          "w_bal_end": 13975,
+          "training_load": 1.2775849
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 9632,
+          "moving_secs": 7351,
+          "start_secs": 6877,
+          "end_secs": 16509,
+          "avg_power": 144,
+          "max_power": 675,
+          "avg_hr": 144,
+          "max_hr": 181,
+          "min_hr": 100,
+          "avg_cadence": 76.68286,
+          "zone": 1,
+          "w_bal_start": 13866,
+          "w_bal_end": 21521,
+          "training_load": 86.44303
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -312,12 +449,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 13,
+        "attempts": 14,
         "first_seen": "2026-10-16T17:41:17.862639",
-        "last_attempt": "2026-10-18T05:07:29.516897",
+        "last_attempt": "2026-10-18T13:32:39.720090",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-18T11:07:29.516897"
+        "next_retry_at": "2026-10-18T19:32:39.720090"
+      }
+    },
+    "i198622884": {
+      "date": "2026-10-18",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-18T13:32:39.720090",
+        "last_attempt": "2026-10-18T13:32:39.720090",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-18T13:32:39.720090",
+        "last_attempt": "2026-10-18T13:32:39.720090",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-18T13:37:39.720090"
       }
     }
   }
