@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T13:13:01.320778",
+  "generated_at": "2026-10-21T18:02:16.124028",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -555,6 +555,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i200076119",
+      "date": "2026-10-21",
+      "start_datetime": "2026-10-21T17:48:01",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Recovery Spinning by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2974,
+          "moving_secs": 2974,
+          "start_secs": 0,
+          "end_secs": 2974,
+          "avg_power": 137,
+          "max_power": 201,
+          "avg_hr": 117,
+          "max_hr": 134,
+          "min_hr": 69,
+          "avg_cadence": 63.285473,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000,
+          "training_load": 21.717573
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -692,12 +720,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-10-20T12:27:54.015954",
-        "last_attempt": "2026-10-21T13:13:01.320778",
+        "last_attempt": "2026-10-21T18:02:16.124028",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-21T13:43:01.320778"
+        "next_retry_at": "2026-10-21T18:32:16.124028"
+      }
+    },
+    "i200076119": {
+      "date": "2026-10-21",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-21T18:02:16.124028",
+        "last_attempt": "2026-10-21T18:02:16.124028",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-21T18:02:16.124028",
+        "last_attempt": "2026-10-21T18:02:16.124028",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-21T18:07:16.124028"
       }
     }
   }
