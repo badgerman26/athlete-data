@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-22T14:39:31.973718",
+    "last_updated": "2026-10-22T18:48:09.557192",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.122"
@@ -253,14 +253,14 @@
       "ctl": 52.17,
       "atl": 39.59,
       "tsb": 12.58,
-      "ramp_rate": -0.03,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ramp_rate": -0.21,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
-      "eftp": 267.1,
-      "w_prime": 22560,
-      "w_prime_kj": 22.6,
-      "p_max": 967,
+      "eftp": 266.8,
+      "w_prime": 22537,
+      "w_prime_kj": 22.5,
+      "p_max": 966,
       "vo2max": null,
       "sports": {
         "cycling": {
@@ -638,23 +638,22 @@
           },
           "coverage_ratio": 1.0,
           "ftp_used": 275,
-          "w_prime_used": 22560,
+          "w_prime_used": 22537,
           "ftp_staleness_days": 223,
           "model_trust_note": "CP/W' model (P=CP+W'/t) is primary for durations \u226420min where W' contribution is meaningful. Coggan duration factors (Allen & Coggan, 3rd ed.) are the established reference for \u226560min. 30min is the crossover zone where both apply. model_divergence_pct = (actual - CP_model) / CP_model \u00d7 100. Positive divergence at short durations may indicate strong anaerobic capacity or stale W' value. Indoor MMP is typically 3-5% lower than outdoor (cooling, motivation) \u2014 source flag indicates which environment produced each anchor."
         }
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.75,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 4,
+      "planned_days": 3,
       "completed_days": 6,
       "matched_days": 3,
       "planned_dates": [
         "2026-10-16",
         "2026-10-20",
-        "2026-10-21",
-        "2026-10-22"
+        "2026-10-21"
       ],
       "completed_dates": [
         "2026-10-16",
@@ -677,13 +676,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 2.0,
-          "hard_sessions_planned": 2,
+          "planned_tss_delta": 0.78,
+          "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 3,
+          "current_week_hard_days_total": 2,
           "race_proximity": null,
           "next_week_load": 4.8,
-          "plan_coverage_current_week": 0.36,
+          "plan_coverage_current_week": 0.18,
           "plan_coverage_next_week": 0.55
         },
         "data_quality": "good",
@@ -711,19 +710,19 @@
       "benchmark_percentage": null,
       "seasonal_expected": null
     },
-    "eftp": 267.1,
-    "w_prime": 22560,
-    "w_prime_kj": 22.6,
-    "p_max": 967,
+    "eftp": 266.8,
+    "w_prime": 22537,
+    "w_prime_kj": 22.5,
+    "p_max": 966,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-22T14:39:31.972399",
+    "calculation_timestamp": "2026-10-22T18:48:09.556256",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 12,
       "activities_28d": 49,
-      "planned_workouts_7d": 5,
+      "planned_workouts_7d": 3,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -4693,7 +4692,7 @@
   "planned_workouts": [
     {
       "id": 146898114,
-      "date": "2026-10-22",
+      "date": "2026-10-23",
       "name": "Modified 12x1m Anaerobic Capacity",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -4704,33 +4703,6 @@
       "has_terrain": false,
       "start_time": "08:00",
       "description": "Warmup\n- 5m ramp 50-65%\n\n3x\n- 30s 100%\n- 30s 55%\n\n- 5m 60%\n\nMain Set\n6x\n- 1m 120%\n- 1m 55%\n\n- 5m 65%\n\n6x\n- 1m 120%\n- 1m 55%\n\nCooldown\n- 5m 55%"
-    },
-    {
-      "id": 145844707,
-      "date": "2026-10-22",
-      "name": "Huberman 3-to-5 Strength Protocol",
-      "type": "WORKOUT",
-      "sport_type": "WeightTraining",
-      "planned_tss": null,
-      "duration_hours": 0.25,
-      "duration_formatted": "15m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "start_time": "17:00",
-      "description": "Warmup\n- 10m dynamic mobility (hip openers, glute activation)\n\nMain Set\n- Trap Bar Deadlift: 3 sets of 5 reps (Leave 1-2 reps in the tank)\n- Bulgarian Split Squats: 3 sets of 5 reps per leg (Focus on depth and control)\n- Weighted Planks: 3 sets of 45 seconds\n\nCooldown\n- 5m light stretching"
-    },
-    {
-      "id": 125985170,
-      "date": "2026-10-23",
-      "name": "2h Z2 + Bursts by LeCoach App",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 91,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": "5m @158W | 1h20m @184W | 6\u00d710s @385W / 4m50s rec | 5m @151W",
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n-1h20m 67% FTP\n\n6x\n-10s 140% FTP\n-4m50s 67% FTP\n\n-5m 55% FTP"
     },
     {
       "id": 145347104,
@@ -5159,12 +5131,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 36,
-    "success": 22,
-    "patternA": 22,
+    "attempted": 34,
+    "success": 21,
+    "patternA": 21,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 14
+    "bail_no_match": 13
   },
   "weekly_summary": {
     "total_training_hours": 11.33,
