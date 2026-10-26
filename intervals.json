@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T06:58:33.186240",
+  "generated_at": "2026-10-26T13:57:30.914782",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -518,6 +518,38 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i201781399",
+      "date": "2026-10-25",
+      "start_datetime": "2026-10-25T08:35:37",
+      "type": "Ride",
+      "name": "Cycle",
+      "interval_summary": [
+        "1x 2h12m 101bpm"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1,
+          "moving_secs": 1,
+          "start_secs": 0,
+          "end_secs": 0
+        },
+        {
+          "type": "WORK",
+          "label": "7933s@101bpm",
+          "duration_secs": 7933,
+          "moving_secs": 7933,
+          "start_secs": 0,
+          "end_secs": 7934,
+          "avg_hr": 101,
+          "max_hr": 133,
+          "min_hr": 72,
+          "zone": 1
+        }
+      ],
+      "zone_basis": "hr"
     }
   ],
   "fetch_state": {
@@ -660,6 +692,24 @@
         "last_attempt": "2026-10-24T13:34:36.119894",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i201781399": {
+      "date": "2026-10-25",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-26T13:57:30.914782",
+        "last_attempt": "2026-10-26T13:57:30.914782",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-26T13:57:30.914782",
+        "last_attempt": "2026-10-26T13:57:30.914782",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-26T14:02:30.914782"
       }
     }
   }
