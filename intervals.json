@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T07:53:51.077590",
+  "generated_at": "2026-10-27T13:49:26.650555",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -522,6 +522,107 @@
         }
       ],
       "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i202259368",
+      "date": "2026-10-27",
+      "start_datetime": "2026-10-27T10:22:33",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Modified 4x10m Sweet Spot",
+      "interval_summary": [
+        "1x 5m40s 233w",
+        "1x 3m53s 226w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1827,
+          "moving_secs": 1827,
+          "start_secs": 0,
+          "end_secs": 1827,
+          "avg_power": 176,
+          "max_power": 308,
+          "avg_hr": 126,
+          "max_hr": 156,
+          "min_hr": 68,
+          "avg_cadence": 64.82485,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21997,
+          "training_load": 24.481464
+        },
+        {
+          "type": "WORK",
+          "label": "340s@233w67rpm",
+          "duration_secs": 340,
+          "moving_secs": 340,
+          "start_secs": 1827,
+          "end_secs": 2167,
+          "avg_power": 233,
+          "max_power": 260,
+          "avg_hr": 141,
+          "max_hr": 153,
+          "min_hr": 86,
+          "avg_cadence": 66.82647,
+          "zone": 3,
+          "w_bal_start": 21997,
+          "w_bal_end": 21998,
+          "training_load": 6.606428
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1324,
+          "moving_secs": 1324,
+          "start_secs": 2167,
+          "end_secs": 3491,
+          "avg_power": 123,
+          "max_power": 276,
+          "avg_hr": 116,
+          "max_hr": 155,
+          "min_hr": 59,
+          "avg_cadence": 42.256798,
+          "zone": 1,
+          "w_bal_start": 21998,
+          "w_bal_end": 21999,
+          "training_load": 15.582107
+        },
+        {
+          "type": "WORK",
+          "label": "233s@226w64rpm",
+          "duration_secs": 233,
+          "moving_secs": 233,
+          "start_secs": 3491,
+          "end_secs": 3724,
+          "avg_power": 226,
+          "max_power": 262,
+          "avg_hr": 144,
+          "max_hr": 156,
+          "min_hr": 99,
+          "avg_cadence": 63.62232,
+          "zone": 3,
+          "w_bal_start": 21999,
+          "w_bal_end": 21999,
+          "training_load": 4.3326445
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 492,
+          "moving_secs": 492,
+          "start_secs": 3724,
+          "end_secs": 4216,
+          "avg_power": 141,
+          "max_power": 203,
+          "avg_hr": 125,
+          "max_hr": 148,
+          "min_hr": 87,
+          "avg_cadence": 64.873985,
+          "zone": 1,
+          "w_bal_start": 21999,
+          "w_bal_end": 21999,
+          "training_load": 3.8521476
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -659,12 +760,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-10-26T13:57:30.914782",
-        "last_attempt": "2026-10-27T07:53:51.077590",
+        "last_attempt": "2026-10-27T13:49:26.650555",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-27T07:58:51.077590"
+        "next_retry_at": "2026-10-27T13:54:26.650555"
+      }
+    },
+    "i202259368": {
+      "date": "2026-10-27",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-27T13:49:26.650555",
+        "last_attempt": "2026-10-27T13:49:26.650555",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-27T13:49:26.650555",
+        "last_attempt": "2026-10-27T13:49:26.650555",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-27T13:54:26.650555"
       }
     }
   }
