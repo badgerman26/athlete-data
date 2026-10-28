@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T07:59:50.683238",
+  "generated_at": "2026-10-28T14:57:46.816024",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -567,6 +567,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i202652641",
+      "date": "2026-10-28",
+      "start_datetime": "2026-10-28T08:19:59",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Endurance intervals \u00b7 5x5m 74% FTP 105RPM by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2634,
+          "moving_secs": 2634,
+          "start_secs": 0,
+          "end_secs": 2634,
+          "avg_power": 171,
+          "max_power": 255,
+          "avg_hr": 135,
+          "max_hr": 157,
+          "min_hr": 80,
+          "avg_cadence": 70.58353,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000,
+          "training_load": 32.755447
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -669,12 +697,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-10-26T13:57:30.914782",
-        "last_attempt": "2026-10-28T07:59:50.683238",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-10-28T08:29:50.683238"
+        "last_attempt": "2026-10-28T14:57:46.816024",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i202259368": {
@@ -688,12 +715,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-10-27T13:49:26.650555",
-        "last_attempt": "2026-10-28T07:59:50.683238",
+        "last_attempt": "2026-10-28T14:57:46.816024",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-28T08:04:50.683238"
+        "next_retry_at": "2026-10-28T15:02:46.816024"
+      }
+    },
+    "i202652641": {
+      "date": "2026-10-28",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-28T14:57:46.816024",
+        "last_attempt": "2026-10-28T14:57:46.816024",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-28T14:57:46.816024",
+        "last_attempt": "2026-10-28T14:57:46.816024",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-28T15:02:46.816024"
       }
     }
   }
