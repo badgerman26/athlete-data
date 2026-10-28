@@ -1,67 +1,11 @@
 {
-  "generated_at": "2026-10-27T22:56:10.169862",
+  "generated_at": "2026-10-28T01:58:42.159095",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i196716387",
-      "date": "2026-10-13",
-      "start_datetime": "2026-10-13T08:51:05",
-      "type": "Ride",
-      "name": "Recovery ride \u00b7 45m by LeCoach App",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 3510,
-          "moving_secs": 2568,
-          "start_secs": 0,
-          "end_secs": 3510,
-          "avg_power": 129,
-          "max_power": 462,
-          "avg_hr": 134,
-          "max_hr": 167,
-          "min_hr": 104,
-          "avg_cadence": 77.875145,
-          "zone": 1,
-          "w_bal_start": 22000,
-          "w_bal_end": 21860,
-          "training_load": 25.080746
-        }
-      ],
-      "zone_basis": "power"
-    },
-    {
-      "activity_id": "i196881664",
-      "date": "2026-10-13",
-      "start_datetime": "2026-10-13T16:46:38",
-      "type": "Ride",
-      "name": "Welwyn Hatfield Road Cycling",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 2344,
-          "moving_secs": 2338,
-          "start_secs": 0,
-          "end_secs": 2344,
-          "avg_power": 134,
-          "max_power": 497,
-          "avg_hr": 126,
-          "max_hr": 156,
-          "min_hr": 84,
-          "avg_cadence": 79.31394,
-          "zone": 1,
-          "w_bal_start": 22000,
-          "w_bal_end": 21283,
-          "training_load": 22.537546
-        }
-      ],
-      "zone_basis": "power"
-    },
     {
       "activity_id": "i197135343",
       "date": "2026-10-14",
@@ -626,41 +570,6 @@
     }
   ],
   "fetch_state": {
-    "i196716387": {
-      "date": "2026-10-13",
-      "paired_planned": true,
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-10-13T16:11:41.848933",
-        "last_attempt": "2026-10-13T16:11:41.848933",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 14,
-        "first_seen": "2026-10-13T16:11:41.848933",
-        "last_attempt": "2026-10-16T03:44:53.875857",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
-    "i196881664": {
-      "date": "2026-10-13",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-10-13T21:13:28.979803",
-        "last_attempt": "2026-10-13T21:13:28.979803",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 15,
-        "first_seen": "2026-10-13T21:13:28.979803",
-        "last_attempt": "2026-10-16T17:41:17.862639",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i197135343": {
       "date": "2026-10-14",
       "paired_planned": true,
@@ -760,12 +669,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-10-26T13:57:30.914782",
-        "last_attempt": "2026-10-27T22:56:10.169862",
+        "last_attempt": "2026-10-28T01:58:42.159095",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-27T23:26:10.169862"
+        "next_retry_at": "2026-10-28T02:28:42.159095"
       }
     },
     "i202259368": {
@@ -779,12 +688,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 3,
+        "attempts": 4,
         "first_seen": "2026-10-27T13:49:26.650555",
-        "last_attempt": "2026-10-27T22:56:10.169862",
+        "last_attempt": "2026-10-28T01:58:42.159095",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-27T23:01:10.169862"
+        "next_retry_at": "2026-10-28T02:03:42.159095"
       }
     }
   }
