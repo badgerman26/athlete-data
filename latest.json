@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-29T04:57:40.006430",
+    "last_updated": "2026-10-29T11:18:13.183729",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.122"
@@ -125,20 +125,20 @@
     "priority": 1,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 28.9,
-        "delta_pct": null
+        "status": "amber",
+        "value": 23.0,
+        "baseline_7d": 27.9,
+        "delta_pct": -17.6
       },
       "rhr": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 61.4,
-        "delta_bpm": null
+        "status": "green",
+        "value": 60,
+        "baseline_7d": 60.7,
+        "delta_bpm": -0.7
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
+        "status": "amber",
+        "hours": 5.77,
         "quality": null
       },
       "acwr": {
@@ -146,16 +146,16 @@
         "value": 1.64
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
+        "status": "green",
+        "value": 0.83,
         "value_yesterday": null
       }
     },
     "signal_summary": {
-      "green": 0,
-      "amber": 0,
+      "green": 2,
+      "amber": 2,
       "red": 1,
-      "unavailable": 4
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Base",
@@ -307,10 +307,10 @@
         }
       },
       "resting_hr": 60,
-      "hrv": null,
+      "hrv": 23.0,
       "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
+      "sleep_hours": 5.77,
+      "sleep_formatted": "5h46m",
       "sleep_score": null,
       "fatigue": null,
       "soreness": null,
@@ -319,16 +319,16 @@
       "motivation": null,
       "injury": null,
       "hydration": null,
-      "spO2": null,
+      "spO2": 98.0,
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
       "baevsky_si": null,
       "lactate": null,
-      "respiration": null,
+      "respiration": 13.0,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 4531,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -353,14 +353,14 @@
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
+    "recovery_index": 0.83,
     "recovery_index_yesterday": null,
-    "hrv_baseline_7d": 28.9,
-    "rhr_baseline_7d": 61.4,
-    "hrv_baseline_28d": 31.1,
-    "rhr_baseline_28d": 61.5,
-    "latest_hrv": null,
-    "latest_rhr": null,
+    "hrv_baseline_7d": 27.9,
+    "rhr_baseline_7d": 60.7,
+    "hrv_baseline_28d": 30.8,
+    "rhr_baseline_28d": 61.4,
+    "latest_hrv": 23.0,
+    "latest_rhr": 60,
     "acwr": 1.64,
     "acwr_interpretation": "danger",
     "monotony": 0.92,
@@ -372,7 +372,7 @@
     "multi_sport_detected": true,
     "strain": 391.0,
     "stress_tolerance": 4.2,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 5.1,
     "tss_7d_total": 425.0,
     "tss_28d_total": 1037.0,
     "zone_distribution_7d": {
@@ -725,10 +725,10 @@
     "p_max": 966,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-29T04:57:40.005120",
+    "calculation_timestamp": "2026-10-29T11:18:13.182765",
     "data_quality": {
-      "hrv_data_points": 5,
-      "rhr_data_points": 5,
+      "hrv_data_points": 6,
+      "rhr_data_points": 7,
       "activities_7d": 24,
       "activities_28d": 54,
       "planned_workouts_7d": 4,
@@ -740,7 +740,7 @@
   },
   "recent_activities": [
     {
-      "id": "i202964860",
+      "id": "i203031187",
       "date": "2026-10-28T14:00:51",
       "type": "Walk",
       "name": "Walk",
@@ -890,7 +890,7 @@
       "description": "\ud83c\udfaf LeCoach.app Workout Score: Excellent\n\u23f1 Duration: 44m / 45m planned\n\ud83d\udca7 Intensity: 67% / 69% planned\n\ud83c\udfcb\ufe0f Load: 33 / 36 planned\n\ud83d\udcca Zone Score: 100 Excellent"
     },
     {
-      "id": "i202964847",
+      "id": "i203031178",
       "date": "2026-10-27T19:05:20",
       "type": "WeightTraining",
       "name": "Strength training",
@@ -1012,7 +1012,7 @@
       "has_dfa": false
     },
     {
-      "id": "i202964836",
+      "id": "i203031174",
       "date": "2026-10-27T18:00:01",
       "type": "Walk",
       "name": "Walk",
@@ -1082,7 +1082,7 @@
       "description": "\ud83c\udfc3 Tracked by LeCoach.app\n\u23f1 17 min \u00b7 Load 1"
     },
     {
-      "id": "i202964821",
+      "id": "i203031169",
       "date": "2026-10-27T16:19:10",
       "type": "Walk",
       "name": "Walk",
@@ -1152,7 +1152,7 @@
       "description": "\ud83c\udfc3 Tracked by LeCoach.app\n\u23f1 30 min \u00b7 Load 10"
     },
     {
-      "id": "i202964805",
+      "id": "i203031158",
       "date": "2026-10-27T14:19:00",
       "type": "Walk",
       "name": "Walk",
@@ -4769,8 +4769,8 @@
       "resting_hr": 60,
       "hrv_rmssd": 25.51791,
       "hrv_sdnn": null,
-      "sleep_hours": 7.43,
-      "sleep_formatted": "7h26m",
+      "sleep_hours": 1.81,
+      "sleep_formatted": "1h48m",
       "sleep_quality": null,
       "sleep_score": null,
       "mental_energy": null,
@@ -4792,7 +4792,7 @@
       "respiration": 13.4,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 210,
+      "steps": 17978,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -4808,11 +4808,11 @@
       "display": {
         "weight": null
       },
-      "resting_hr": null,
+      "resting_hr": 58,
       "hrv_rmssd": null,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
+      "sleep_hours": 8.47,
+      "sleep_formatted": "8h28m",
       "sleep_quality": null,
       "sleep_score": null,
       "mental_energy": null,
@@ -4825,16 +4825,16 @@
       "motivation": null,
       "injury": null,
       "hydration": null,
-      "spO2": null,
+      "spO2": 97.0,
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
       "baevsky_si": null,
       "lactate": null,
-      "respiration": null,
+      "respiration": 13.0,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 16137,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -4850,11 +4850,11 @@
       "display": {
         "weight": null
       },
-      "resting_hr": null,
-      "hrv_rmssd": null,
+      "resting_hr": 60,
+      "hrv_rmssd": 23.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
+      "sleep_hours": 5.77,
+      "sleep_formatted": "5h46m",
       "sleep_quality": null,
       "sleep_score": null,
       "mental_energy": null,
@@ -4867,16 +4867,16 @@
       "motivation": null,
       "injury": null,
       "hydration": null,
-      "spO2": null,
+      "spO2": 98.0,
       "blood_glucose": null,
       "systolic": null,
       "diastolic": null,
       "baevsky_si": null,
       "lactate": null,
-      "respiration": null,
+      "respiration": 13.0,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 4531,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -4889,8 +4889,21 @@
   ],
   "planned_workouts": [
     {
-      "id": 125985176,
+      "id": 149506043,
       "date": "2026-10-29",
+      "name": "Steady endurance \u00b7 45m by LeCoach App",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 30,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "-5m ramp 50-65% FTP\n\n-35m 65% FTP\n\n-5m 55% FTP"
+    },
+    {
+      "id": 125985176,
+      "date": "2026-10-30",
       "name": "3x12m Threshold by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -4900,19 +4913,6 @@
       "workout_summary": "5m @158W | 3\u00d730s @275W / 30s rec | 5m @165W | 3\u00d712m @275W / 4m rec | 1m @151W",
       "has_terrain": false,
       "description": "-5m ramp 50-65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n3x\n-12m 100% FTP\n-4m 65% FTP\n\n-1m 55% FTP"
-    },
-    {
-      "id": 125985177,
-      "date": "2026-10-30",
-      "name": "Aerobic Extension by LeCoach App",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 88,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n-110m 67% FTP\n-5m 55% FTP"
     },
     {
       "id": 125985178,
@@ -5366,8 +5366,8 @@
     "total_training_formatted": "18h38m",
     "total_tss": 425,
     "activities_count": 24,
-    "avg_hrv": 28.9,
-    "avg_resting_hr": 61.4
+    "avg_hrv": 27.9,
+    "avg_resting_hr": 60.7
   },
   "race_calendar": {
     "next_race": null,
