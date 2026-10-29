@@ -1,39 +1,11 @@
 {
-  "generated_at": "2026-10-28T23:59:18.956157",
+  "generated_at": "2026-10-29T04:57:39.503334",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i197135343",
-      "date": "2026-10-14",
-      "start_datetime": "2026-10-14T09:57:45",
-      "type": "VirtualRide",
-      "name": "Recovery ride \u00b7 50m by LeCoach App",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 4238,
-          "moving_secs": 4238,
-          "start_secs": 0,
-          "end_secs": 4238,
-          "avg_power": 131,
-          "max_power": 440,
-          "avg_hr": 115,
-          "max_hr": 139,
-          "min_hr": 81,
-          "avg_cadence": 75.00519,
-          "zone": 1,
-          "w_bal_start": 22000,
-          "w_bal_end": 21999,
-          "training_load": 33.621937
-        }
-      ],
-      "zone_basis": "power"
-    },
     {
       "activity_id": "i197983568",
       "date": "2026-10-16",
@@ -598,24 +570,6 @@
     }
   ],
   "fetch_state": {
-    "i197135343": {
-      "date": "2026-10-14",
-      "paired_planned": true,
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-10-14T10:08:53.186283",
-        "last_attempt": "2026-10-14T10:08:53.186283",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 16,
-        "first_seen": "2026-10-14T10:08:53.186283",
-        "last_attempt": "2026-10-17T09:21:58.447593",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i197983568": {
       "date": "2026-10-16",
       "paired_planned": true,
@@ -715,12 +669,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-10-27T13:49:26.650555",
-        "last_attempt": "2026-10-28T23:59:18.956157",
+        "last_attempt": "2026-10-29T04:57:39.503334",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-29T00:29:18.956157"
+        "next_retry_at": "2026-10-29T05:27:39.503334"
       }
     },
     "i202652641": {
@@ -734,12 +688,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 3,
+        "attempts": 4,
         "first_seen": "2026-10-28T14:57:46.816024",
-        "last_attempt": "2026-10-28T23:59:18.956157",
+        "last_attempt": "2026-10-29T04:57:39.503334",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-29T00:04:18.956157"
+        "next_retry_at": "2026-10-29T05:02:39.503334"
       }
     }
   }
