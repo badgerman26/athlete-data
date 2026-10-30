@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T14:30:46.140251",
+  "generated_at": "2026-10-30T19:41:35.015048",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -567,6 +567,71 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i203577296",
+      "date": "2026-10-30",
+      "start_datetime": "2026-10-30T13:17:10",
+      "type": "Ride",
+      "name": "3x12m Threshold by LeCoach App",
+      "interval_summary": [
+        "1x 12s 419w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1356,
+          "moving_secs": 1177,
+          "start_secs": 0,
+          "end_secs": 1356,
+          "avg_power": 142,
+          "max_power": 458,
+          "avg_hr": 124,
+          "max_hr": 148,
+          "min_hr": 81,
+          "avg_cadence": 79.325386,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21835,
+          "training_load": 11.486396
+        },
+        {
+          "type": "WORK",
+          "label": "12s@419w80rpm",
+          "duration_secs": 12,
+          "moving_secs": 12,
+          "start_secs": 1356,
+          "end_secs": 1368,
+          "avg_power": 419,
+          "max_power": 462,
+          "avg_hr": 132,
+          "max_hr": 139,
+          "min_hr": 127,
+          "avg_cadence": 79.75,
+          "zone": 7,
+          "w_bal_start": 21669,
+          "w_bal_end": 20098,
+          "training_load": 0.2311449
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4350,
+          "moving_secs": 3889,
+          "start_secs": 1368,
+          "end_secs": 5718,
+          "avg_power": 117,
+          "max_power": 714,
+          "avg_hr": 123,
+          "max_hr": 163,
+          "min_hr": 87,
+          "avg_cadence": 73.04432,
+          "zone": 1,
+          "w_bal_start": 19968,
+          "w_bal_end": 21776,
+          "training_load": 37.933407
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -687,12 +752,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-10-28T14:57:46.816024",
-        "last_attempt": "2026-10-30T14:30:46.140251",
+        "last_attempt": "2026-10-30T19:41:35.015048",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-30T15:00:46.140251"
+        "next_retry_at": "2026-10-30T20:11:35.015048"
+      }
+    },
+    "i203577296": {
+      "date": "2026-10-30",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-30T19:41:35.015048",
+        "last_attempt": "2026-10-30T19:41:35.015048",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-30T19:41:35.015048",
+        "last_attempt": "2026-10-30T19:41:35.015048",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-30T19:46:35.015048"
       }
     }
   }
