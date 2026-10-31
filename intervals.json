@@ -1,39 +1,11 @@
 {
-  "generated_at": "2026-10-30T23:14:05.231914",
+  "generated_at": "2026-10-31T02:23:37.220658",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i197983568",
-      "date": "2026-10-16",
-      "start_datetime": "2026-10-16T14:11:22",
-      "type": "VirtualRide",
-      "name": "MyWhoosh - Steady endurance \u00b7 60m by LeCoach App",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 3252,
-          "moving_secs": 3252,
-          "start_secs": 0,
-          "end_secs": 3252,
-          "avg_power": 169,
-          "max_power": 240,
-          "avg_hr": 127,
-          "max_hr": 148,
-          "min_hr": 71,
-          "avg_cadence": 65.43327,
-          "zone": 2,
-          "w_bal_start": 22000,
-          "w_bal_end": 22000,
-          "training_load": 35.7499
-        }
-      ],
-      "zone_basis": "power"
-    },
     {
       "activity_id": "i198622884",
       "date": "2026-10-18",
@@ -635,24 +607,6 @@
     }
   ],
   "fetch_state": {
-    "i197983568": {
-      "date": "2026-10-16",
-      "paired_planned": true,
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-10-16T17:41:17.862639",
-        "last_attempt": "2026-10-16T17:41:17.862639",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 17,
-        "first_seen": "2026-10-16T17:41:17.862639",
-        "last_attempt": "2026-10-19T14:12:31.864308",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i198622884": {
       "date": "2026-10-18",
       "intervals": {
@@ -752,12 +706,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 12,
+        "attempts": 13,
         "first_seen": "2026-10-28T14:57:46.816024",
-        "last_attempt": "2026-10-30T23:14:05.231914",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-10-30T23:44:05.231914"
+        "last_attempt": "2026-10-31T02:23:37.220658",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i203577296": {
@@ -771,12 +724,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-10-30T19:41:35.015048",
-        "last_attempt": "2026-10-30T23:14:05.231914",
+        "last_attempt": "2026-10-31T02:23:37.220658",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-30T23:19:05.231914"
+        "next_retry_at": "2026-10-31T02:28:37.220658"
       }
     }
   }
