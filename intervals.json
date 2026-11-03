@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T01:42:42.800885",
+  "generated_at": "2026-11-03T08:34:25.524201",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -697,6 +697,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i205092106",
+      "date": "2026-11-03",
+      "start_datetime": "2026-11-03T06:51:02",
+      "type": "VirtualRide",
+      "name": "Active Recovery Spin",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2353,
+          "moving_secs": 2353,
+          "start_secs": 0,
+          "end_secs": 2353,
+          "avg_power": 177,
+          "max_power": 360,
+          "avg_hr": 132,
+          "max_hr": 153,
+          "min_hr": 86,
+          "avg_cadence": 77.69826,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21954,
+          "training_load": 29.900602
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -810,20 +838,20 @@
     "i204206689": {
       "date": "2026-10-31",
       "intervals": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-11-01T07:29:16.986980",
-        "last_attempt": "2026-11-03T01:42:42.800885",
+        "last_attempt": "2026-11-03T08:34:25.524201",
         "status": "pending",
         "reason": "transient",
-        "next_retry_at": "2026-11-03T02:12:42.800885"
+        "next_retry_at": "2026-11-03T09:04:25.524201"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-11-01T07:29:16.986980",
-        "last_attempt": "2026-11-03T01:42:42.800885",
+        "last_attempt": "2026-11-03T08:34:25.524201",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-03T02:12:42.800885"
+        "next_retry_at": "2026-11-03T09:04:25.524201"
       }
     },
     "i204206680": {
@@ -853,12 +881,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-11-01T14:25:51.387341",
-        "last_attempt": "2026-11-03T01:42:42.800885",
+        "last_attempt": "2026-11-03T08:34:25.524201",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-03T02:12:42.800885"
+        "next_retry_at": "2026-11-03T09:04:25.524201"
       }
     },
     "i204260003": {
@@ -871,12 +899,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-11-01T14:25:51.387341",
-        "last_attempt": "2026-11-03T01:42:42.800885",
+        "last_attempt": "2026-11-03T08:34:25.524201",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-03T02:12:42.800885"
+        "next_retry_at": "2026-11-03T09:04:25.524201"
       }
     },
     "i204722891": {
@@ -889,12 +917,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-11-02T19:26:46.116006",
-        "last_attempt": "2026-11-03T01:42:42.800885",
+        "last_attempt": "2026-11-03T08:34:25.524201",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-03T01:47:42.800885"
+        "next_retry_at": "2026-11-03T08:39:25.524201"
+      }
+    },
+    "i205092106": {
+      "date": "2026-11-03",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-03T08:34:25.524201",
+        "last_attempt": "2026-11-03T08:34:25.524201",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-03T08:34:25.524201",
+        "last_attempt": "2026-11-03T08:34:25.524201",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-03T08:39:25.524201"
       }
     }
   }
