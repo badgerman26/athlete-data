@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T08:45:59.849127",
+  "generated_at": "2026-11-04T16:41:34.845392",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -517,6 +517,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i205573715",
+      "date": "2026-11-04",
+      "start_datetime": "2026-11-04T08:19:01",
+      "type": "VirtualRide",
+      "name": "Recovery Ride by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2138,
+          "moving_secs": 2138,
+          "start_secs": 0,
+          "end_secs": 2138,
+          "avg_power": 162,
+          "max_power": 274,
+          "avg_hr": 131,
+          "max_hr": 148,
+          "min_hr": 89,
+          "avg_cadence": 73.80636,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000,
+          "training_load": 22.3977
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -653,12 +681,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 12,
+        "attempts": 13,
         "first_seen": "2026-11-01T14:25:51.387341",
-        "last_attempt": "2026-11-04T08:45:59.849127",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-11-04T09:15:59.849127"
+        "last_attempt": "2026-11-04T16:41:34.845392",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i204260003": {
@@ -688,12 +715,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-11-02T19:26:46.116006",
-        "last_attempt": "2026-11-04T08:45:59.849127",
+        "last_attempt": "2026-11-04T16:41:34.845392",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-04T09:15:59.849127"
+        "next_retry_at": "2026-11-04T17:11:34.845392"
       }
     },
     "i205092106": {
@@ -707,12 +734,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-11-03T08:34:25.524201",
-        "last_attempt": "2026-11-04T08:45:59.849127",
+        "last_attempt": "2026-11-04T16:41:34.845392",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-04T08:50:59.849127"
+        "next_retry_at": "2026-11-04T16:46:34.845392"
+      }
+    },
+    "i205573715": {
+      "date": "2026-11-04",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-04T16:41:34.845392",
+        "last_attempt": "2026-11-04T16:41:34.845392",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-04T16:41:34.845392",
+        "last_attempt": "2026-11-04T16:41:34.845392",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-04T16:46:34.845392"
       }
     }
   }
