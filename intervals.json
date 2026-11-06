@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T10:36:41.317760",
+  "generated_at": "2026-11-06T17:40:31.815730",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -724,6 +724,70 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i206549479",
+      "date": "2026-11-06",
+      "start_datetime": "2026-11-06T11:03:21",
+      "type": "VirtualRide",
+      "name": "Short Aerobic by LeCoach App",
+      "interval_summary": [
+        "1x 3m51s 224w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 16,
+          "moving_secs": 16,
+          "start_secs": 0,
+          "end_secs": 16,
+          "avg_power": 173,
+          "max_power": 242,
+          "avg_hr": 101,
+          "max_hr": 106,
+          "min_hr": 100,
+          "avg_cadence": 84.125,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000
+        },
+        {
+          "type": "WORK",
+          "label": "231s@224w77rpm",
+          "duration_secs": 231,
+          "moving_secs": 231,
+          "start_secs": 16,
+          "end_secs": 247,
+          "avg_power": 224,
+          "max_power": 298,
+          "avg_hr": 132,
+          "max_hr": 143,
+          "min_hr": 107,
+          "avg_cadence": 77.09091,
+          "zone": 3,
+          "w_bal_start": 22000,
+          "w_bal_end": 21939,
+          "training_load": 4.144085
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4646,
+          "moving_secs": 4646,
+          "start_secs": 247,
+          "end_secs": 4893,
+          "avg_power": 165,
+          "max_power": 377,
+          "avg_hr": 129,
+          "max_hr": 162,
+          "min_hr": 93,
+          "avg_cadence": 74.27464,
+          "zone": 2,
+          "w_bal_start": 21939,
+          "w_bal_end": 21981,
+          "training_load": 54.43145
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -912,12 +976,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-11-04T16:41:34.845392",
-        "last_attempt": "2026-11-06T10:36:41.317760",
+        "last_attempt": "2026-11-06T17:40:31.815730",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-06T11:06:41.317760"
+        "next_retry_at": "2026-11-06T18:10:31.815730"
       }
     },
     "i206076000": {
@@ -931,12 +995,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-11-05T17:39:23.634501",
-        "last_attempt": "2026-11-06T10:36:41.317760",
+        "last_attempt": "2026-11-06T17:40:31.815730",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-06T10:41:41.317760"
+        "next_retry_at": "2026-11-06T17:45:31.815730"
+      }
+    },
+    "i206549479": {
+      "date": "2026-11-06",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-06T17:40:31.815730",
+        "last_attempt": "2026-11-06T17:40:31.815730",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-06T17:40:31.815730",
+        "last_attempt": "2026-11-06T17:40:31.815730",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-06T17:45:31.815730"
       }
     }
   }
