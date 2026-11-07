@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T08:43:12.475067",
+  "generated_at": "2026-11-07T15:10:24.248709",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -788,6 +788,71 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i206904799",
+      "date": "2026-11-07",
+      "start_datetime": "2026-11-07T09:35:09",
+      "type": "VirtualRide",
+      "name": "Zwift - Sa Calobra in Video",
+      "interval_summary": [
+        "1x 4m29s 210w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 356,
+          "moving_secs": 356,
+          "start_secs": 0,
+          "end_secs": 356,
+          "avg_power": 187,
+          "max_power": 254,
+          "avg_hr": 123,
+          "max_hr": 137,
+          "min_hr": 78,
+          "avg_cadence": 74.485954,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000,
+          "training_load": 4.523848
+        },
+        {
+          "type": "WORK",
+          "label": "269s@210w78rpm",
+          "duration_secs": 269,
+          "moving_secs": 269,
+          "start_secs": 356,
+          "end_secs": 625,
+          "avg_power": 210,
+          "max_power": 256,
+          "avg_hr": 139,
+          "max_hr": 149,
+          "min_hr": 129,
+          "avg_cadence": 77.82528,
+          "zone": 3,
+          "w_bal_start": 22000,
+          "w_bal_end": 22000,
+          "training_load": 4.3159556
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2536,
+          "moving_secs": 2536,
+          "start_secs": 625,
+          "end_secs": 3161,
+          "avg_power": 173,
+          "max_power": 365,
+          "avg_hr": 132,
+          "max_hr": 150,
+          "min_hr": 120,
+          "avg_cadence": 78.12337,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21989,
+          "training_load": 29.338976
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -994,12 +1059,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 8,
+        "attempts": 9,
         "first_seen": "2026-11-05T17:39:23.634501",
-        "last_attempt": "2026-11-07T08:43:12.475067",
+        "last_attempt": "2026-11-07T15:10:24.248709",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-07T09:13:12.475067"
+        "next_retry_at": "2026-11-07T15:40:24.248709"
       }
     },
     "i206549479": {
@@ -1013,12 +1078,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-11-06T17:40:31.815730",
-        "last_attempt": "2026-11-07T08:43:12.475067",
+        "last_attempt": "2026-11-07T15:10:24.248709",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-07T08:48:12.475067"
+        "next_retry_at": "2026-11-07T15:15:24.248709"
+      }
+    },
+    "i206904799": {
+      "date": "2026-11-07",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-07T15:10:24.248709",
+        "last_attempt": "2026-11-07T15:10:24.248709",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-07T15:10:24.248709",
+        "last_attempt": "2026-11-07T15:10:24.248709",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-07T15:15:24.248709"
       }
     }
   }
