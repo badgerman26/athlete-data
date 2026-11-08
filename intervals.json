@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T15:34:48.441584",
+  "generated_at": "2026-11-08T19:57:17.019146",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -853,6 +853,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i207511678",
+      "date": "2026-11-08",
+      "start_datetime": "2026-11-08T15:39:31",
+      "type": "VirtualRide",
+      "name": "Long Light by LeCoach App",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 8856,
+          "moving_secs": 8856,
+          "start_secs": 0,
+          "end_secs": 8856,
+          "avg_power": 140,
+          "max_power": 340,
+          "avg_hr": 109,
+          "max_hr": 129,
+          "min_hr": 58,
+          "avg_cadence": 66.88499,
+          "zone": 1,
+          "w_bal_start": 22000,
+          "w_bal_end": 21999,
+          "training_load": 60.794292
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -1077,12 +1105,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-11-06T17:40:31.815730",
-        "last_attempt": "2026-11-08T15:34:48.441584",
+        "last_attempt": "2026-11-08T19:57:17.019146",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-08T16:04:48.441584"
+        "next_retry_at": "2026-11-08T20:27:17.019146"
       }
     },
     "i206904799": {
@@ -1095,12 +1123,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 6,
+        "attempts": 7,
         "first_seen": "2026-11-07T15:10:24.248709",
-        "last_attempt": "2026-11-08T15:34:48.441584",
+        "last_attempt": "2026-11-08T19:57:17.019146",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-08T15:39:48.441584"
+        "next_retry_at": "2026-11-08T20:27:17.019146"
+      }
+    },
+    "i207511678": {
+      "date": "2026-11-08",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-08T19:57:17.019146",
+        "last_attempt": "2026-11-08T19:57:17.019146",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-08T19:57:17.019146",
+        "last_attempt": "2026-11-08T19:57:17.019146",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-08T20:02:17.019146"
       }
     }
   }
