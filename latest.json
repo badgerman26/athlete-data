@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-11T14:12:20.916340",
+    "last_updated": "2026-11-11T21:24:29.111643",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.122"
@@ -231,8 +231,8 @@
       "ctl": 51.83,
       "atl": 43.12,
       "tsb": 8.71,
-      "ramp_rate": -0.43,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ramp_rate": -0.98,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
       "eftp": 264.4,
@@ -623,9 +623,9 @@
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.83,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 6,
+      "planned_days": 5,
       "completed_days": 6,
       "matched_days": 5,
       "planned_dates": [
@@ -633,8 +633,7 @@
         "2026-11-06",
         "2026-11-07",
         "2026-11-08",
-        "2026-11-10",
-        "2026-11-11"
+        "2026-11-10"
       ],
       "completed_dates": [
         "2026-11-05",
@@ -657,13 +656,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 3.71,
-          "hard_sessions_planned": 4,
+          "planned_tss_delta": 3.39,
+          "hard_sessions_planned": 3,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 5,
+          "current_week_hard_days_total": 4,
           "race_proximity": null,
           "next_week_load": 2.91,
-          "plan_coverage_current_week": 0.23,
+          "plan_coverage_current_week": 0.18,
           "plan_coverage_next_week": 0.27
         },
         "data_quality": "good",
@@ -697,13 +696,13 @@
     "p_max": 958,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-11T14:12:20.915054",
+    "calculation_timestamp": "2026-11-11T21:24:29.111005",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 21,
       "activities_28d": 82,
-      "planned_workouts_7d": 6,
+      "planned_workouts_7d": 5,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -6928,30 +6927,17 @@
   ],
   "planned_workouts": [
     {
-      "id": 125985190,
-      "date": "2026-11-11",
-      "name": "High Cadence Aerobic by LeCoach App",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 40,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
-      "workout_summary": "5m @158W | 4\u00d78m @178W / 5m rec | 3m @151W",
-      "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n4x\n-8m 65% FTP 105RPM\n-5m 65% FTP 85RPM\n\n-3m 55% FTP"
-    },
-    {
       "id": 125985191,
       "date": "2026-11-12",
       "name": "10x1m VO2max by LeCoach App",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 69,
-      "duration_hours": 1.08,
-      "duration_formatted": "1h5m",
-      "workout_summary": "5m @158W | 3\u00d730s @275W / 30s rec | 5m @165W | 10\u00d71m @330W / 1m rec | 27m @178W | 5m @151W",
+      "planned_tss": 61,
+      "duration_hours": 0.92,
+      "duration_formatted": "55m",
+      "workout_summary": "5m @158W | 3\u00d730s @275W / 30s rec | 5m @165W | 10\u00d71m @330W / 1m rec | 17m @178W | 5m @151W",
       "has_terrain": false,
-      "description": "-5m ramp 50-65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n10x\n-1m 120% FTP\n-1m 55% FTP\n\n-27m 65% FTP\n\n-5m 55% FTP"
+      "description": "-5m ramp 50-65% FTP\n\n3x\n-30s 100% FTP\n-30s 55% FTP\n\n-5m 60% FTP\n\n10x\n-1m 120% FTP\n-1m 55% FTP\n\n-17m 65% FTP\n\n-5m 55% FTP"
     },
     {
       "id": 125985192,
@@ -7356,9 +7342,9 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 33,
-    "success": 20,
-    "patternA": 20,
+    "attempted": 32,
+    "success": 19,
+    "patternA": 19,
     "patternB": 0,
     "bail_no_workout_doc": 0,
     "bail_no_match": 13
