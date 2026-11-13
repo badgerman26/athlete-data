@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T03:34:36.345114",
+  "generated_at": "2026-11-13T11:31:56.247569",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1096,6 +1096,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i209487985",
+      "date": "2026-11-13",
+      "start_datetime": "2026-11-13T10:00:29",
+      "type": "VirtualRide",
+      "name": "Zwift - Group Ride: Long - Stage 5 - Tour of Watopia 2026",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4947,
+          "moving_secs": 4947,
+          "start_secs": 0,
+          "end_secs": 4947,
+          "avg_power": 170,
+          "max_power": 396,
+          "avg_hr": 134,
+          "max_hr": 162,
+          "min_hr": 82,
+          "avg_cadence": 79.316154,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21952,
+          "training_load": 58.837685
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -1320,12 +1348,11 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 11,
+        "attempts": 12,
         "first_seen": "2026-11-10T11:45:51.543831",
-        "last_attempt": "2026-11-13T03:34:36.345114",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-11-13T04:04:36.345114"
+        "last_attempt": "2026-11-13T11:31:56.247569",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i209060483": {
@@ -1339,12 +1366,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-11-12T10:00:01.778445",
-        "last_attempt": "2026-11-13T03:34:36.345114",
+        "last_attempt": "2026-11-13T11:31:56.247569",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-13T03:39:36.345114"
+        "next_retry_at": "2026-11-13T11:36:56.247569"
+      }
+    },
+    "i209487985": {
+      "date": "2026-11-13",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-13T11:31:56.247569",
+        "last_attempt": "2026-11-13T11:31:56.247569",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-13T11:31:56.247569",
+        "last_attempt": "2026-11-13T11:31:56.247569",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-13T11:36:56.247569"
       }
     }
   }
