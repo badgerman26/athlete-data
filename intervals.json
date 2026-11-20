@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T09:42:31.931146",
+  "generated_at": "2026-11-20T18:01:03.471182",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1186,6 +1186,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i212478125",
+      "date": "2026-11-20",
+      "start_datetime": "2026-11-20T12:48:38",
+      "type": "VirtualRide",
+      "name": "90m Z2 + Micro-Bursts",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3231,
+          "moving_secs": 3231,
+          "start_secs": 0,
+          "end_secs": 3231,
+          "avg_power": 173,
+          "max_power": 353,
+          "avg_hr": 140,
+          "max_hr": 162,
+          "min_hr": 58,
+          "avg_cadence": 76.61998,
+          "zone": 2,
+          "w_bal_start": 22000,
+          "w_bal_end": 21887,
+          "training_load": 38.082645
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -1324,12 +1352,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-11-18T15:33:23.807044",
-        "last_attempt": "2026-11-20T09:42:31.931146",
+        "last_attempt": "2026-11-20T18:01:03.471182",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-20T10:12:31.931146"
+        "next_retry_at": "2026-11-20T18:31:03.471182"
       }
     },
     "i211947925": {
@@ -1343,12 +1371,31 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-11-19T12:21:34.744912",
-        "last_attempt": "2026-11-20T09:42:31.931146",
+        "last_attempt": "2026-11-20T18:01:03.471182",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-20T09:47:31.931146"
+        "next_retry_at": "2026-11-20T18:06:03.471182"
+      }
+    },
+    "i212478125": {
+      "date": "2026-11-20",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-20T18:01:03.471182",
+        "last_attempt": "2026-11-20T18:01:03.471182",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-20T18:01:03.471182",
+        "last_attempt": "2026-11-20T18:01:03.471182",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-20T18:06:03.471182"
       }
     }
   }
